@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rhuan Nunes | Nutricionista</title>
+<link href="style.css?v=31" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* ==================================================
+           PAINEL DE AJUSTES - DEPOIMENTOS / IPHONE
+
+           MEXA SOMENTE NOS VALORES DESTA ÁREA.
+
+           X positivo  = move para a DIREITA
+           X negativo  = move para a ESQUERDA
+           Y positivo  = move para BAIXO
+           Y negativo  = move para CIMA
+           ================================================== */
+
+        :root {
+            /* BLOCO COMPLETO: texto + celular */
+            --depoimentos-x: -105px;
+            --depoimentos-y: -190px;
+            --espaco-texto-celular: 28px;
+
+            /* CELULAR */
+            --celular-largura: 240px;
+            --celular-x: -30px;
+            --celular-y: 0px;
+
+            /* TEXTO */
+            --texto-largura: 250px;
+            --texto-x: -30px;
+            --texto-y: -80px;
+            --texto-tamanho: 0.88rem;
+            --texto-altura-linha: 1.7;
+            --texto-alinhamento: left;
+            --texto-cor: #b7b7b7;
+
+            /* AJUSTES SOMENTE DO NOVO TEXTO / SETA
+               Estes valores NÃO alteram a posição do celular */
+            --texto-cursivo-tamanho: 12rem;
+            --texto-cursivo-cor: #ffffff;
+            --texto-cursivo-linha: 1.02;
+            --seta-largura: 70px;
+            --seta-x: 190px;
+            --seta-y: 10px;
+            --seta-cor: #D6AE61;
+
+            /* VELOCIDADE DOS PRINTS */
+            --velocidade-depoimentos: 48s;
+        }
+
+        /* ==================================================
+           ESTRUTURA - NÃO PRECISA MEXER
+           ================================================== */
+
+        .prova-social-home {
+            width: 100%;
+            max-width: 500px;
+            display: grid;
+            grid-template-columns: var(--texto-largura) var(--celular-largura);
+            align-items: center;
+            justify-content: center;
+            gap: var(--espaco-texto-celular);
+            transform: translate(var(--depoimentos-x), var(--depoimentos-y));
+            animation: entradaPelaEsquerda 0.9s ease-out 0.20s both;
+        }
+
+        .prova-social-texto {
+            position: relative;
+            width: var(--texto-largura);
+            align-self: center;
+            transform: translate(var(--texto-x), var(--texto-y));
+        }
+
+        /* ==================================================
+           TEXTO DOS DEPOIMENTOS
+
+           A FONTE NÃO É FIXADA AQUI.
+           O JavaScript copia a tipografia REAL aplicada em
+           "e experiência." pelo seu próprio style.css.
+
+           Cor: branco.
+           Animação: revelação suave, sem cursor ou barrinha.
+           ================================================== */
+
+        .frase-depoimentos-cursiva {
+            margin: 0;
+            width: 100%;
+
+            color: #ffffff;
+            font-size: var(--texto-cursivo-tamanho);
+            line-height: 1.18;
+            text-align: center;
+
+            letter-spacing: 0;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.32);
+        }
+
+        /*
+           Cada frase permanece separada pelo ponto.
+           O estado inicial fica escondido até o JavaScript
+           liberar a animação.
+        */
+        .frase-depoimentos-cursiva .frase-escrita {
+            display: block;
+            width: 100%;
+
+            opacity: 0;
+
+            -webkit-mask-image: linear-gradient(90deg,
+                    #000 0%,
+                    #000 45%,
+                    transparent 55%,
+                    transparent 100%);
+            mask-image: linear-gradient(90deg,
+                    #000 0%,
+                    #000 45%,
+                    transparent 55%,
+                    transparent 100%);
+
+            -webkit-mask-size: 220% 100%;
+            mask-size: 220% 100%;
+
+            -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+
+            will-change: opacity, -webkit-mask-position, mask-position;
+        }
+
+        .frase-depoimentos-cursiva .frase-escrita:not(:last-child) {
+            margin-bottom: 0.22em;
+        }
+
+        /*
+           A classe .escrita-ativa só é colocada DEPOIS
+           que a página já carregou. Assim a primeira frase
+           nunca aparece pronta antes do efeito.
+        */
+        /* ==================================================
+           FRASES - SEQUÊNCIA CONTÍNUA E FLUIDA
+           Uma começa exatamente quando a anterior termina.
+           ================================================== */
+
+        /* 1 - RESULTADOS REAIS */
+
+        .prova-social-texto.escrita-ativa .frase-escrita:nth-child(1) {
+            animation:
+                revelar-como-escrita 0.95s cubic-bezier(0.22, 0.72, 0.28, 1) 0s forwards;
+        }
+
+
+        /* 2 - ESTRATÉGIAS INDIVIDUALIZADAS */
+
+        .prova-social-texto.escrita-ativa .frase-escrita:nth-child(2) {
+            animation:
+                revelar-como-escrita 1.05s cubic-bezier(0.22, 0.72, 0.28, 1) 0.70s forwards;
+        }
+
+
+        /* 3 - PESSOAS QUE DECIDIRAM */
+
+        .prova-social-texto.escrita-ativa .frase-escrita:nth-child(3) {
+            animation:
+                revelar-como-escrita 0.95s cubic-bezier(0.22, 0.72, 0.28, 1) 1.50s forwards;
+        }
+
+
+        /* 4 - FAZER DIFERENTE */
+
+        .prova-social-texto.escrita-ativa .frase-escrita:nth-child(4) {
+            animation:
+                revelar-como-escrita 0.85s cubic-bezier(0.22, 0.72, 0.28, 1) 2.25s forwards;
+        }
+
+        @keyframes revelar-como-escrita {
+            0% {
+                opacity: 0;
+
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+
+            4% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+
+                -webkit-mask-position: 0% 0;
+                mask-position: 0% 0;
+            }
+        }
+
+        /*
+           A seta continua ABSOLUTA.
+           Portanto NÃO empurra e NÃO reposiciona o celular.
+        */
+        .seta-depoimentos {
+            position: absolute;
+            left: 0;
+            top: 100%;
+
+            width: var(--seta-largura);
+            height: auto;
+
+            transform: translate(var(--seta-x),
+                    var(--seta-y));
+
+            overflow: visible;
+            pointer-events: none;
+
+            filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.28));
+        }
+
+        .seta-depoimentos path {
+            fill: none;
+
+            stroke: var(--seta-cor);
+            stroke-width: 2.6;
+
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Estado inicial da curva */
+        .seta-depoimentos .seta-traco {
+            stroke-dasharray: 180;
+            stroke-dashoffset: 180;
+            opacity: 0;
+        }
+
+        /* Estado inicial da ponta */
+        .seta-depoimentos .seta-ponta {
+            stroke-dasharray: 60;
+            stroke-dashoffset: 60;
+            opacity: 0;
+        }
+
+        /*
+           A classe .desenhando é aplicada pelo JavaScript
+           somente quando a terceira frase termina.
+        */
+        .seta-depoimentos.desenhando .seta-traco {
+            animation: desenhar-seta-traco 0.95s ease-out forwards;
+        }
+
+        .seta-depoimentos.desenhando .seta-ponta {
+            animation: desenhar-seta-ponta 0.38s ease-out 0.80s forwards;
+        }
+
+        @keyframes desenhar-seta-traco {
+            from {
+                opacity: 1;
+                stroke-dashoffset: 180;
+            }
+
+            to {
+                opacity: 1;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes desenhar-seta-ponta {
+            from {
+                opacity: 1;
+                stroke-dashoffset: 60;
+            }
+
+            to {
+                opacity: 1;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .iphone-mockup {
+            position: relative;
+            width: var(--celular-largura);
+            aspect-ratio: 190 / 390;
+            padding: 7px;
+            border-radius: 42px;
+            transform: translate(var(--celular-x), var(--celular-y));
+            background: linear-gradient(145deg, #3a3a3a 0%, #0b0b0b 42%, #2a2a2a 100%);
+            box-shadow:
+                0 24px 45px rgba(0, 0, 0, 0.48),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+        }
+
+        .iphone-tela {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 35px;
+            background: #0b141a;
+        }
+
+        .iphone-ilha {
+            position: absolute;
+            top: 9px;
+            left: 50%;
+            z-index: 20;
+            width: 40%;
+            height: 20px;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            background: #000;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .depoimentos-viewport {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 20% 10%, rgba(37, 211, 102, 0.05), transparent 34%),
+                #0b141a;
+        }
+
+        .depoimentos-viewport::before,
+        .depoimentos-viewport::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 12;
+            height: 52px;
+            pointer-events: none;
+        }
+
+        .depoimentos-viewport::before {
+            top: 0;
+            background: linear-gradient(to bottom, #0b141a 0%, rgba(11, 20, 26, 0) 100%);
+        }
+
+        .depoimentos-viewport::after {
+            bottom: 0;
+            background: linear-gradient(to top, #0b141a 0%, rgba(11, 20, 26, 0) 100%);
+        }
+
+        .depoimentos-track {
+            width: 100%;
+            animation: rolarDepoimentos var(--velocidade-depoimentos) linear infinite;
+            will-change: transform;
+        }
+
+        .depoimentos-grupo {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding: 40px 10px 16px;
+        }
+
+        .depoimento-print {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 11px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+        }
+
+        .iphone-barra-home {
+            position: absolute;
+            left: 50%;
+            bottom: 8px;
+            z-index: 20;
+            width: 36%;
+            height: 4px;
+            transform: translateX(-50%);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .iphone-mockup:hover .depoimentos-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes rolarDepoimentos {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-50%);
+            }
+        }
+
+        /* ==================================================
+           AJUSTES PARA CELULAR / TABLET
+           Se quiser mudar separadamente no celular, altere aqui.
+           ================================================== */
+
+        @media (max-width: 992px) {
+            .prova-social-home {
+                --depoimentos-x: 0px;
+                --depoimentos-y: 0px;
+                --celular-largura: 165px;
+                --celular-x: 0px;
+                --celular-y: 0px;
+                --texto-largura: 190px;
+                --texto-x: 0px;
+                --texto-y: 0px;
+                --texto-tamanho: 0.74rem;
+                --texto-altura-linha: 1.55;
+                --texto-alinhamento: left;
+                --espaco-texto-celular: 14px;
+
+                max-width: 210px;
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            .iphone-mockup {
+                border-radius: 36px;
+            }
+
+            .iphone-tela {
+                border-radius: 30px;
+            }
+
+            .iphone-ilha {
+                height: 18px;
+            }
+
+            .frase-depoimentos-cursiva {
+                font-size: 1.15rem;
+                line-height: 1.18;
+                text-align: center;
+            }
+
+            .seta-depoimentos {
+                width: 78px;
+                left: 50%;
+                top: calc(100% + 2px);
+                transform: translate(-15%, 0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .depoimentos-track {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- ==================================================
+         PÁGINA 1 - HOME
+         ================================================== -->
+<div class="pagina-home">
+<header>
+<img alt="Rhuan Nunes Nutricionista" class="logo" src="img/logo.png"/>
+<nav>
+<ul class="navegacao-primaria">
+<li>
+<a href="#diferenciais">Diferenciais</a>
+</li>
+<li>
+<a href="#servicos">Serviços Ofertados</a>
+</li>
+<li>
+<a href="#consultoria">Marcar Consulta</a>
+</li>
+</ul>
+<i class="fa-solid fa-bars"></i>
+</nav>
+</header>
+<section aria-label="Apresentação de Rhuan Nunes" class="section-div" id="home">
+<!-- ==================================================
+                 LADO ESQUERDO - EXPERIÊNCIAS REAIS
+                 ================================================== -->
+<div class="conteudo-home">
+<div class="prova-social-home">
+<div class="prova-social-texto">
+<p class="frase-depoimentos-cursiva">
+<span class="frase-escrita">
+                                Resultados reais.
+                            </span>
+<span class="frase-escrita">
+                                Estratégias individualizadas.
+                            </span>
+<span class="frase-escrita">
+                                Pessoas que decidiram
+                            </span>
+<span class="frase-escrita">
+                                fazer diferente.
+                            </span>
+</p>
+<svg aria-hidden="true" class="seta-depoimentos" viewbox="0 0 120 78">
+<path class="seta-traco" d="M8 8 C 34 7, 48 17, 57 32 C 67 48, 84 62, 108 58"></path>
+<path class="seta-ponta" d="M98 49 L108 58 L95 64"></path>
+</svg>
+</div>
+<div aria-label="Relatos de pacientes" class="iphone-mockup">
+<div class="iphone-tela">
+<div aria-hidden="true" class="iphone-ilha"></div>
+<div class="depoimentos-viewport">
+<div class="depoimentos-track">
+<!--
+                                    TROQUE OS ARQUIVOS ABAIXO PELOS SEUS PRINTS.
+                                    De preferência, use recortes verticais apenas da conversa.
+                                    -->
+<div class="depoimentos-grupo">
+<img alt="Relato de paciente 1" class="depoimento-print" src="img/depoimento1.jpg"/>
+<img alt="Relato de paciente 2" class="depoimento-print" src="img/depoimento2.jpg"/>
+<img alt="Relato de paciente 3" class="depoimento-print" src="img/depoimento3.jpg"/>
+<img alt="Relato de paciente 4" class="depoimento-print" src="img/depoimento4.jpg"/>
+</div>
+<!-- CÓPIA PARA O LOOP FICAR CONTÍNUO -->
+<div aria-hidden="true" class="depoimentos-grupo">
+<img alt="" class="depoimento-print" src="img/depoimento1.jpg"/>
+<img alt="" class="depoimento-print" src="img/depoimento2.jpg"/>
+<img alt="" class="depoimento-print" src="img/depoimento3.jpg"/>
+<img alt="" class="depoimento-print" src="img/depoimento4.jpg"/>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="iphone-barra-home"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================================================
+                 FOTO + APRESENTAÇÃO PROFISSIONAL
+                 ================================================== -->
+<div class="home-perfil">
+
+    <div class="home-foto-area">
+        <img
+            alt="Rhuan Nunes - Nutricionista"
+            class="imagem-rhuan"
+            src="img/eu.jpeg"
+        />
+    </div>
+
+    <aside class="apresentacao-home">
+
+        <h2 class="titulo-experiencia">
+            Ciência, prática
+            <span class="destaque-experiencia">
+                e experiência.
+            </span>
+        </h2>
+
+        <p class="apresentacao-home-intro"></p>
+
+        <div class="linha-apresentacao-home">
+
+            <!-- NUTRICIONISTA -->
+            <div class="item-apresentacao-home">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <div>
+                    <h3>Nutricionista</h3>
+
+                    <p>
+                        Graduado pela Universidade Evangélica de Goiás.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- PÓS-GRADUAÇÃO -->
+            <div class="item-apresentacao-home">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <div>
+                    <h3>Pós-graduado em Nutrição Esportiva</h3>
+
+                    <p>
+                        Especialização direcionada à estética corporal
+                        e performance esportiva.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- EXPERIÊNCIA PRÁTICA -->
+            <div class="item-apresentacao-home">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+                <div>
+                    <h3>Mais de 15 anos de vivência prática</h3>
+
+                    <p>
+                        Musculação e nutrição fazem parte da minha rotina
+                        há mais de uma década, unindo experiência pessoal,
+                        estudo voltado à composição corporal e performance.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--
+            QUANDO VOCÊ TIVER O CRN, PODE COLOCAR AQUI:
+
+            <p class="crn-home">
+                <span>CRN</span>-X XXXXX
+            </p>
+        -->
+
+    </aside>
+
+
+    <!-- ==================================================
+         REDES SOCIAIS
+         ================================================== -->
+
+    <div class="whatsapp-home-wrap social-home-wrap">
+
+        <a
+            aria-label="Chamar no WhatsApp"
+            class="social-home whatsapp-home"
+            href="https://wa.me/5562994611228?text=Olá%2C%20quero%20saber%20mais%20sobre%20a%20consultoria%20nutricional."
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <a
+            aria-label="Abrir Instagram"
+            class="social-home instagram-home"
+            href="https://www.instagram.com/SEUUSUARIO/"
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <a
+            aria-label="Abrir TikTok"
+            class="social-home tiktok-home"
+            href="https://www.tiktok.com/@SEUUSUARIO"
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+
+    </div>
+
+</div>
+<!-- ==================================================
+                 ROLE PARA BAIXO
+                 ================================================== -->
+<a aria-label="Ir para Diferenciais" class="scroll-indicador seta-pagina" href="#diferenciais">
+<i class="fa-solid fa-chevron-down"></i>
+</a>
+</section>
+</div>
+<!-- ==================================================
+         PÁGINA 2 - DIFERENCIAIS
+         ================================================== -->
+<section aria-label="Diferenciais" class="diferenciais" id="diferenciais">
+
+    <div class="pagina-titulo">
+        <h1>Diferenciais</h1>
+    </div>
+
+    <div class="diferenciais-conteudo">
+
+        <!-- LADO ESQUERDO - POSICIONAMENTO -->
+        <div class="diferenciais-editorial">
+
+            <span class="diferenciais-selo">
+                NUTRIÇÃO COM ESTRATÉGIA
+            </span>
+
+            <h2>
+                Não é sobre seguir uma dieta.
+                <span>É sobre construir um processo que funcione para você.</span>
+            </h2>
+
+            <p>
+                Cada estratégia é construída considerando objetivo, rotina,
+                preferências e contexto. A proposta é transformar ciência
+                em decisões práticas, sustentáveis e direcionadas à sua evolução.
+            </p>
+
+            <div class="diferenciais-assinatura" aria-label="Pilares da consultoria">
+                <span>Ciência</span>
+                <i aria-hidden="true"></i>
+                <span>Estratégia</span>
+                <i aria-hidden="true"></i>
+                <span>Constância</span>
+                <i aria-hidden="true"></i>
+                <span>Evolução</span>
+            </div>
+
+        </div>
+
+
+        <!-- LADO DIREITO - DIFERENCIAIS -->
+        <div class="diferenciais-lista-premium">
+
+            <article class="diferencial-premium">
+                <span class="diferencial-numero">01</span>
+
+                <div class="diferencial-icone">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div class="diferencial-texto">
+                    <h3>Estratégia individualizada</h3>
+                    <p>
+                        A conduta é pensada para o seu objetivo e adaptada à sua
+                        rotina, preferências e realidade.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="diferencial-premium">
+                <span class="diferencial-numero">02</span>
+
+                <div class="diferencial-icone">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div class="diferencial-texto">
+                    <h3>Evolução acompanhada</h3>
+                    <p>
+                        O processo é observado ao longo do tempo para que a
+                        estratégia acompanhe sua resposta e sua evolução.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="diferencial-premium">
+                <span class="diferencial-numero">03</span>
+
+                <div class="diferencial-icone">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+
+                <div class="diferencial-texto">
+                    <h3>Ciência aplicada à prática</h3>
+                    <p>
+                        Evidência científica traduzida em escolhas claras e
+                        aplicáveis, sem complicar o que precisa ser sustentável.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="diferencial-premium">
+                <span class="diferencial-numero">04</span>
+
+                <div class="diferencial-icone">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+
+                <div class="diferencial-texto">
+                    <h3>Ajustes com propósito</h3>
+                    <p>
+                        Mudanças são feitas quando fazem sentido para o processo,
+                        evitando alterações aleatórias e soluções genéricas.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+    <a
+        aria-label="Ir para Serviços Ofertados"
+        class="scroll-indicador seta-pagina"
+        href="#servicos"
+    >
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+</section>
+<!-- ==================================================
+         PÁGINA 3 - SERVIÇOS
+         ================================================== -->
+<section aria-label="Serviços oferecidos" class="services" id="servicos">
+
+    <!-- ==================================================
+         SERVIÇOS OFERECIDOS
+         ================================================== -->
+
+    <div class="servicos-vendas-cabecalho">
+
+        <span class="servicos-vendas-kicker">
+            01 · AVALIAÇÃO &amp; ESTRATÉGIA
+        </span>
+
+        <h1>Serviços oferecidos</h1>
+
+    </div>
+
+
+    <div class="servicos-vendas-bloco servicos-vendas-bloco-principal">
+
+        <div class="servicos-vendas-grade">
+
+
+            <!-- ==================================================
+                 BIOIMPEDÂNCIA
+                 ================================================== -->
+
+            <article class="servico-venda-card">
+
+                <div class="servico-ilustracao servico-ilustracao-bio">
+
+                    <span class="ilustracao-anel"></span>
+
+                    <i class="fa-solid fa-weight-scale ilustracao-principal"></i>
+
+                    <i class="fa-solid fa-person ilustracao-detalhe"></i>
+
+                </div>
+
+                <h3>Bioimpedância</h3>
+
+                <p>
+                    Composição corporal além do peso:
+                    gordura, massa magra e evolução.
+                </p>
+
+                <span class="servico-venda-rodape">
+                    Composição corporal
+                </span>
+
+            </article>
+
+
+            <!-- ==================================================
+                 AVALIAÇÃO FÍSICA
+                 ================================================== -->
+
+            <article class="servico-venda-card">
+
+                <div class="servico-ilustracao servico-ilustracao-avaliacao">
+
+                    <span class="ilustracao-anel"></span>
+
+                    <i class="fa-solid fa-chart-line ilustracao-principal"></i>
+
+                    <i class="fa-solid fa-ruler-combined ilustracao-detalhe"></i>
+
+                </div>
+
+                <h3>Avaliação Física</h3>
+
+                <p>
+                    Medidas e indicadores para acompanhar
+                    sua evolução corporal com clareza.
+                </p>
+
+                <span class="servico-venda-rodape">
+                    Medidas &amp; evolução
+                </span>
+
+            </article>
+
+
+            <!-- ==================================================
+                 PLANO ESTRATÉGICO
+                 ================================================== -->
+
+            <article class="servico-venda-card servico-venda-card-destaque">
+
+                <div class="servico-ilustracao servico-ilustracao-plano">
+
+                    <span class="ilustracao-anel"></span>
+
+                    <i class="fa-solid fa-calendar-check ilustracao-principal"></i>
+
+                    <i class="fa-solid fa-route ilustracao-detalhe"></i>
+
+                </div>
+
+                <h3>Plano Estratégico</h3>
+
+                <p>
+                    Planejamento nutricional adaptado à sua rotina
+                    e aos seus próximos passos.
+                </p>
+
+                <div class="servico-venda-adaptacoes">
+
+                    <span>
+                        <i class="fa-solid fa-plane"></i>
+                        Viagens
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-medal"></i>
+                        Competições
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-calendar-day"></i>
+                        Rotina
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         COMO POSSO TE AJUDAR
+         ================================================== -->
+
+    <div class="servicos-vendas-bloco servicos-vendas-bloco-objetivos" id="como-posso-te-ajudar">
+
+        <div class="servicos-vendas-titulo-linha">
+
+            <div>
+
+                <span>02</span>
+
+                <h2>Como posso te ajudar</h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="objetivos-vendas-grade">
+
+
+            <!-- ==================================================
+                 EMAGRECIMENTO
+                 ================================================== -->
+
+            <article class="objetivo-venda-card">
+
+                <div class="objetivo-ilustracao">
+
+                    <span class="objetivo-ilustracao-circulo"></span>
+
+                    <i class="fa-solid fa-fire-flame-curved objetivo-ilustracao-principal"></i>
+
+                    <i class="fa-solid fa-arrow-trend-down objetivo-ilustracao-detalhe"></i>
+
+                </div>
+
+                <span class="objetivo-venda-tag">
+                    COMPOSIÇÃO CORPORAL
+                </span>
+
+                <h3>Emagrecimento</h3>
+
+                <p>
+                    Reduzir gordura preservando massa muscular,
+                    desempenho e uma rotina sustentável.
+                </p>
+
+            </article>
+
+
+            <!-- ==================================================
+                 HIPERTROFIA
+                 ================================================== -->
+
+            <article class="objetivo-venda-card">
+
+                <div class="objetivo-ilustracao">
+
+                    <span class="objetivo-ilustracao-circulo"></span>
+
+                    <i class="fa-solid fa-dumbbell objetivo-ilustracao-principal"></i>
+
+                    <i class="fa-solid fa-arrow-trend-up objetivo-ilustracao-detalhe"></i>
+
+                </div>
+
+                <span class="objetivo-venda-tag">
+                    GANHO DE MASSA
+                </span>
+
+                <h3>Hipertrofia</h3>
+
+                <p>
+                    Criar as condições nutricionais para favorecer
+                    ganho muscular e evolução no treinamento.
+                </p>
+
+            </article>
+
+
+            <!-- ==================================================
+                 PERFORMANCE
+                 ================================================== -->
+
+            <article class="objetivo-venda-card">
+
+                <div class="objetivo-ilustracao">
+
+                    <span class="objetivo-ilustracao-circulo"></span>
+
+                    <i class="fa-solid fa-bolt objetivo-ilustracao-principal"></i>
+
+                    <i class="fa-solid fa-stopwatch objetivo-ilustracao-detalhe"></i>
+
+                </div>
+
+                <span class="objetivo-venda-tag">
+                    RENDIMENTO
+                </span>
+
+                <h3>Performance</h3>
+
+                <p>
+                    Nutrição direcionada a rendimento, recuperação
+                    e preparação para treinos ou competições.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <a
+        aria-label="Ir para Consultoria"
+        class="scroll-indicador seta-pagina"
+        href="#consultoria"
+    >
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+</section>
+
+
+<!-- ==================================================
+     PÁGINA 4 - CONSULTORIA / ESCOLHA DA MODALIDADE
+     ================================================== -->
+
+<section
+    aria-label="Modalidades de consultoria nutricional"
+    class="consultoria-planos"
+    id="consultoria"
+>
+
+    <div class="consultoria-vendas-cabecalho">
+
+        <span class="consultoria-vendas-kicker">
+            CONSULTORIA NUTRICIONAL
+        </span>
+
+        <h1>Escolha como você prefere ser atendido.</h1>
+
+        <p>
+            Três formas de atendimento. A mesma estratégia individualizada.
+        </p>
+
+    </div>
+
+
+    <div class="planos-vendas-grade">
+
+
+        <!-- ==================================================
+             MODALIDADE 1 - ONLINE ESSENCIAL
+
+             ALTERE OS PREÇOS NOS data-preco=""
+             ================================================== -->
+
+        <article
+            class="plano-vendas-card"
+            data-modalidade="Online Essencial"
+        >
+
+            <span class="plano-vendas-badge plano-vendas-badge-neutro">
+                MAIS ACESSÍVEL
+            </span>
+
+            <div class="modalidade-ilustracao">
+
+                <span class="modalidade-ilustracao-circulo"></span>
+
+                <i class="fa-solid fa-file-lines modalidade-ilustracao-principal"></i>
+
+                <i class="fa-regular fa-comments modalidade-ilustracao-detalhe"></i>
+
+            </div>
+
+            <div class="plano-vendas-cabecalho-card">
+
+                <span class="plano-vendas-periodo">
+                    ONLINE ESSENCIAL
+                </span>
+
+                <h2>Questionário + mensagens</h2>
+
+            </div>
+
+            <p class="plano-vendas-resumo">
+                Você responde no seu tempo e o acompanhamento acontece por mensagens.
+            </p>
+
+
+            <div
+                aria-label="Escolha a duração do Online Essencial"
+                class="plano-periodos"
+            >
+
+                <button
+                    class="plano-opcao ativo"
+                    data-checkout-url=""
+                    data-periodo="Mensal"
+                    data-preco="199"
+                    type="button"
+                >
+                    <span>Mensal</span>
+                    <strong>R$ 199</strong>
+                </button>
+
+                <button
+                    class="plano-opcao"
+                    data-checkout-url=""
+                    data-periodo="Trimestral"
+                    data-preco="549"
+                    type="button"
+                >
+                    <span>3 meses</span>
+                    <strong>R$ 549</strong>
+                </button>
+
+                <button
+                    class="plano-opcao"
+                    data-checkout-url=""
+                    data-periodo="Semestral"
+                    data-preco="999"
+                    type="button"
+                >
+                    <span>6 meses</span>
+                    <strong>R$ 999</strong>
+                </button>
+
+            </div>
+
+
+            <div class="plano-preco-selecionado">
+
+                <span>A partir de</span>
+
+                <div>
+                    <small>R$</small>
+                    <strong data-preco-display>199</strong>
+                </div>
+
+            </div>
+
+
+            <ul class="plano-vendas-beneficios">
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Questionário inicial estruturado
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Acompanhamento por mensagens
+                </li>
+
+            </ul>
+
+
+            <button
+                class="plano-vendas-comprar"
+                type="button"
+            >
+                Comprar este plano
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <a
+                class="plano-vendas-conversar"
+                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20conversar%20sobre%20a%20Consultoria%20Online%20Essencial."
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <i class="fa-regular fa-message"></i>
+                Conversar antes
+            </a>
+
+        </article>
+
+
+        <!-- ==================================================
+             MODALIDADE 2 - ONLINE COM VIDEOCONSULTA
+
+             ALTERE OS PREÇOS NOS data-preco=""
+             ================================================== -->
+
+        <article
+            class="plano-vendas-card plano-vendas-card-destaque"
+            data-modalidade="Online com Videoconsulta"
+        >
+
+            <span class="plano-vendas-badge">
+                MAIS INTERAÇÃO
+            </span>
+
+            <div class="modalidade-ilustracao">
+
+                <span class="modalidade-ilustracao-circulo"></span>
+
+                <i class="fa-solid fa-video modalidade-ilustracao-principal"></i>
+
+                <i class="fa-solid fa-user modalidade-ilustracao-detalhe"></i>
+
+            </div>
+
+            <div class="plano-vendas-cabecalho-card">
+
+                <span class="plano-vendas-periodo">
+                    ONLINE COM VIDEOCONSULTA
+                </span>
+
+                <h2>Consulta ao vivo</h2>
+
+            </div>
+
+            <p class="plano-vendas-resumo">
+                A avaliação é conduzida durante a videochamada, sem questionário extenso.
+            </p>
+
+
+            <div
+                aria-label="Escolha a duração da Videoconsulta"
+                class="plano-periodos"
+            >
+
+                <button
+                    class="plano-opcao ativo"
+                    data-checkout-url=""
+                    data-periodo="Mensal"
+                    data-preco="249"
+                    type="button"
+                >
+                    <span>Mensal</span>
+                    <strong>R$ 249</strong>
+                </button>
+
+                <button
+                    class="plano-opcao"
+                    data-checkout-url=""
+                    data-periodo="Trimestral"
+                    data-preco="649"
+                    type="button"
+                >
+                    <span>3 meses</span>
+                    <strong>R$ 649</strong>
+                </button>
+
+                <button
+                    class="plano-opcao"
+                    data-checkout-url=""
+                    data-periodo="Semestral"
+                    data-preco="1.149"
+                    type="button"
+                >
+                    <span>6 meses</span>
+                    <strong>R$ 1.149</strong>
+                </button>
+
+            </div>
+
+
+            <div class="plano-preco-selecionado">
+
+                <span>A partir de</span>
+
+                <div>
+                    <small>R$</small>
+                    <strong data-preco-display>249</strong>
+                </div>
+
+            </div>
+
+
+            <ul class="plano-vendas-beneficios">
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Consulta individual por vídeo
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Avaliação conduzida em tempo real
+                </li>
+
+            </ul>
+
+
+            <button
+                class="plano-vendas-comprar"
+                type="button"
+            >
+                Comprar este plano
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <a
+                class="plano-vendas-disponibilidade"
+                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20consultar%20a%20disponibilidade%20de%20horários%20para%20a%20Consultoria%20Online%20com%20Videoconsulta."
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <i class="fa-regular fa-calendar-check"></i>
+                Consultar disponibilidade
+            </a>
+
+
+            <a
+                class="plano-vendas-conversar"
+                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20conversar%20sobre%20a%20Consultoria%20Online%20com%20Videoconsulta."
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <i class="fa-regular fa-message"></i>
+                Conversar antes
+            </a>
+
+        </article>
+
+
+        <!-- ==================================================
+             MODALIDADE 3 - PRESENCIAL EM DOMICÍLIO
+
+             BIOIMPEDÂNCIA INCLUÍDA
+             TAXA DE DESLOCAMENTO: A PARTIR DE R$ 50
+
+             ALTERE OS PREÇOS NOS data-preco=""
+             ================================================== -->
+
+        <article
+            class="plano-vendas-card plano-vendas-card-presencial"
+            data-modalidade="Presencial em Domicílio"
+        >
+
+            <span class="plano-vendas-badge plano-vendas-badge-bio">
+                BIOIMPEDÂNCIA INCLUÍDA
+            </span>
+
+            <div class="modalidade-ilustracao">
+
+                <span class="modalidade-ilustracao-circulo"></span>
+
+                <i class="fa-solid fa-house modalidade-ilustracao-principal"></i>
+
+                <i class="fa-solid fa-weight-scale modalidade-ilustracao-detalhe"></i>
+
+            </div>
+
+            <div class="plano-vendas-cabecalho-card">
+
+                <span class="plano-vendas-periodo">
+                    PRESENCIAL EM DOMICÍLIO
+                </span>
+
+                <h2>Consulta + Bioimpedância</h2>
+
+            </div>
+
+            <p class="plano-vendas-resumo">
+                Atendimento no seu endereço com avaliação da composição corporal.
+            </p>
+
+
+            <div
+                aria-label="Escolha a duração do atendimento presencial"
+                class="plano-periodos"
+            >
+
+                <button
+                    class="plano-opcao ativo"
+                    data-checkout-url=""
+                    data-periodo="Mensal"
+                    data-preco="299"
+                    type="button"
+                >
+                    <span>Mensal</span>
+                    <strong>R$ 299</strong>
+                </button>
+
+                <button
+                    class="plano-opcao"
+                    data-checkout-url=""
+                    data-periodo="Trimestral"
+                    data-preco="799"
+                    type="button"
+                >
+                    <span>3 meses</span>
+                    <strong>R$ 799</strong>
+                </button>
+
+                <button
+                    class="plano-opcao"
+                    data-checkout-url=""
+                    data-periodo="Semestral"
+                    data-preco="1.399"
+                    type="button"
+                >
+                    <span>6 meses</span>
+                    <strong>R$ 1.399</strong>
+                </button>
+
+            </div>
+
+
+            <div class="plano-preco-selecionado">
+
+                <span>A partir de</span>
+
+                <div>
+                    <small>R$</small>
+                    <strong data-preco-display>299</strong>
+                </div>
+
+            </div>
+
+
+            <div class="taxa-domicilio">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>
+                    Deslocamento a partir de R$ 50,
+                    conforme a localização.
+                </span>
+
+            </div>
+
+
+            <ul class="plano-vendas-beneficios">
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Atendimento no seu endereço
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Bioimpedância incluída
+                </li>
+
+            </ul>
+
+
+            <button
+                class="plano-vendas-comprar"
+                type="button"
+            >
+                Comprar este plano
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <a
+                class="plano-vendas-disponibilidade"
+                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20consultar%20a%20disponibilidade%20para%20Atendimento%20Presencial%20em%20Domicílio."
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <i class="fa-regular fa-calendar-check"></i>
+                Consultar disponibilidade
+            </a>
+
+
+            <a
+                class="plano-vendas-conversar"
+                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20conversar%20sobre%20o%20Atendimento%20Presencial%20em%20Domicílio."
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <i class="fa-regular fa-message"></i>
+                Conversar antes
+            </a>
+
+        </article>
+
+    </div>
+
+
+    <!-- AVISO DO CHECKOUT -->
+
+    <div
+        aria-live="polite"
+        class="checkout-vendas-aviso"
+        id="checkout-vendas-aviso"
+    ></div>
+
+
+    <!-- ==================================================
+         CTA FINAL - MAIS ENXUTO
+         ================================================== -->
+
+    <div class="consultoria-vendas-cta">
+
+        <div>
+
+            <span>AINDA EM DÚVIDA?</span>
+
+            <h2>Eu te ajudo a escolher a melhor modalidade.</h2>
+
+        </div>
+
+        <a
+            href="https://wa.me/5562994611228?text=Olá%2C%20estou%20em%20dúvida%20sobre%20qual%20modalidade%20de%20consultoria%20escolher."
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            <i class="fa-regular fa-comments"></i>
+            Conversar sobre a consultoria
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <!-- ==================================================
+         SETA PARA A ÁREA FINAL DO SITE
+         ================================================== -->
+
+    <a
+        aria-label="Ir para informações finais"
+        class="scroll-indicador seta-pagina consultoria-seta-rodape"
+        href="#rodape"
+    >
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+</section>
+
+
+<!-- ======================================================================
+     ======================================================================
+     DADOS DO RODAPÉ - EDITE SOMENTE ESTE BLOCO
+
+     ESTE É O ESPAÇO SEPARADO PARA VOCÊ ALTERAR DEPOIS:
+
+     - LOGO
+     - NOME
+     - PROFISSÃO
+     - CRN
+     - DESCRIÇÃO
+     - WHATSAPP
+     - INSTAGRAM
+     - TIKTOK
+     - E-MAIL
+     - CIDADE / UF
+     - TIPO DE ATENDIMENTO
+
+     NÃO PRECISA PROCURAR ESSAS INFORMAÇÕES EM OUTRO LUGAR DO HTML.
+     ======================================================================
+     ====================================================================== -->
+
+<footer class="rodape-site" id="rodape">
+
+    <div class="rodape-site-conteudo">
+
+
+        <!-- ==================================================
+             MARCA
+             ================================================== -->
+
+        <div class="rodape-site-marca">
+
+            <!-- LOGO DO RODAPÉ -->
+            <img
+                alt="Rhuan Nunes Nutricionista"
+                class="rodape-logo"
+                src="img/logo.png"
+            />
+
+
+        
+
+
+            <!--
+                CRN - QUANDO TIVER, RETIRE O COMENTÁRIO:
+
+                <small class="rodape-crn">
+                    CRN-X XXXXX
+                </small>
+            -->
+
+        </div>
+
+
+        <!-- ==================================================
+             NAVEGAÇÃO
+             ================================================== -->
+
+        <div class="rodape-site-coluna">
+
+            <h3>Navegação</h3>
+
+            <a href="#home">Início</a>
+
+            <a href="#diferenciais">Diferenciais</a>
+
+            <a href="#servicos">Serviços</a>
+
+            <a href="#consultoria">Consultoria</a>
+
+        </div>
+
+
+        <!-- ==================================================
+             CONTATO
+             ================================================== -->
+
+        <div class="rodape-site-coluna">
+
+            <h3>Contato</h3>
+
+
+            <!-- WHATSAPP -->
+            <a
+                href="https://wa.me/5562994611228"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                WhatsApp
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a
+                href="https://www.instagram.com/SEUUSUARIO/"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                Instagram
+            </a>
+
+
+            <!-- TIKTOK -->
+            <a
+                href="https://www.tiktok.com/@SEUUSUARIO"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                TikTok
+            </a>
+
+
+            <!-- E-MAIL -->
+            <a href="mailto:SEUEMAIL@EXEMPLO.COM">
+                SEUEMAIL@EXEMPLO.COM
+            </a>
+
+        </div>
+
+
+        <!-- ==================================================
+             ATENDIMENTO
+             ================================================== -->
+
+        <div class="rodape-site-coluna">
+
+            <h3>Atendimento</h3>
+
+
+            <!-- CIDADE / UF -->
+            <p>
+                SUA CIDADE - UF
+            </p>
+
+
+            <!-- MODALIDADES -->
+            <p>
+                Online e presencial em domicílio
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         DIREITOS / POLÍTICAS
+         ================================================== -->
+
+    <div class="rodape-site-final">
+
+        <p>
+            © <span id="ano-atual"></span> Rhuan Nunes.
+            Todos os direitos reservados.
+        </p>
+
+        <div>
+            <span>Política de Privacidade</span>
+            <span>Termos de Uso</span>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==================================================
+     VOLTAR PARA A HOME - APARECE A PARTIR DA PÁGINA 2
+     ================================================== -->
+
+<a
+    aria-label="Voltar para a página inicial"
+    class="scroll-indicador voltar-home-global"
+    href="#home"
+>
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
+
+<script src="script.js?v=26"></script>
+
+</body>
+</html>
+
