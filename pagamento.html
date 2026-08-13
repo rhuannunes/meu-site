@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Pagamento | Rhuan Nunes</title>
+    <link rel="stylesheet" href="style.css?v=36">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    >
+</head>
+<body class="pagina-fluxo">
+    <span class="fluxo-linha fluxo-linha-esquerda"></span>
+    <span class="fluxo-linha fluxo-linha-direita"></span>
+
+    <header class="fluxo-topo">
+        <a href="index.html#consultoria" aria-label="Voltar ao site">
+            <img
+                src="img/logo.png"
+                alt="Rhuan Nunes Nutricionista"
+                class="fluxo-logo"
+            >
+        </a>
+    </header>
+
+    <main class="fluxo-conteudo">
+
+        <section class="fluxo-card fluxo-card-pagamento">
+
+            <div class="fluxo-titulo">
+                <span class="agenda-etapa">FINALIZAÇÃO</span>
+                <h1>Finalize sua contratação</h1>
+                <p>
+                    Confira os dados antes de seguir para o ambiente seguro de pagamento.
+                </p>
+            </div>
+
+            <div class="fluxo-resumo-plano" data-resumo-plano></div>
+
+            <form class="pagamento-dados" id="pagamento-dados">
+
+                <div class="campo campo-largo">
+                    <label for="pag-nome">Nome completo</label>
+                    <input id="pag-nome" name="nome" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="campo">
+                    <label for="pag-email">E-mail</label>
+                    <input id="pag-email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="pag-whatsapp">WhatsApp</label>
+                    <input id="pag-whatsapp" name="whatsapp" type="tel" autocomplete="tel" required>
+                </div>
+
+                <button class="fluxo-botao-principal" id="ir-pagamento" type="submit">
+                    Ir para o pagamento seguro
+                    <i class="fa-solid fa-lock"></i>
+                </button>
+
+            </form>
+
+            <p class="pagamento-aviso" id="pagamento-aviso">
+                O provedor de pagamento ainda será conectado. Nenhum pagamento é processado nesta versão.
+            </p>
+
+            <a class="fluxo-voltar" href="index.html#consultoria">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar ao site
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="script.js?v=29"></script>
+</body>
+</html>

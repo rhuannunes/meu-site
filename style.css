@@ -8525,8 +8525,8 @@ body::after {
         --d-p1-depoimentos-tamanho: 1;
 
         /* SOMENTE TEXTO AO LADO DO CELULAR */
-        --d-p1-texto-depoimentos-x: 0px;
-        --d-p1-texto-depoimentos-y: 0px;
+        --d-p1-texto-depoimentos-x: -30px;
+        --d-p1-texto-depoimentos-y: -40px;
         --d-p1-texto-depoimentos-tamanho: 1;
 
         /* CELULAR */
@@ -8535,8 +8535,8 @@ body::after {
         --d-p1-celular-tamanho: 1;
 
         /* SETA DESENHADA AO LADO DO CELULAR */
-        --d-p1-seta-depoimentos-x: 0px;
-        --d-p1-seta-depoimentos-y: 0px;
+        --d-p1-seta-depoimentos-x: 15px;
+        --d-p1-seta-depoimentos-y: 20px;
         --d-p1-seta-depoimentos-tamanho: 1;
 
         /* BLOCO DIREITO COMPLETO: FOTO + FORMAÇÃO + REDES */
@@ -8816,7 +8816,7 @@ body::after {
 
         /* LINHA FINAL / DIREITOS RESERVADOS */
         --d-ft-final-x: 0px;
-        --d-ft-final-y: 0px;
+        --d-ft-final-y: -20px;
         --d-ft-final-tamanho: 1;
     }
 }
@@ -9829,9 +9829,7 @@ body::after {
         calc(50% - 50vw) !important;
 
     padding:
-        38px
-        34px
-        104px !important;
+        38px 34px 104px !important;
 
     background:
         #000000 !important;
@@ -9845,8 +9843,7 @@ body::after {
    CABEÇALHO "SERVIÇOS OFERECIDOS"
    ================================================== */
 
-.services
-.servicos-vendas-cabecalho {
+.services .servicos-vendas-cabecalho {
 
     width:
         100% !important;
@@ -9855,8 +9852,7 @@ body::after {
         var(--servicos-v29-largura) !important;
 
     margin:
-        0 auto
-        34px !important;
+        0 auto 34px !important;
 
     padding:
         0 !important;
@@ -9866,16 +9862,13 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-kicker {
+.services .servicos-vendas-kicker {
 
     display:
         inline-block;
 
     margin:
-        0
-        0
-        9px !important;
+        0 0 9px !important;
 
     color:
         var(--dourado);
@@ -9895,9 +9888,7 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-cabecalho
-> h1 {
+.services .servicos-vendas-cabecalho>h1 {
 
     width:
         auto !important;
@@ -9916,11 +9907,9 @@ body::after {
         sans-serif;
 
     font-size:
-        clamp(
-            2.6rem,
+        clamp(2.6rem,
             4vw,
-            3.7rem
-        ) !important;
+            3.7rem) !important;
 
     font-weight:
         300 !important;
@@ -9936,9 +9925,7 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-cabecalho
-> h1::after {
+.services .servicos-vendas-cabecalho>h1::after {
 
     content:
         "";
@@ -9963,9 +9950,7 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-cabecalho
-> p {
+.services .servicos-vendas-cabecalho>p {
 
     display:
         none !important;
@@ -9976,8 +9961,7 @@ body::after {
    BLOCOS
    ================================================== */
 
-.services
-.servicos-vendas-bloco {
+.services .servicos-vendas-bloco {
 
     width:
         100% !important;
@@ -9993,16 +9977,14 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-bloco-principal {
+.services .servicos-vendas-bloco-principal {
 
     margin-top:
         0 !important;
 }
 
 
-.services
-.servicos-vendas-bloco-objetivos {
+.services .servicos-vendas-bloco-objetivos {
 
     margin-top:
         72px !important;
@@ -10013,16 +9995,13 @@ body::after {
    TÍTULO "COMO POSSO TE AJUDAR"
    ================================================== */
 
-.services
-.servicos-vendas-titulo-linha {
+.services .servicos-vendas-titulo-linha {
 
     width:
         100% !important;
 
     margin:
-        0
-        auto
-        30px !important;
+        0 auto 30px !important;
 
     padding:
         0 !important;
@@ -10050,9 +10029,7 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-titulo-linha
-> div {
+.services .servicos-vendas-titulo-linha>div {
 
     display:
         flex !important;
@@ -10071,10 +10048,7 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-titulo-linha
-> div
-> span {
+.services .servicos-vendas-titulo-linha>div>span {
 
     color:
         var(--dourado);
@@ -10094,9 +10068,7 @@ body::after {
 }
 
 
-.services
-.servicos-vendas-titulo-linha
-h2 {
+.services .servicos-vendas-titulo-linha h2 {
 
     margin:
         0 !important;
@@ -10109,11 +10081,9 @@ h2 {
         sans-serif;
 
     font-size:
-        clamp(
-            2.35rem,
+        clamp(2.35rem,
             3.6vw,
-            3.25rem
-        ) !important;
+            3.25rem) !important;
 
     font-weight:
         300 !important;
@@ -10129,9 +10099,7 @@ h2 {
 }
 
 
-.services
-.servicos-vendas-titulo-linha
-h2::after {
+.services .servicos-vendas-titulo-linha h2::after {
 
     content:
         "";
@@ -10156,9 +10124,7 @@ h2::after {
 }
 
 
-.services
-.servicos-vendas-titulo-linha
-> p {
+.services .servicos-vendas-titulo-linha>p {
 
     display:
         none !important;
@@ -10169,8 +10135,7 @@ h2::after {
    SERVIÇOS OFERECIDOS - 3 CARDS ILUSTRADOS
    ====================================================================== */
 
-.services
-.servicos-vendas-grade {
+.services .servicos-vendas-grade {
 
     width:
         100% !important;
@@ -10179,21 +10144,16 @@ h2::after {
         grid !important;
 
     grid-template-columns:
-        repeat(
-            3,
-            minmax(
-                0,
-                1fr
-            )
-        ) !important;
+        repeat(3,
+            minmax(0,
+                1fr)) !important;
 
     gap:
         22px !important;
 }
 
 
-.services
-.servico-venda-card {
+.services .servico-venda-card {
 
     position:
         relative;
@@ -10202,9 +10162,7 @@ h2::after {
         390px !important;
 
     padding:
-        20px
-        24px
-        26px !important;
+        20px 24px 26px !important;
 
     display:
         flex !important;
@@ -10225,13 +10183,10 @@ h2::after {
         #111113 !important;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.085
-        ) !important;
+            0.085) !important;
 
     border-radius:
         16px !important;
@@ -10247,16 +10202,13 @@ h2::after {
 }
 
 
-.services
-.servico-venda-card-destaque {
+.services .servico-venda-card-destaque {
 
     border-color:
-        rgba(
-            214,
+        rgba(214,
             174,
             97,
-            0.34
-        ) !important;
+            0.34) !important;
 }
 
 
@@ -10264,8 +10216,7 @@ h2::after {
    ILUSTRAÇÃO DOS SERVIÇOS
    ================================================== */
 
-.services
-.servico-ilustracao {
+.services .servico-ilustracao {
 
     position:
         relative;
@@ -10277,9 +10228,7 @@ h2::after {
         170px;
 
     margin:
-        0
-        0
-        24px;
+        0 0 24px;
 
     display:
         flex;
@@ -10294,13 +10243,10 @@ h2::after {
         #0a0a0c;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.07
-        );
+            0.07);
 
     border-radius:
         13px;
@@ -10310,10 +10256,8 @@ h2::after {
 }
 
 
-.services
-.servico-ilustracao::before,
-.services
-.servico-ilustracao::after {
+.services .servico-ilustracao::before,
+.services .servico-ilustracao::after {
 
     content:
         "";
@@ -10322,21 +10266,17 @@ h2::after {
         absolute;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.13
-        );
+            0.13);
 
     border-radius:
         50%;
 }
 
 
-.services
-.servico-ilustracao::before {
+.services .servico-ilustracao::before {
 
     width:
         145px;
@@ -10346,8 +10286,7 @@ h2::after {
 }
 
 
-.services
-.servico-ilustracao::after {
+.services .servico-ilustracao::after {
 
     width:
         105px;
@@ -10356,17 +10295,14 @@ h2::after {
         105px;
 
     border-color:
-        rgba(
+        rgba(255,
             255,
             255,
-            255,
-            0.065
-        );
+            0.065);
 }
 
 
-.services
-.ilustracao-anel {
+.services .ilustracao-anel {
 
     position:
         absolute;
@@ -10378,13 +10314,10 @@ h2::after {
         72px;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.30
-        );
+            0.30);
 
     border-radius:
         50%;
@@ -10395,8 +10328,7 @@ h2::after {
 }
 
 
-.services
-.ilustracao-principal {
+.services .ilustracao-principal {
 
     position:
         relative;
@@ -10411,23 +10343,17 @@ h2::after {
         4.2rem;
 
     filter:
-        drop-shadow(
-            0 8px 18px
-            rgba(
+        drop-shadow(0 8px 18px rgba(0,
                 0,
                 0,
-                0,
-                0.35
-            )
-        );
+                0.35));
 
     transition:
         transform 0.35s ease;
 }
 
 
-.services
-.ilustracao-detalhe {
+.services .ilustracao-detalhe {
 
     position:
         absolute;
@@ -10463,13 +10389,10 @@ h2::after {
         #171719;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.40
-        );
+            0.40);
 
     border-radius:
         50%;
@@ -10483,14 +10406,10 @@ h2::after {
    TEXTO DOS SERVIÇOS
    ================================================== */
 
-.services
-.servico-venda-card
-h3 {
+.services .servico-venda-card h3 {
 
     margin:
-        0
-        0
-        10px !important;
+        0 0 10px !important;
 
     color:
         #ffffff;
@@ -10513,9 +10432,7 @@ h3 {
 }
 
 
-.services
-.servico-venda-card
-> p {
+.services .servico-venda-card>p {
 
     width:
         100%;
@@ -10547,8 +10464,7 @@ h3 {
 }
 
 
-.services
-.servico-venda-rodape {
+.services .servico-venda-rodape {
 
     width:
         100% !important;
@@ -10560,12 +10476,10 @@ h3 {
         19px !important;
 
     color:
-        rgba(
-            214,
+        rgba(214,
             174,
             97,
-            0.84
-        );
+            0.84);
 
     font-family:
         'Montserrat',
@@ -10588,8 +10502,7 @@ h3 {
 }
 
 
-.services
-.servico-venda-adaptacoes {
+.services .servico-venda-adaptacoes {
 
     width:
         100%;
@@ -10617,13 +10530,10 @@ h3 {
 }
 
 
-.services
-.servico-venda-adaptacoes
-span {
+.services .servico-venda-adaptacoes span {
 
     padding:
-        6px
-        9px;
+        6px 9px;
 
     display:
         inline-flex;
@@ -10641,13 +10551,10 @@ span {
         #151517;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.20
-        );
+            0.20);
 
     border-radius:
         999px;
@@ -10657,18 +10564,14 @@ span {
 }
 
 
-.services
-.servico-venda-adaptacoes
-i {
+.services .servico-venda-adaptacoes i {
 
     color:
         var(--dourado);
 }
 
 
-.services
-.servico-venda-card
-small {
+.services .servico-venda-card small {
 
     display:
         none !important;
@@ -10677,8 +10580,7 @@ small {
 
 @media (hover: hover) and (pointer: fine) {
 
-    .services
-    .servico-venda-card:hover {
+    .services .servico-venda-card:hover {
 
         transform:
             translateY(-5px);
@@ -10687,48 +10589,36 @@ small {
             #151517 !important;
 
         border-color:
-            rgba(
-                214,
+            rgba(214,
                 174,
                 97,
-                0.44
-            ) !important;
+                0.44) !important;
 
         box-shadow:
-            0 18px 40px
-            rgba(
+            0 18px 40px rgba(0,
                 0,
                 0,
-                0,
-                0.30
-            ) !important;
+                0.30) !important;
     }
 
 
-    .services
-    .servico-venda-card:hover
-    .ilustracao-anel {
+    .services .servico-venda-card:hover .ilustracao-anel {
 
         transform:
             scale(1.15);
 
         border-color:
-            rgba(
-                214,
+            rgba(214,
                 174,
                 97,
-                0.58
-            );
+                0.58);
     }
 
 
-    .services
-    .servico-venda-card:hover
-    .ilustracao-principal {
+    .services .servico-venda-card:hover .ilustracao-principal {
 
         transform:
-            translateY(-4px)
-            scale(1.06);
+            translateY(-4px) scale(1.06);
     }
 
 }
@@ -10738,8 +10628,7 @@ small {
    COMO POSSO TE AJUDAR - 3 CARDS ILUSTRADOS
    ====================================================================== */
 
-.services
-.objetivos-vendas-grade {
+.services .objetivos-vendas-grade {
 
     width:
         100% !important;
@@ -10748,21 +10637,16 @@ small {
         grid !important;
 
     grid-template-columns:
-        repeat(
-            3,
-            minmax(
-                0,
-                1fr
-            )
-        ) !important;
+        repeat(3,
+            minmax(0,
+                1fr)) !important;
 
     gap:
         22px !important;
 }
 
 
-.services
-.objetivo-venda-card {
+.services .objetivo-venda-card {
 
     position:
         relative;
@@ -10771,9 +10655,7 @@ small {
         340px !important;
 
     padding:
-        20px
-        24px
-        28px !important;
+        20px 24px 28px !important;
 
     display:
         flex !important;
@@ -10794,13 +10676,10 @@ small {
         #0e0e10 !important;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.075
-        ) !important;
+            0.075) !important;
 
     border-radius:
         16px !important;
@@ -10815,8 +10694,7 @@ small {
 }
 
 
-.services
-.objetivo-ilustracao {
+.services .objetivo-ilustracao {
 
     position:
         relative;
@@ -10843,13 +10721,10 @@ small {
         #09090b;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.055
-        );
+            0.055);
 
     border-radius:
         13px;
@@ -10859,8 +10734,7 @@ small {
 }
 
 
-.services
-.objetivo-ilustracao::before {
+.services .objetivo-ilustracao::before {
 
     content:
         "";
@@ -10875,21 +10749,17 @@ small {
         135px;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.12
-        );
+            0.12);
 
     border-radius:
         50%;
 }
 
 
-.services
-.objetivo-ilustracao-circulo {
+.services .objetivo-ilustracao-circulo {
 
     position:
         absolute;
@@ -10901,13 +10771,10 @@ small {
         84px;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.30
-        );
+            0.30);
 
     border-radius:
         50%;
@@ -10917,8 +10784,7 @@ small {
 }
 
 
-.services
-.objetivo-ilustracao-principal {
+.services .objetivo-ilustracao-principal {
 
     position:
         relative;
@@ -10937,8 +10803,7 @@ small {
 }
 
 
-.services
-.objetivo-ilustracao-detalhe {
+.services .objetivo-ilustracao-detalhe {
 
     position:
         absolute;
@@ -10974,13 +10839,10 @@ small {
         #171719;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.36
-        );
+            0.36);
 
     border-radius:
         50%;
@@ -10990,24 +10852,19 @@ small {
 }
 
 
-.services
-.objetivo-venda-tag {
+.services .objetivo-venda-tag {
 
     display:
         inline-block !important;
 
     margin:
-        0
-        0
-        8px !important;
+        0 0 8px !important;
 
     color:
-        rgba(
-            214,
+        rgba(214,
             174,
             97,
-            0.78
-        );
+            0.78);
 
     font-family:
         'Montserrat',
@@ -11024,14 +10881,10 @@ small {
 }
 
 
-.services
-.objetivo-venda-card
-h3 {
+.services .objetivo-venda-card h3 {
 
     margin:
-        0
-        0
-        9px !important;
+        0 0 9px !important;
 
     color:
         #ffffff;
@@ -11054,9 +10907,7 @@ h3 {
 }
 
 
-.services
-.objetivo-venda-card
-p {
+.services .objetivo-venda-card p {
 
     max-width:
         330px;
@@ -11085,10 +10936,8 @@ p {
 }
 
 
-.services
-.objetivo-venda-icone,
-.services
-.objetivo-venda-seta {
+.services .objetivo-venda-icone,
+.services .objetivo-venda-seta {
 
     display:
         none !important;
@@ -11097,8 +10946,7 @@ p {
 
 @media (hover: hover) and (pointer: fine) {
 
-    .services
-    .objetivo-venda-card:hover {
+    .services .objetivo-venda-card:hover {
 
         transform:
             translateY(-5px);
@@ -11107,31 +10955,24 @@ p {
             #131315 !important;
 
         border-color:
-            rgba(
-                214,
+            rgba(214,
                 174,
                 97,
-                0.40
-            ) !important;
+                0.40) !important;
     }
 
 
-    .services
-    .objetivo-venda-card:hover
-    .objetivo-ilustracao-circulo {
+    .services .objetivo-venda-card:hover .objetivo-ilustracao-circulo {
 
         transform:
             scale(1.13);
     }
 
 
-    .services
-    .objetivo-venda-card:hover
-    .objetivo-ilustracao-principal {
+    .services .objetivo-venda-card:hover .objetivo-ilustracao-principal {
 
         transform:
-            translateY(-4px)
-            scale(1.06);
+            translateY(-4px) scale(1.06);
     }
 
 }
@@ -11139,8 +10980,7 @@ p {
 
 /* SETA DA PÁGINA 3 */
 
-.services
-> .seta-pagina {
+.services>.seta-pagina {
 
     bottom:
         32px !important;
@@ -11172,9 +11012,7 @@ p {
         calc(50% - 50vw) !important;
 
     padding:
-        42px
-        34px
-        76px !important;
+        42px 34px 76px !important;
 
     display:
         flex !important;
@@ -11200,8 +11038,7 @@ p {
    CABEÇALHO
    ================================================== */
 
-.consultoria-planos
-.consultoria-vendas-cabecalho {
+.consultoria-planos .consultoria-vendas-cabecalho {
 
     width:
         100% !important;
@@ -11220,8 +11057,7 @@ p {
 }
 
 
-.consultoria-planos
-.consultoria-vendas-kicker {
+.consultoria-planos .consultoria-vendas-kicker {
 
     display:
         inline-block;
@@ -11247,9 +11083,7 @@ p {
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cabecalho
-> h1 {
+.consultoria-planos .consultoria-vendas-cabecalho>h1 {
 
     max-width:
         900px !important;
@@ -11265,11 +11099,9 @@ p {
         sans-serif;
 
     font-size:
-        clamp(
-            2.6rem,
+        clamp(2.6rem,
             4vw,
-            3.7rem
-        ) !important;
+            3.7rem) !important;
 
     font-weight:
         300 !important;
@@ -11285,9 +11117,7 @@ p {
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cabecalho
-> h1::after {
+.consultoria-planos .consultoria-vendas-cabecalho>h1::after {
 
     content:
         "";
@@ -11312,9 +11142,7 @@ p {
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cabecalho
-> p {
+.consultoria-planos .consultoria-vendas-cabecalho>p {
 
     max-width:
         680px !important;
@@ -11347,8 +11175,7 @@ p {
    CARDS DAS 3 MODALIDADES
    ====================================================================== */
 
-.consultoria-planos
-.planos-vendas-grade {
+.consultoria-planos .planos-vendas-grade {
 
     width:
         100% !important;
@@ -11363,21 +11190,16 @@ p {
         grid !important;
 
     grid-template-columns:
-        repeat(
-            3,
-            minmax(
-                0,
-                1fr
-            )
-        ) !important;
+        repeat(3,
+            minmax(0,
+                1fr)) !important;
 
     gap:
         22px !important;
 }
 
 
-.consultoria-planos
-.plano-vendas-card {
+.consultoria-planos .plano-vendas-card {
 
     position:
         relative;
@@ -11386,9 +11208,7 @@ p {
         650px !important;
 
     padding:
-        20px
-        24px
-        25px !important;
+        20px 24px 25px !important;
 
     display:
         flex !important;
@@ -11400,13 +11220,10 @@ p {
         #101012 !important;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.085
-        ) !important;
+            0.085) !important;
 
     border-radius:
         16px !important;
@@ -11422,32 +11239,26 @@ p {
 }
 
 
-.consultoria-planos
-.plano-vendas-card-destaque {
+.consultoria-planos .plano-vendas-card-destaque {
 
     background:
         #141310 !important;
 
     border-color:
-        rgba(
-            214,
+        rgba(214,
             174,
             97,
-            0.52
-        ) !important;
+            0.52) !important;
 }
 
 
-.consultoria-planos
-.plano-vendas-card-presencial {
+.consultoria-planos .plano-vendas-card-presencial {
 
     border-color:
-        rgba(
-            214,
+        rgba(214,
             174,
             97,
-            0.29
-        ) !important;
+            0.29) !important;
 }
 
 
@@ -11455,8 +11266,7 @@ p {
    BADGES
    ================================================== */
 
-.consultoria-planos
-.plano-vendas-badge {
+.consultoria-planos .plano-vendas-badge {
 
     position:
         absolute !important;
@@ -11471,8 +11281,7 @@ p {
         18px !important;
 
     padding:
-        6px
-        9px !important;
+        6px 9px !important;
 
     color:
         #080808 !important;
@@ -11501,8 +11310,7 @@ p {
 }
 
 
-.consultoria-planos
-.plano-vendas-badge-neutro {
+.consultoria-planos .plano-vendas-badge-neutro {
 
     color:
         #cfcfcf !important;
@@ -11511,18 +11319,14 @@ p {
         #1a1a1d !important;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.11
-        ) !important;
+            0.11) !important;
 }
 
 
-.consultoria-planos
-.plano-vendas-badge-bio {
+.consultoria-planos .plano-vendas-badge-bio {
 
     color:
         #090909 !important;
@@ -11536,8 +11340,7 @@ p {
    ILUSTRAÇÃO DA MODALIDADE
    ================================================== */
 
-.consultoria-planos
-.modalidade-ilustracao {
+.consultoria-planos .modalidade-ilustracao {
 
     position:
         relative;
@@ -11564,13 +11367,10 @@ p {
         #09090b;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.06
-        );
+            0.06);
 
     border-radius:
         13px;
@@ -11580,8 +11380,7 @@ p {
 }
 
 
-.consultoria-planos
-.modalidade-ilustracao::before {
+.consultoria-planos .modalidade-ilustracao::before {
 
     content:
         "";
@@ -11596,21 +11395,17 @@ p {
         135px;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.13
-        );
+            0.13);
 
     border-radius:
         50%;
 }
 
 
-.consultoria-planos
-.modalidade-ilustracao-circulo {
+.consultoria-planos .modalidade-ilustracao-circulo {
 
     position:
         absolute;
@@ -11622,13 +11417,10 @@ p {
         80px;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.31
-        );
+            0.31);
 
     border-radius:
         50%;
@@ -11638,8 +11430,7 @@ p {
 }
 
 
-.consultoria-planos
-.modalidade-ilustracao-principal {
+.consultoria-planos .modalidade-ilustracao-principal {
 
     position:
         relative;
@@ -11658,8 +11449,7 @@ p {
 }
 
 
-.consultoria-planos
-.modalidade-ilustracao-detalhe {
+.consultoria-planos .modalidade-ilustracao-detalhe {
 
     position:
         absolute;
@@ -11695,13 +11485,10 @@ p {
         #171719;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.38
-        );
+            0.38);
 
     border-radius:
         50%;
@@ -11715,8 +11502,7 @@ p {
    TÍTULO DA MODALIDADE
    ================================================== */
 
-.consultoria-planos
-.plano-vendas-cabecalho-card {
+.consultoria-planos .plano-vendas-cabecalho-card {
 
     display:
         block !important;
@@ -11726,8 +11512,7 @@ p {
 }
 
 
-.consultoria-planos
-.plano-vendas-periodo {
+.consultoria-planos .plano-vendas-periodo {
 
     display:
         block;
@@ -11750,14 +11535,10 @@ p {
 }
 
 
-.consultoria-planos
-.plano-vendas-cabecalho-card
-h2 {
+.consultoria-planos .plano-vendas-cabecalho-card h2 {
 
     margin:
-        7px
-        0
-        0;
+        7px 0 0;
 
     color:
         #ffffff;
@@ -11777,16 +11558,13 @@ h2 {
 }
 
 
-.consultoria-planos
-.plano-vendas-resumo {
+.consultoria-planos .plano-vendas-resumo {
 
     min-height:
         46px !important;
 
     margin:
-        12px
-        0
-        0 !important;
+        12px 0 0 !important;
 
     color:
         #929292;
@@ -11810,8 +11588,7 @@ h2 {
    SELETOR DE DURAÇÃO
    ====================================================================== */
 
-.consultoria-planos
-.plano-periodos {
+.consultoria-planos .plano-periodos {
 
     width:
         100%;
@@ -11823,21 +11600,16 @@ h2 {
         grid;
 
     grid-template-columns:
-        repeat(
-            3,
-            minmax(
-                0,
-                1fr
-            )
-        );
+        repeat(3,
+            minmax(0,
+                1fr));
 
     gap:
         7px;
 }
 
 
-.consultoria-planos
-.plano-opcao {
+.consultoria-planos .plano-opcao {
 
     min-width:
         0;
@@ -11846,8 +11618,7 @@ h2 {
         58px;
 
     padding:
-        8px
-        5px;
+        8px 5px;
 
     display:
         flex;
@@ -11871,13 +11642,10 @@ h2 {
         #0b0b0d;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.08
-        );
+            0.08);
 
     border-radius:
         9px;
@@ -11892,9 +11660,7 @@ h2 {
 }
 
 
-.consultoria-planos
-.plano-opcao
-span {
+.consultoria-planos .plano-opcao span {
 
     font-family:
         'Poppins',
@@ -11908,9 +11674,7 @@ span {
 }
 
 
-.consultoria-planos
-.plano-opcao
-strong {
+.consultoria-planos .plano-opcao strong {
 
     color:
         #d8d8d8;
@@ -11927,8 +11691,7 @@ strong {
 }
 
 
-.consultoria-planos
-.plano-opcao.ativo {
+.consultoria-planos .plano-opcao.ativo {
 
     color:
         #ffffff;
@@ -11937,18 +11700,14 @@ strong {
         #171713;
 
     border-color:
-        rgba(
-            214,
+        rgba(214,
             174,
             97,
-            0.52
-        );
+            0.52);
 }
 
 
-.consultoria-planos
-.plano-opcao.ativo
-strong {
+.consultoria-planos .plano-opcao.ativo strong {
 
     color:
         var(--dourado-claro);
@@ -11959,17 +11718,14 @@ strong {
    PREÇO GRANDE
    ================================================== */
 
-.consultoria-planos
-.plano-preco-selecionado {
+.consultoria-planos .plano-preco-selecionado {
 
     margin-top:
         19px;
 }
 
 
-.consultoria-planos
-.plano-preco-selecionado
-> span {
+.consultoria-planos .plano-preco-selecionado>span {
 
     display:
         block;
@@ -11992,9 +11748,7 @@ strong {
 }
 
 
-.consultoria-planos
-.plano-preco-selecionado
-> div {
+.consultoria-planos .plano-preco-selecionado>div {
 
     display:
         flex;
@@ -12007,9 +11761,7 @@ strong {
 }
 
 
-.consultoria-planos
-.plano-preco-selecionado
-small {
+.consultoria-planos .plano-preco-selecionado small {
 
     margin-top:
         9px;
@@ -12026,9 +11778,7 @@ small {
 }
 
 
-.consultoria-planos
-.plano-preco-selecionado
-strong {
+.consultoria-planos .plano-preco-selecionado strong {
 
     color:
         #ffffff;
@@ -12052,22 +11802,19 @@ strong {
    TAXA DE DESLOCAMENTO
    ================================================== */
 
-.consultoria-planos
-.taxa-domicilio {
+.consultoria-planos .taxa-domicilio {
 
     margin-top:
         11px;
 
     padding:
-        9px
-        10px;
+        9px 10px;
 
     display:
         grid;
 
     grid-template-columns:
-        18px
-        1fr;
+        18px 1fr;
 
     align-items:
         center;
@@ -12082,13 +11829,10 @@ strong {
         #151512;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.20
-        );
+            0.20);
 
     border-radius:
         9px;
@@ -12105,9 +11849,7 @@ strong {
 }
 
 
-.consultoria-planos
-.taxa-domicilio
-i {
+.consultoria-planos .taxa-domicilio i {
 
     color:
         var(--dourado);
@@ -12118,13 +11860,10 @@ i {
    BENEFÍCIOS
    ================================================== */
 
-.consultoria-planos
-.plano-vendas-beneficios {
+.consultoria-planos .plano-vendas-beneficios {
 
     margin:
-        18px
-        0
-        22px !important;
+        18px 0 22px !important;
 
     display:
         flex !important;
@@ -12137,16 +11876,13 @@ i {
 }
 
 
-.consultoria-planos
-.plano-vendas-beneficios
-li {
+.consultoria-planos .plano-vendas-beneficios li {
 
     display:
         grid !important;
 
     grid-template-columns:
-        16px
-        1fr !important;
+        16px 1fr !important;
 
     align-items:
         center !important;
@@ -12172,9 +11908,7 @@ li {
 }
 
 
-.consultoria-planos
-.plano-vendas-beneficios
-i {
+.consultoria-planos .plano-vendas-beneficios i {
 
     color:
         var(--dourado);
@@ -12188,8 +11922,7 @@ i {
    BOTÕES
    ================================================== */
 
-.consultoria-planos
-.plano-vendas-comprar {
+.consultoria-planos .plano-vendas-comprar {
 
     width:
         100% !important;
@@ -12201,8 +11934,7 @@ i {
         auto !important;
 
     padding:
-        0
-        17px !important;
+        0 17px !important;
 
     display:
         inline-flex !important;
@@ -12223,8 +11955,7 @@ i {
         var(--dourado) !important;
 
     border:
-        1px solid
-        var(--dourado) !important;
+        1px solid var(--dourado) !important;
 
     border-radius:
         9px !important;
@@ -12244,8 +11975,7 @@ i {
 }
 
 
-.consultoria-planos
-.plano-vendas-conversar {
+.consultoria-planos .plano-vendas-conversar {
 
     width:
         100% !important;
@@ -12275,13 +12005,10 @@ i {
         transparent !important;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.11
-        ) !important;
+            0.11) !important;
 
     border-radius:
         9px !important;
@@ -12300,71 +12027,56 @@ i {
 
 @media (hover: hover) and (pointer: fine) {
 
-    .consultoria-planos
-    .plano-vendas-card:hover {
+    .consultoria-planos .plano-vendas-card:hover {
 
         transform:
             translateY(-5px);
 
         border-color:
-            rgba(
-                214,
+            rgba(214,
                 174,
                 97,
-                0.43
-            ) !important;
+                0.43) !important;
 
         box-shadow:
-            0 18px 42px
-            rgba(
+            0 18px 42px rgba(0,
                 0,
                 0,
-                0,
-                0.30
-            ) !important;
+                0.30) !important;
     }
 
 
-    .consultoria-planos
-    .plano-vendas-card:hover
-    .modalidade-ilustracao-circulo {
+    .consultoria-planos .plano-vendas-card:hover .modalidade-ilustracao-circulo {
 
         transform:
             scale(1.13);
     }
 
 
-    .consultoria-planos
-    .plano-vendas-card:hover
-    .modalidade-ilustracao-principal {
+    .consultoria-planos .plano-vendas-card:hover .modalidade-ilustracao-principal {
 
         transform:
-            translateY(-4px)
-            scale(1.05);
+            translateY(-4px) scale(1.05);
     }
 
 
-    .consultoria-planos
-    .plano-vendas-comprar:hover {
+    .consultoria-planos .plano-vendas-comprar:hover {
 
         filter:
             brightness(1.07);
     }
 
 
-    .consultoria-planos
-    .plano-vendas-conversar:hover {
+    .consultoria-planos .plano-vendas-conversar:hover {
 
         color:
             #ffffff !important;
 
         border-color:
-            rgba(
-                214,
+            rgba(214,
                 174,
                 97,
-                0.46
-            ) !important;
+                0.46) !important;
     }
 
 }
@@ -12374,8 +12086,7 @@ i {
    AVISO DO CHECKOUT
    ================================================== */
 
-.consultoria-planos
-.checkout-vendas-aviso {
+.consultoria-planos .checkout-vendas-aviso {
 
     width:
         100% !important;
@@ -12410,8 +12121,7 @@ i {
 }
 
 
-.consultoria-planos
-.checkout-vendas-aviso.ativo {
+.consultoria-planos .checkout-vendas-aviso.ativo {
 
     opacity:
         1;
@@ -12422,8 +12132,7 @@ i {
    CTA FINAL
    ================================================== */
 
-.consultoria-planos
-.consultoria-vendas-cta {
+.consultoria-planos .consultoria-vendas-cta {
 
     width:
         100% !important;
@@ -12435,15 +12144,13 @@ i {
         35px auto 0 !important;
 
     padding:
-        24px
-        26px !important;
+        24px 26px !important;
 
     display:
         grid !important;
 
     grid-template-columns:
-        1fr
-        auto !important;
+        1fr auto !important;
 
     align-items:
         center !important;
@@ -12455,23 +12162,17 @@ i {
         #0c0c0e;
 
     border:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.075
-        ) !important;
+            0.075) !important;
 
     border-radius:
         13px !important;
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cta
-> div
-> span {
+.consultoria-planos .consultoria-vendas-cta>div>span {
 
     color:
         var(--dourado);
@@ -12491,14 +12192,10 @@ i {
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cta
-h2 {
+.consultoria-planos .consultoria-vendas-cta h2 {
 
     margin:
-        6px
-        0
-        0 !important;
+        6px 0 0 !important;
 
     color:
         #ffffff;
@@ -12515,25 +12212,20 @@ h2 {
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cta
-p {
+.consultoria-planos .consultoria-vendas-cta p {
 
     display:
         none !important;
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cta
-> a {
+.consultoria-planos .consultoria-vendas-cta>a {
 
     min-height:
         48px !important;
 
     padding:
-        0
-        18px !important;
+        0 18px !important;
 
     display:
         inline-flex !important;
@@ -12554,13 +12246,10 @@ p {
         transparent !important;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.54
-        ) !important;
+            0.54) !important;
 
     border-radius:
         9px !important;
@@ -12596,26 +12285,20 @@ p {
         calc(50% - 50vw) !important;
 
     padding:
-        42px
-        38px
-        20px !important;
+        42px 38px 20px !important;
 
     background:
         #080809 !important;
 
     border-top:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.23
-        ) !important;
+            0.23) !important;
 }
 
 
-.rodape-site
-.rodape-site-conteudo {
+.rodape-site .rodape-site-conteudo {
 
     width:
         100% !important;
@@ -12630,10 +12313,7 @@ p {
         grid !important;
 
     grid-template-columns:
-        1.55fr
-        0.72fr
-        0.90fr
-        0.85fr !important;
+        1.55fr 0.72fr 0.90fr 0.85fr !important;
 
     gap:
         45px !important;
@@ -12644,15 +12324,13 @@ p {
    LOGO + NOME
    ================================================== */
 
-.rodape-site
-.rodape-site-marca {
+.rodape-site .rodape-site-marca {
 
     display:
         grid;
 
     grid-template-columns:
-        115px
-        1fr;
+        115px 1fr;
 
     grid-template-areas:
         "logo nome"
@@ -12669,8 +12347,7 @@ p {
 }
 
 
-.rodape-site
-.rodape-logo {
+.rodape-site .rodape-logo {
 
     grid-area:
         logo;
@@ -12692,17 +12369,14 @@ p {
 }
 
 
-.rodape-site
-.rodape-marca-nome {
+.rodape-site .rodape-marca-nome {
 
     grid-area:
         nome;
 }
 
 
-.rodape-site
-.rodape-site-marca
-strong {
+.rodape-site .rodape-site-marca strong {
 
     display:
         block !important;
@@ -12728,10 +12402,7 @@ strong {
 }
 
 
-.rodape-site
-.rodape-site-marca
-.rodape-marca-nome
-> span {
+.rodape-site .rodape-site-marca .rodape-marca-nome>span {
 
     display:
         block;
@@ -12760,9 +12431,7 @@ strong {
 }
 
 
-.rodape-site
-.rodape-site-marca
-> p {
+.rodape-site .rodape-site-marca>p {
 
     grid-area:
         texto;
@@ -12795,8 +12464,7 @@ strong {
    COLUNAS
    ================================================== */
 
-.rodape-site
-.rodape-site-coluna {
+.rodape-site .rodape-site-coluna {
 
     display:
         flex !important;
@@ -12812,14 +12480,10 @@ strong {
 }
 
 
-.rodape-site
-.rodape-site-coluna
-h3 {
+.rodape-site .rodape-site-coluna h3 {
 
     margin:
-        0
-        0
-        6px !important;
+        0 0 6px !important;
 
     color:
         #ffffff;
@@ -12839,12 +12503,8 @@ h3 {
 }
 
 
-.rodape-site
-.rodape-site-coluna
-a,
-.rodape-site
-.rodape-site-coluna
-p {
+.rodape-site .rodape-site-coluna a,
+.rodape-site .rodape-site-coluna p {
 
     margin:
         0 !important;
@@ -12867,9 +12527,7 @@ p {
 }
 
 
-.rodape-site
-.rodape-site-coluna
-a:hover {
+.rodape-site .rodape-site-coluna a:hover {
 
     color:
         var(--dourado);
@@ -12880,8 +12538,7 @@ a:hover {
    DIREITOS
    ================================================== */
 
-.rodape-site
-.rodape-site-final {
+.rodape-site .rodape-site-final {
 
     width:
         100% !important;
@@ -12908,22 +12565,15 @@ a:hover {
         20px !important;
 
     border-top:
-        1px solid
-        rgba(
+        1px solid rgba(255,
             255,
             255,
-            255,
-            0.065
-        ) !important;
+            0.065) !important;
 }
 
 
-.rodape-site
-.rodape-site-final
-p,
-.rodape-site
-.rodape-site-final
-span {
+.rodape-site .rodape-site-final p,
+.rodape-site .rodape-site-final span {
 
     color:
         #5d5d5d;
@@ -12949,25 +12599,19 @@ span {
     .services {
 
         padding:
-            34px
-            24px
-            92px !important;
+            34px 24px 92px !important;
     }
 
 
-    .services
-    .servicos-vendas-cabecalho
-    > h1 {
+    .services .servicos-vendas-cabecalho>h1 {
 
         font-size:
             2.35rem !important;
     }
 
 
-    .services
-    .servicos-vendas-grade,
-    .services
-    .objetivos-vendas-grade {
+    .services .servicos-vendas-grade,
+    .services .objetivos-vendas-grade {
 
         grid-template-columns:
             1fr !important;
@@ -12977,59 +12621,48 @@ span {
     }
 
 
-    .services
-    .servico-venda-card {
+    .services .servico-venda-card {
 
         min-height:
             auto !important;
 
         padding:
-            18px
-            18px
-            23px !important;
+            18px 18px 23px !important;
     }
 
 
-    .services
-    .servico-ilustracao {
+    .services .servico-ilustracao {
 
         height:
             145px;
     }
 
 
-    .services
-    .servicos-vendas-bloco-objetivos {
+    .services .servicos-vendas-bloco-objetivos {
 
         margin-top:
             58px !important;
     }
 
 
-    .services
-    .servicos-vendas-titulo-linha
-    h2 {
+    .services .servicos-vendas-titulo-linha h2 {
 
         font-size:
             2.15rem !important;
     }
 
 
-    .services
-    .objetivo-venda-card {
+    .services .objetivo-venda-card {
 
         min-height:
             auto !important;
 
         padding:
-            18px
-            18px
-            24px !important;
+            18px 18px 24px !important;
     }
 
 
-    .services
-    .objetivo-ilustracao {
+    .services .objetivo-ilustracao {
 
         height:
             135px;
@@ -13039,23 +12672,18 @@ span {
     .consultoria-planos {
 
         padding:
-            36px
-            24px
-            62px !important;
+            36px 24px 62px !important;
     }
 
 
-    .consultoria-planos
-    .consultoria-vendas-cabecalho
-    > h1 {
+    .consultoria-planos .consultoria-vendas-cabecalho>h1 {
 
         font-size:
             2.35rem !important;
     }
 
 
-    .consultoria-planos
-    .planos-vendas-grade {
+    .consultoria-planos .planos-vendas-grade {
 
         grid-template-columns:
             1fr !important;
@@ -13068,37 +12696,31 @@ span {
     }
 
 
-    .consultoria-planos
-    .plano-vendas-card {
+    .consultoria-planos .plano-vendas-card {
 
         min-height:
             auto !important;
 
         padding:
-            18px
-            18px
-            22px !important;
+            18px 18px 22px !important;
     }
 
 
-    .consultoria-planos
-    .modalidade-ilustracao {
+    .consultoria-planos .modalidade-ilustracao {
 
         height:
             135px;
     }
 
 
-    .consultoria-planos
-    .plano-vendas-comprar {
+    .consultoria-planos .plano-vendas-comprar {
 
         margin-top:
             6px !important;
     }
 
 
-    .consultoria-planos
-    .consultoria-vendas-cta {
+    .consultoria-planos .consultoria-vendas-cta {
 
         grid-template-columns:
             1fr !important;
@@ -13111,9 +12733,7 @@ span {
     }
 
 
-    .consultoria-planos
-    .consultoria-vendas-cta
-    > a {
+    .consultoria-planos .consultoria-vendas-cta>a {
 
         justify-self:
             stretch;
@@ -13126,27 +12746,21 @@ span {
     .rodape-site {
 
         padding:
-            38px
-            24px
-            18px !important;
+            38px 24px 18px !important;
     }
 
 
-    .rodape-site
-    .rodape-site-conteudo {
+    .rodape-site .rodape-site-conteudo {
 
         grid-template-columns:
-            1fr
-            1fr !important;
+            1fr 1fr !important;
 
         gap:
-            30px
-            20px !important;
+            30px 20px !important;
     }
 
 
-    .rodape-site
-    .rodape-site-marca {
+    .rodape-site .rodape-site-marca {
 
         grid-column:
             1 / -1;
@@ -13160,77 +12774,63 @@ span {
 
 @media (max-width: 600px) {
 
-    .services
-    .servico-venda-card
-    h3,
-    .services
-    .objetivo-venda-card
-    h3 {
+    .services .servico-venda-card h3,
+    .services .objetivo-venda-card h3 {
 
         font-size:
             1.42rem !important;
     }
 
 
-    .consultoria-planos
-    .plano-periodos {
+    .consultoria-planos .plano-periodos {
 
         gap:
             5px;
     }
 
 
-    .consultoria-planos
-    .plano-opcao {
+    .consultoria-planos .plano-opcao {
 
         min-height:
             56px;
 
         padding:
-            7px
-            3px;
+            7px 3px;
     }
 
 
-    .consultoria-planos
-    .plano-opcao
-    strong {
+    .consultoria-planos .plano-opcao strong {
 
         font-size:
             0.70rem;
     }
 
 
-    .rodape-site
-    .rodape-site-conteudo {
+    .rodape-site .rodape-site-conteudo {
 
         grid-template-columns:
             1fr !important;
     }
 
 
-    .rodape-site
-    .rodape-site-marca {
+    .rodape-site .rodape-site-marca {
 
         grid-column:
             auto;
 
         grid-template-columns:
-            95px
-            1fr;
+            95px 1fr;
     }
 
 
-    .rodape-site
-    .rodape-logo {
+    .rodape-site .rodape-logo {
 
         width:
             95px;
     }
 
 
-    .rodape-site
-    .rodape-site-final {
+    .rodape-site .rodape-site-final {
 
         flex-direction:
             column;
@@ -13240,9 +12840,7 @@ span {
     }
 
 
-    .rodape-site
-    .rodape-site-final
-    > div {
+    .rodape-site .rodape-site-final>div {
 
         display:
             flex;
@@ -13281,9 +12879,7 @@ span {
 
 /* "DIFERENCIAIS" COM A MESMA TIPOGRAFIA DE "SERVIÇOS OFERECIDOS" */
 
-.diferenciais
-> .pagina-titulo
-h1 {
+.diferenciais>.pagina-titulo h1 {
 
     color:
         #ffffff !important;
@@ -13293,11 +12889,9 @@ h1 {
         sans-serif !important;
 
     font-size:
-        clamp(
-            2.6rem,
+        clamp(2.6rem,
             4vw,
-            3.7rem
-        ) !important;
+            3.7rem) !important;
 
     font-weight:
         300 !important;
@@ -13315,9 +12909,7 @@ h1 {
 
 /* FONTES DAS CAIXAS DA PÁGINA 2 */
 
-.diferenciais
-.diferencial-texto
-h3 {
+.diferenciais .diferencial-texto h3 {
 
     font-size:
         1.55rem !important;
@@ -13327,9 +12919,7 @@ h3 {
 }
 
 
-.diferenciais
-.diferencial-texto
-p {
+.diferenciais .diferencial-texto p {
 
     font-size:
         0.91rem !important;
@@ -13356,8 +12946,7 @@ p {
 }
 
 
-.services
-.servicos-vendas-cabecalho {
+.services .servicos-vendas-cabecalho {
 
     margin-top:
         0 !important;
@@ -13370,8 +12959,7 @@ p {
 /* REMOVE O GRANDE VÃO ENTRE
    "SERVIÇOS OFERECIDOS" E "COMO POSSO TE AJUDAR" */
 
-.services
-.servicos-vendas-bloco-objetivos {
+.services .servicos-vendas-bloco-objetivos {
 
     margin-top:
         30px !important;
@@ -13381,8 +12969,7 @@ p {
 /* A ÚNICA SETA CENTRAL DA PÁGINA 3 FICA
    DEPOIS DE EMAGRECIMENTO / HIPERTROFIA / PERFORMANCE */
 
-.services
-> .seta-pagina {
+.services>.seta-pagina {
 
     left:
         50% !important;
@@ -13414,16 +13001,14 @@ p {
 }
 
 
-.consultoria-planos
-.planos-vendas-grade {
+.consultoria-planos .planos-vendas-grade {
 
     margin-top:
         34px !important;
 }
 
 
-.consultoria-planos
-.consultoria-vendas-cta {
+.consultoria-planos .consultoria-vendas-cta {
 
     margin-top:
         25px !important;
@@ -13434,8 +13019,7 @@ p {
    PÁGINA 4 - 3 AÇÕES EM VÍDEO E PRESENCIAL
    ====================================================================== */
 
-.consultoria-planos
-.plano-vendas-disponibilidade {
+.consultoria-planos .plano-vendas-disponibilidade {
 
     width:
         100% !important;
@@ -13465,13 +13049,10 @@ p {
         #151512 !important;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.42
-        ) !important;
+            0.42) !important;
 
     border-radius:
         9px !important;
@@ -13494,9 +13075,7 @@ p {
 }
 
 
-.consultoria-planos
-.plano-vendas-disponibilidade
-i {
+.consultoria-planos .plano-vendas-disponibilidade i {
 
     color:
         var(--dourado);
@@ -13508,8 +13087,7 @@ i {
 
 @media (hover: hover) and (pointer: fine) {
 
-    .consultoria-planos
-    .plano-vendas-disponibilidade:hover {
+    .consultoria-planos .plano-vendas-disponibilidade:hover {
 
         color:
             #ffffff !important;
@@ -13518,12 +13096,10 @@ i {
             #1a1915 !important;
 
         border-color:
-            rgba(
-                214,
+            rgba(214,
                 174,
                 97,
-                0.70
-            ) !important;
+                0.70) !important;
 
         transform:
             translateY(-1px);
@@ -13534,8 +13110,7 @@ i {
 
 /* SETA DA CONSULTORIA PARA O RODAPÉ */
 
-.consultoria-planos
-> .consultoria-seta-rodape {
+.consultoria-planos>.consultoria-seta-rodape {
 
     left:
         50% !important;
@@ -13563,8 +13138,7 @@ i {
 }
 
 
-.rodape-site
-.rodape-site-marca {
+.rodape-site .rodape-site-marca {
 
     display:
         flex !important;
@@ -13583,8 +13157,7 @@ i {
 }
 
 
-.rodape-site
-.rodape-logo {
+.rodape-site .rodape-logo {
 
     display:
         block !important;
@@ -13606,8 +13179,7 @@ i {
 }
 
 
-.rodape-site
-.rodape-marca-nome {
+.rodape-site .rodape-marca-nome {
 
     display:
         none !important;
@@ -13667,29 +13239,22 @@ i {
         center !important;
 
     color:
-        rgba(
+        rgba(255,
             255,
             255,
-            255,
-            0.76
-        ) !important;
+            0.76) !important;
 
     background:
-        rgba(
-            9,
+        rgba(9,
             9,
             10,
-            0.88
-        ) !important;
+            0.88) !important;
 
     border:
-        1px solid
-        rgba(
-            214,
+        1px solid rgba(214,
             174,
             97,
-            0.36
-        ) !important;
+            0.36) !important;
 
     border-radius:
         50% !important;
@@ -13721,16 +13286,14 @@ i {
 }
 
 
-.voltar-home-global
-span {
+.voltar-home-global span {
 
     display:
         none !important;
 }
 
 
-.voltar-home-global
-i {
+.voltar-home-global i {
 
     margin:
         0 !important;
@@ -13742,10 +13305,7 @@ i {
         1rem !important;
 
     animation:
-        setaVoltarHomeV31
-        1.8s
-        ease-in-out
-        infinite !important;
+        setaVoltarHomeV31 1.8s ease-in-out infinite !important;
 }
 
 
@@ -13791,12 +13351,10 @@ i {
             #111113 !important;
 
         border-color:
-            rgba(
-                214,
+            rgba(214,
                 174,
                 97,
-                0.72
-            ) !important;
+                0.72) !important;
     }
 
 }
@@ -13808,27 +13366,21 @@ i {
 
 @media (max-width: 992px) {
 
-    .diferenciais
-    > .pagina-titulo
-    h1 {
+    .diferenciais>.pagina-titulo h1 {
 
         font-size:
             2.35rem !important;
     }
 
 
-    .diferenciais
-    .diferencial-texto
-    h3 {
+    .diferenciais .diferencial-texto h3 {
 
         font-size:
             1.42rem !important;
     }
 
 
-    .diferenciais
-    .diferencial-texto
-    p {
+    .diferenciais .diferencial-texto p {
 
         font-size:
             0.88rem !important;
@@ -13845,8 +13397,7 @@ i {
     }
 
 
-    .services
-    .servicos-vendas-bloco-objetivos {
+    .services .servicos-vendas-bloco-objetivos {
 
         margin-top:
             24px !important;
@@ -13870,8 +13421,7 @@ i {
     }
 
 
-    .rodape-site
-    .rodape-logo {
+    .rodape-site .rodape-logo {
 
         width:
             220px !important;
@@ -13904,8 +13454,7 @@ i {
 
 @media (max-width: 520px) {
 
-    .rodape-site
-    .rodape-logo {
+    .rodape-site .rodape-logo {
 
         width:
             205px !important;
@@ -13919,14 +13468,3547 @@ i {
 
 @media (min-width: 993px) {
 
-    .rodape-site
-    .rodape-site-coluna {
+    .rodape-site .rodape-site-coluna {
 
         margin-top: 28px !important;
     }
 
 }
 
+/* ==================================================
+   TEXTO AO LADO DO CELULAR - CENTRALIZADO
+   NÃO ALTERA TAMANHO NEM POSIÇÃO
+   ================================================== */
+
+.pagina-home .prova-social-texto,
+.pagina-home .frase-depoimentos-cursiva,
+.pagina-home .frase-depoimentos-cursiva .frase-escrita {
+
+    text-align: center !important;
+}
+
 /* ======================================================================
    FIM V31
+   ====================================================================== */
+
+
+
+/* ======================================================================
+   ======================================================================
+   V32 - PÁGINAS 3 E 4 + RODAPÉ
+   ======================================================================
+
+   IMPORTANTE:
+   - NENHUMA REGRA NOVA ABAIXO ALTERA A PÁGINA 1.
+   - NENHUMA REGRA NOVA ABAIXO ALTERA A PÁGINA 2.
+   - SUA HOME E SEUS DIFERENCIAIS PERMANECEM COMO NO CSS ENVIADO.
+   ======================================================================
+   ====================================================================== */
+
+
+/* ======================================================================
+   PÁGINA 3
+   SETA ABAIXO DE EMAGRECIMENTO / HIPERTROFIA / PERFORMANCE
+   ====================================================================== */
+
+.services {
+
+    padding-bottom:
+        12px !important;
+}
+
+
+.services .seta-objetivos-consultoria {
+
+    position:
+        relative !important;
+
+    left:
+        auto !important;
+
+    right:
+        auto !important;
+
+    top:
+        auto !important;
+
+    bottom:
+        auto !important;
+
+    width:
+        max-content !important;
+
+    height:
+        auto !important;
+
+    margin:
+        22px auto 6px !important;
+
+    padding:
+        0 !important;
+
+    display:
+        flex !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        center !important;
+
+    transform:
+        none !important;
+
+    opacity:
+        1 !important;
+
+    visibility:
+        visible !important;
+
+    pointer-events:
+        auto !important;
+}
+
+
+.services .seta-objetivos-consultoria i {
+
+    color:
+        var(--dourado) !important;
+
+    font-size:
+        1.5rem !important;
+}
+
+
+/* ======================================================================
+   PÁGINA 4 - CABEÇALHO DOS CARDS CENTRALIZADO
+   PREÇO E CHECKS CONTINUAM ALINHADOS À ESQUERDA
+   ====================================================================== */
+
+.consultoria-planos .plano-nome {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    margin:
+        1px 0 10px;
+
+    color:
+        var(--dourado-claro);
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        1.25rem;
+
+    font-style:
+        italic;
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        0.7px;
+
+    text-align:
+        center;
+}
+
+
+.consultoria-planos .plano-vendas-cabecalho-card {
+
+    width:
+        100% !important;
+
+    text-align:
+        center !important;
+}
+
+
+.consultoria-planos .plano-vendas-periodo {
+
+    width:
+        100%;
+
+    text-align:
+        center !important;
+}
+
+
+.consultoria-planos .plano-vendas-cabecalho-card h2 {
+
+    width:
+        100%;
+
+    text-align:
+        center !important;
+}
+
+
+.consultoria-planos .plano-vendas-resumo {
+
+    width:
+        100%;
+
+    max-width:
+        355px;
+
+    margin-left:
+        auto !important;
+
+    margin-right:
+        auto !important;
+
+    text-align:
+        center !important;
+}
+
+
+/* O PREÇO CONTINUA À ESQUERDA */
+
+.consultoria-planos .plano-preco-selecionado {
+
+    width:
+        100%;
+
+    text-align:
+        left !important;
+}
+
+
+.consultoria-planos .plano-preco-selecionado>span {
+
+    text-align:
+        left !important;
+}
+
+
+/* OS CHECKS CONTINUAM À ESQUERDA */
+
+.consultoria-planos .plano-vendas-beneficios {
+
+    text-align:
+        left !important;
+}
+
+
+.consultoria-planos .plano-vendas-beneficios li {
+
+    text-align:
+        left !important;
+}
+
+
+/* ======================================================================
+   PREÇO + ECONOMIA
+   ====================================================================== */
+
+.consultoria-planos .plano-preco-linha {
+
+    width:
+        100%;
+
+    display:
+        flex !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        flex-start !important;
+
+    gap:
+        14px !important;
+
+    flex-wrap:
+        wrap;
+}
+
+
+.consultoria-planos .plano-preco-valor {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        6px;
+
+    flex-shrink:
+        0;
+}
+
+
+.consultoria-planos .plano-preco-valor small {
+
+    margin-top:
+        9px;
+}
+
+
+.consultoria-planos .plano-economia {
+
+    display:
+        none;
+
+    max-width:
+        150px;
+
+    padding:
+        7px 10px;
+
+    color:
+        var(--dourado-claro);
+
+    background:
+        rgba(214,
+            174,
+            97,
+            0.09);
+
+    border:
+        1px solid rgba(214,
+            174,
+            97,
+            0.30);
+
+    border-radius:
+        999px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        0.68rem;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.25;
+
+    text-align:
+        center;
+
+    letter-spacing:
+        0.2px;
+
+    box-shadow:
+        0 0 15px rgba(214,
+            174,
+            97,
+            0.06);
+}
+
+
+.consultoria-planos .plano-economia.ativo {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+/* ======================================================================
+   BIOIMPEDÂNCIA INCLUÍDA - DESTAQUE PREMIUM
+   ====================================================================== */
+
+.consultoria-planos .plano-vendas-badge-bio {
+
+    padding:
+        7px 11px !important;
+
+    color:
+        #090909 !important;
+
+    background:
+        var(--dourado-claro) !important;
+
+    font-size:
+        0.67rem !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        0.9px !important;
+
+    box-shadow:
+        0 0 10px rgba(231,
+            199,
+            125,
+            0.34),
+        0 0 24px rgba(214,
+            174,
+            97,
+            0.18) !important;
+
+    animation:
+        brilhoBioimpedanciaV32 2.8s ease-in-out infinite;
+}
+
+
+.consultoria-planos .beneficio-bioimpedancia {
+
+    color:
+        var(--dourado-claro) !important;
+
+    font-weight:
+        500 !important;
+}
+
+
+.consultoria-planos .beneficio-bioimpedancia i {
+
+    color:
+        var(--dourado-claro) !important;
+}
+
+
+@keyframes brilhoBioimpedanciaV32 {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 9px rgba(231,
+                199,
+                125,
+                0.26),
+            0 0 20px rgba(214,
+                174,
+                97,
+                0.12);
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 15px rgba(231,
+                199,
+                125,
+                0.48),
+            0 0 30px rgba(214,
+                174,
+                97,
+                0.23);
+    }
+
+}
+
+
+/* ======================================================================
+   TAXA DE DESLOCAMENTO REMOVIDA
+   ====================================================================== */
+
+.consultoria-planos .taxa-domicilio {
+
+    display:
+        none !important;
+}
+
+
+/* ======================================================================
+   LOGO DO RODAPÉ MAIOR
+   ====================================================================== */
+
+.rodape-site .rodape-logo {
+
+    width:
+        330px !important;
+
+    max-width:
+        100% !important;
+}
+
+
+/* ======================================================================
+   RESPONSIVO
+   ====================================================================== */
+
+@media (max-width: 992px) {
+
+    .services {
+
+        padding-bottom:
+            10px !important;
+    }
+
+
+    .services .seta-objetivos-consultoria {
+
+        margin:
+            20px auto 4px !important;
+    }
+
+
+    .consultoria-planos .plano-economia {
+
+        max-width:
+            145px;
+
+        font-size:
+            0.66rem;
+    }
+
+
+    .rodape-site .rodape-logo {
+
+        width:
+            270px !important;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .consultoria-planos .plano-preco-linha {
+
+        gap:
+            9px !important;
+    }
+
+
+    .consultoria-planos .plano-economia {
+
+        max-width:
+            132px;
+
+        padding:
+            6px 8px;
+
+        font-size:
+            0.62rem;
+    }
+
+
+    .rodape-site .rodape-logo {
+
+        width:
+            235px !important;
+    }
+
+}
+
+
+/* ======================================================================
+   FIM V32
+   ====================================================================== */
+
+
+
+/* ======================================================================
+   V33 - AJUSTE FINO DOS PLANOS
+   ======================================================================
+
+   IMPORTANTE:
+   - NÃO ALTERA A PÁGINA 1.
+   - NÃO ALTERA POSIÇÃO, TAMANHO OU CSS DA PÁGINA 2.
+   - O PRIMEIRO CARD FICA UM POUCO MAIS CURTO PARA OS BOTÕES
+     "COMPRAR" E "CONVERSAR" SUBIREM E ALINHAREM COM OS OUTROS.
+   ====================================================================== */
+
+
+/* ==================================================
+   CARD BASIC - UM POUCO MAIS CURTO NO DESKTOP
+   ================================================== */
+
+@media (min-width: 993px) {
+
+    .consultoria-planos .planos-vendas-grade .plano-vendas-card:nth-child(1) {
+
+        min-height:
+            596px !important;
+
+        align-self:
+            start !important;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE/TABLET - DEIXA O CARD CRESCER NATURALMENTE
+   ================================================== */
+
+@media (max-width: 992px) {
+
+    .consultoria-planos .planos-vendas-grade .plano-vendas-card:nth-child(1) {
+
+        min-height:
+            auto !important;
+
+        align-self:
+            stretch !important;
+    }
+
+}
+
+
+/* ======================================================================
+   FIM V33
+   ====================================================================== */
+
+
+
+/* ======================================================================
+   ======================================================================
+   V34 - AGENDAMENTO / GOOGLE AGENDA / FLUXO DE COMPRA
+   ======================================================================
+
+   IMPORTANTE:
+   - ESTE BLOCO NÃO ALTERA A ESTRUTURA DA HOME.
+   - ESTE BLOCO NÃO ALTERA A ESTRUTURA DOS DIFERENCIAIS.
+   - AS NOVAS REGRAS SÃO PARA:
+     * BOTÕES DA PÁGINA DE PLANOS;
+     * MODAL DO CALENDÁRIO;
+     * AGENDAMENTO.HTML;
+     * ENDERECO.HTML;
+     * PAGAMENTO.HTML.
+   ======================================================================
+   ====================================================================== */
+
+
+/* ==================================================
+   BOTÃO DISPONIBILIDADE - GARANTIR CURSOR
+   ================================================== */
+
+.consultoria-planos .plano-vendas-disponibilidade {
+
+    cursor:
+        pointer;
+}
+
+
+/* ==================================================
+   MODAL DE DISPONIBILIDADE
+   ================================================== */
+
+.agenda-modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        5000;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        28px;
+
+    background:
+        rgba(0,
+            0,
+            0,
+            0.88);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity 0.28s ease,
+        visibility 0.28s ease;
+}
+
+
+.agenda-modal.ativo {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+}
+
+
+.agenda-modal-painel {
+
+    position:
+        relative;
+
+    width:
+        min(760px,
+            94vw);
+
+    max-height:
+        90vh;
+
+    overflow-y:
+        auto;
+
+    padding:
+        34px;
+
+    background:
+        #0d0d0f;
+
+    border:
+        1px solid rgba(214,
+            174,
+            97,
+            0.32);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 28px 90px rgba(0,
+            0,
+            0,
+            0.72),
+        0 0 35px rgba(214,
+            174,
+            97,
+            0.08);
+}
+
+
+.agenda-modal-fechar {
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    right:
+        18px;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #ffffff;
+
+    background:
+        #161619;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    border-radius:
+        50%;
+
+    cursor:
+        pointer;
+}
+
+
+.agenda-modal-cabecalho {
+
+    padding-right:
+        50px;
+
+    margin-bottom:
+        24px;
+}
+
+
+.agenda-modal-cabecalho h2 {
+
+    margin:
+        7px 0 8px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(1.7rem,
+            3vw,
+            2.4rem);
+
+    font-weight:
+        400;
+}
+
+
+.agenda-modal-cabecalho p {
+
+    color:
+        #9b9b9f;
+
+    font-size:
+        0.88rem;
+
+    font-weight:
+        300;
+}
+
+
+/* ==================================================
+   CALENDÁRIO PERSONALIZADO
+   ================================================== */
+
+.agenda-widget {
+
+    width:
+        100%;
+
+    color:
+        #ffffff;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+}
+
+
+.agenda-status {
+
+    min-height:
+        42px;
+
+    margin-bottom:
+        15px;
+
+    padding:
+        10px 13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    color:
+        #b7b7ba;
+
+    background:
+        #121215;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.06);
+
+    border-radius:
+        10px;
+
+    font-size:
+        0.78rem;
+}
+
+
+.agenda-status i {
+
+    color:
+        var(--dourado);
+}
+
+
+.agenda-status.erro {
+
+    color:
+        #e5c6c6;
+}
+
+
+.agenda-calendario-topo {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        42px 1fr 42px;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        15px;
+}
+
+
+.agenda-calendario-topo button {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--dourado);
+
+    background:
+        #151518;
+
+    border:
+        1px solid rgba(214,
+            174,
+            97,
+            0.18);
+
+    border-radius:
+        10px;
+
+    cursor:
+        pointer;
+}
+
+
+.agenda-mes {
+
+    color:
+        #ffffff;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        500;
+
+    text-align:
+        center;
+}
+
+
+.agenda-semana,
+.agenda-dias {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(7,
+            minmax(0, 1fr));
+
+    gap:
+        7px;
+}
+
+
+.agenda-semana {
+
+    margin-bottom:
+        7px;
+}
+
+
+.agenda-semana span {
+
+    color:
+        #69696d;
+
+    font-size:
+        0.68rem;
+
+    font-weight:
+        500;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+}
+
+
+.agenda-dia {
+
+    position:
+        relative;
+
+    min-height:
+        50px;
+
+    padding:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #66666a;
+
+    background:
+        #111114;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.04);
+
+    border-radius:
+        10px;
+
+    font-size:
+        0.82rem;
+
+    cursor:
+        default;
+}
+
+
+.agenda-dia.tem-horarios {
+
+    color:
+        #ffffff;
+
+    border-color:
+        rgba(214,
+            174,
+            97,
+            0.22);
+
+    cursor:
+        pointer;
+}
+
+
+.agenda-dia.tem-horarios::after {
+
+    content:
+        '';
+
+    position:
+        absolute;
+
+    bottom:
+        6px;
+
+    width:
+        4px;
+
+    height:
+        4px;
+
+    background:
+        var(--dourado);
+
+    border-radius:
+        50%;
+}
+
+
+.agenda-dia.selecionado {
+
+    color:
+        #090909;
+
+    background:
+        var(--dourado-claro);
+
+    border-color:
+        var(--dourado-claro);
+
+    font-weight:
+        600;
+}
+
+
+.agenda-dia.selecionado::after {
+
+    background:
+        #090909;
+}
+
+
+.agenda-horarios {
+
+    margin-top:
+        24px;
+}
+
+
+.agenda-horarios-titulo {
+
+    margin-bottom:
+        11px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        0.86rem;
+
+    font-weight:
+        500;
+}
+
+
+.agenda-horarios-grade {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,
+            minmax(0, 1fr));
+
+    gap:
+        8px;
+}
+
+
+.agenda-horario {
+
+    min-height:
+        42px;
+
+    color:
+        #d9d9db;
+
+    background:
+        #141417;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.07);
+
+    border-radius:
+        9px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        0.77rem;
+
+    cursor:
+        pointer;
+}
+
+
+.agenda-horario.selecionado {
+
+    color:
+        #090909;
+
+    background:
+        var(--dourado-claro);
+
+    border-color:
+        var(--dourado-claro);
+
+    font-weight:
+        600;
+}
+
+
+.agenda-selecao {
+
+    margin-top:
+        18px;
+
+    padding:
+        13px 15px;
+
+    color:
+        #dedee0;
+
+    background:
+        rgba(214,
+            174,
+            97,
+            0.06);
+
+    border-left:
+        2px solid var(--dourado);
+
+    font-size:
+        0.80rem;
+}
+
+
+.agenda-continuar,
+.fluxo-botao-principal {
+
+    width:
+        100%;
+
+    min-height:
+        50px;
+
+    margin-top:
+        18px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    color:
+        #090909;
+
+    background:
+        var(--dourado-claro);
+
+    border:
+        1px solid var(--dourado-claro);
+
+    border-radius:
+        10px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+
+.agenda-continuar:hover,
+.fluxo-botao-principal:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(214,
+            174,
+            97,
+            0.15);
+}
+
+
+/* ==================================================
+   PÁGINAS DO FLUXO DE COMPRA
+   ================================================== */
+
+body.pagina-fluxo {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        none;
+
+    min-height:
+        100vh;
+
+    margin:
+        0;
+
+    overflow-x:
+        hidden;
+
+    background:
+        #000000;
+}
+
+
+.pagina-fluxo::before,
+.pagina-fluxo::after {
+
+    content:
+        '';
+
+    position:
+        fixed;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    z-index:
+        1;
+
+    width:
+        1px;
+
+    background:
+        var(--dourado);
+
+    box-shadow:
+        0 0 10px rgba(214,
+            174,
+            97,
+            0.58),
+        0 0 24px rgba(214,
+            174,
+            97,
+            0.22);
+
+    pointer-events:
+        none;
+}
+
+
+.pagina-fluxo::before {
+
+    left:
+        26px;
+}
+
+
+.pagina-fluxo::after {
+
+    right:
+        26px;
+}
+
+
+.fluxo-linha {
+
+    display:
+        none;
+}
+
+
+.fluxo-topo {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    padding:
+        24px 50px 0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        transparent;
+}
+
+
+.fluxo-topo a {
+
+    display:
+        block;
+}
+
+
+.fluxo-logo {
+
+    display:
+        block;
+
+    width:
+        460px;
+
+    max-width:
+        78vw;
+
+    height:
+        auto;
+
+    object-fit:
+        contain;
+}
+
+
+.fluxo-conteudo {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    min-height:
+        calc(100vh - 120px);
+
+    padding:
+        12px 60px 60px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        center;
+
+    background:
+        transparent;
+}
+
+
+.fluxo-card {
+
+    width:
+        min(980px,
+            100%);
+
+    margin:
+        0 auto;
+
+    padding:
+        34px;
+
+    background:
+        #0b0b0d;
+
+    border:
+        1px solid rgba(214,
+            174,
+            97,
+            0.20);
+
+    border-radius:
+        20px;
+
+    box-shadow:
+        0 24px 80px rgba(0,
+            0,
+            0,
+            0.55);
+}
+
+
+.fluxo-card-agendamento {
+
+    width:
+        min(1040px,
+            100%);
+}
+
+
+.fluxo-titulo {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        25px;
+}
+
+
+.agenda-etapa {
+
+    color:
+        var(--dourado);
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        0.67rem;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        2px;
+}
+
+
+.fluxo-titulo h1 {
+
+    margin:
+        7px 0 9px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(2rem,
+            4vw,
+            3rem);
+
+    font-weight:
+        300;
+
+    letter-spacing:
+        -1px;
+}
+
+
+.fluxo-titulo p {
+
+    max-width:
+        620px;
+
+    margin:
+        0 auto;
+
+    color:
+        #9e9ea2;
+
+    font-size:
+        0.88rem;
+
+    font-weight:
+        300;
+
+    line-height:
+        1.65;
+}
+
+
+.fluxo-resumo-plano {
+
+    margin-bottom:
+        24px;
+
+    padding:
+        16px 18px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr auto;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    background:
+        #111114;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.05);
+
+    border-radius:
+        12px;
+}
+
+
+.fluxo-resumo-plano strong {
+
+    display:
+        block;
+
+    color:
+        #ffffff;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        0.92rem;
+
+    font-weight:
+        500;
+}
+
+
+.fluxo-resumo-plano span {
+
+    color:
+        #818185;
+
+    font-size:
+        0.74rem;
+}
+
+
+.fluxo-resumo-preco {
+
+    color:
+        var(--dourado-claro) !important;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        1.05rem !important;
+
+    font-weight:
+        600 !important;
+
+    white-space:
+        nowrap;
+}
+
+
+.agenda-widget-grande {
+
+    width:
+        min(820px,
+            100%);
+
+    margin:
+        0 auto;
+
+    padding:
+        24px;
+
+    background:
+        #0f0f12;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.05);
+
+    border-radius:
+        16px;
+}
+
+
+.agenda-continuar-pagina {
+
+    width:
+        min(820px,
+            100%);
+
+    margin:
+        18px auto 0;
+
+    display:
+        flex;
+}
+
+
+.fluxo-voltar {
+
+    width:
+        max-content;
+
+    margin:
+        22px auto 0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        #77777c;
+
+    font-size:
+        0.76rem;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.fluxo-voltar:hover {
+
+    color:
+        var(--dourado-claro);
+}
+
+
+/* ==================================================
+   FORMULÁRIO DE ENDEREÇO / DADOS
+   ================================================== */
+
+.endereco-form,
+.pagamento-dados {
+
+    width:
+        min(760px,
+            100%);
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,
+            minmax(0, 1fr));
+
+    gap:
+        15px;
+}
+
+
+.campo {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        7px;
+}
+
+
+.campo-largo {
+
+    grid-column:
+        1 / -1;
+}
+
+
+.campo label {
+
+    color:
+        #a9a9ad;
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        400;
+}
+
+
+.campo input {
+
+    width:
+        100%;
+
+    height:
+        48px;
+
+    padding:
+        0 14px;
+
+    color:
+        #ffffff;
+
+    background:
+        #121215;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.07);
+
+    border-radius:
+        9px;
+
+    outline:
+        none;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:
+        0.84rem;
+}
+
+
+.campo input:focus {
+
+    border-color:
+        rgba(214,
+            174,
+            97,
+            0.55);
+
+    box-shadow:
+        0 0 0 3px rgba(214,
+            174,
+            97,
+            0.06);
+}
+
+
+.campo input[readonly] {
+
+    color:
+        #a8a8ab;
+
+    cursor:
+        default;
+}
+
+
+.endereco-form .fluxo-botao-principal,
+.pagamento-dados .fluxo-botao-principal {
+
+    grid-column:
+        1 / -1;
+}
+
+
+/* ==================================================
+   PAGAMENTO
+   ================================================== */
+
+.pagamento-aviso {
+
+    width:
+        min(760px,
+            100%);
+
+    margin:
+        16px auto 0;
+
+    padding:
+        12px 14px;
+
+    color:
+        #8f8f93;
+
+    background:
+        #111114;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.05);
+
+    border-radius:
+        9px;
+
+    font-size:
+        0.75rem;
+
+    line-height:
+        1.55;
+
+    text-align:
+        center;
+}
+
+
+.pagamento-aviso.ativo {
+
+    color:
+        var(--dourado-claro);
+
+    border-color:
+        rgba(214,
+            174,
+            97,
+            0.22);
+}
+
+
+/* ==================================================
+   RESPONSIVO DO FLUXO
+   ================================================== */
+
+@media (max-width: 760px) {
+
+    .agenda-modal {
+
+        padding:
+            14px;
+    }
+
+
+    .agenda-modal-painel {
+
+        padding:
+            24px 18px;
+    }
+
+
+    .agenda-horarios-grade {
+
+        grid-template-columns:
+            repeat(3,
+                minmax(0, 1fr));
+    }
+
+
+    .pagina-fluxo::before {
+
+        left:
+            12px;
+    }
+
+
+    .pagina-fluxo::after {
+
+        right:
+            12px;
+    }
+
+
+    .fluxo-topo {
+
+        padding:
+            20px 24px 0;
+    }
+
+
+    .fluxo-logo {
+
+        width:
+            360px;
+
+        max-width:
+            82vw;
+    }
+
+
+    .fluxo-conteudo {
+
+        padding:
+            10px 24px 40px;
+    }
+
+
+    .fluxo-card {
+
+        padding:
+            25px 18px;
+    }
+
+
+    .fluxo-resumo-plano {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .endereco-form,
+    .pagamento-dados {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .campo-largo {
+
+        grid-column:
+            auto;
+    }
+
+
+    .endereco-form .fluxo-botao-principal,
+    .pagamento-dados .fluxo-botao-principal {
+
+        grid-column:
+            auto;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .agenda-semana,
+    .agenda-dias {
+
+        gap:
+            4px;
+    }
+
+
+    .agenda-dia {
+
+        min-height:
+            44px;
+
+        border-radius:
+            8px;
+    }
+
+
+    .agenda-horarios-grade {
+
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+    }
+
+
+    .agenda-widget-grande {
+
+        padding:
+            16px 12px;
+    }
+
+}
+
+
+/* ======================================================================
+   FIM V34
+   ====================================================================== */
+
+
+
+/* ======================================================================
+   ======================================================================
+   V36 - CORREÇÕES FINAIS DE LAYOUT
+   ======================================================================
+
+   Ajustes:
+   - Essencial com a mesma cor dos demais cards.
+   - "MAIS INTERAÇÃO" igual a "MAIS ACESSÍVEL".
+   - Gap inferior do card Essencial reduzido.
+   - Calendário popup mais estreito.
+   - Calendário da página de agendamento menor.
+   - Datas rigorosamente quadradas.
+   - Linhas laterais do fluxo com o MESMO brilho da Home.
+   - Logo do fluxo com o MESMO efeito da Home.
+   - Botão voltar no topo.
+   - Carrossel do iPhone sem gap no loop.
+   ======================================================================
+   ====================================================================== */
+
+
+/* ======================================================================
+   1. PLANO ESSENCIAL - CARD NEUTRO
+   ====================================================================== */
+
+.consultoria-planos .plano-vendas-card-destaque {
+
+    background:
+        #101012 !important;
+
+    border-color:
+        rgba(255,
+            255,
+            255,
+            0.085) !important;
+
+    min-height:
+        auto !important;
+
+    align-self:
+        start !important;
+}
+
+
+/* A classe neutra já é a mesma usada no Basic.
+   Esta regra reforça o visual caso outra regra anterior tente sobrescrever. */
+
+.consultoria-planos .plano-vendas-card-destaque .plano-vendas-badge-neutro {
+
+    color:
+        #cfcfcf !important;
+
+    background:
+        #1a1a1d !important;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.11) !important;
+
+    box-shadow:
+        none !important;
+}
+
+
+/* Remove o espaço automático entre o último check e o botão.
+   O card pode ficar menor que os demais, conforme solicitado. */
+
+.consultoria-planos .plano-vendas-card-destaque .plano-vendas-comprar {
+
+    margin-top:
+        4px !important;
+}
+
+
+/* ======================================================================
+   2. POP-UP - MAIS ESTREITO E SEM BARRA INTERNA
+   ====================================================================== */
+
+@media (min-width: 761px) {
+
+    .agenda-modal {
+
+        padding:
+            16px !important;
+    }
+
+
+    .agenda-modal-painel {
+
+        width:
+            min(700px,
+                92vw) !important;
+
+        max-height:
+            calc(100vh - 32px) !important;
+
+        padding:
+            24px 26px !important;
+
+        overflow:
+            hidden !important;
+    }
+
+
+    .agenda-modal-cabecalho {
+
+        margin-bottom:
+            14px !important;
+
+        padding-right:
+            42px !important;
+    }
+
+
+    /* Mantém o texto em uma única linha no desktop. */
+
+    .agenda-modal-cabecalho p {
+
+        white-space:
+            nowrap !important;
+    }
+
+
+    .agenda-modal-fechar {
+
+        top:
+            14px !important;
+
+        right:
+            14px !important;
+    }
+
+}
+
+
+/* ======================================================================
+   3. DATAS QUADRADAS - POP-UP
+   ====================================================================== */
+
+@media (min-width: 761px) {
+
+    .agenda-modal .agenda-semana,
+    .agenda-modal .agenda-dias {
+
+        grid-template-columns:
+            repeat(7,
+                40px) !important;
+
+        justify-content:
+            center !important;
+
+        gap:
+            6px !important;
+    }
+
+
+    .agenda-modal .agenda-dia {
+
+        width:
+            40px !important;
+
+        height:
+            40px !important;
+
+        min-width:
+            40px !important;
+
+        min-height:
+            40px !important;
+
+        aspect-ratio:
+            1 / 1 !important;
+
+        border-radius:
+            8px !important;
+    }
+
+
+    .agenda-modal .agenda-calendario-topo {
+
+        width:
+            316px !important;
+
+        margin-left:
+            auto !important;
+
+        margin-right:
+            auto !important;
+    }
+
+
+    .agenda-modal .agenda-horarios {
+
+        margin-top:
+            14px !important;
+    }
+
+
+    .agenda-modal .agenda-horarios-grade {
+
+        grid-template-columns:
+            repeat(5,
+                minmax(0,
+                    1fr)) !important;
+
+        gap:
+            7px !important;
+    }
+
+
+    .agenda-modal .agenda-selecao {
+
+        margin-top:
+            11px !important;
+
+        padding:
+            9px 12px !important;
+    }
+
+
+    .agenda-modal .agenda-continuar {
+
+        min-height:
+            44px !important;
+
+        margin-top:
+            10px !important;
+    }
+
+}
+
+
+/* ======================================================================
+   4. PÁGINA DE AGENDAMENTO - CALENDÁRIO MENOR
+   MANTÉM OS TEXTOS NOS TAMANHOS EXISTENTES
+   ====================================================================== */
+
+@media (min-width: 993px) {
+
+    body.pagina-fluxo {
+
+        min-height:
+            100vh !important;
+
+        overflow-x:
+            hidden !important;
+
+        /*
+           Não usamos overflow:hidden vertical.
+           Assim nada fica cortado em telas excepcionalmente baixas.
+           Nas telas normais o conteúdo foi reduzido para caber sem rolagem.
+        */
+        overflow-y:
+            auto !important;
+    }
+
+
+    .fluxo-topo {
+
+        /*
+           Mesmos parâmetros-base de distância superior da Home.
+        */
+        padding:
+            28px 60px 10px !important;
+
+        min-height:
+            0 !important;
+
+        height:
+            auto !important;
+    }
+
+
+    .fluxo-logo {
+
+        /*
+           A Home usa 460px e escala 1.2 no painel desktop.
+           Repetimos os mesmos parâmetros.
+        */
+        width:
+            460px !important;
+
+        max-width:
+            42vw !important;
+
+        translate:
+            0 30px !important;
+
+        scale:
+            1.2 !important;
+
+        transform-origin:
+            center center !important;
+    }
+
+
+    .fluxo-conteudo {
+
+        min-height:
+            0 !important;
+
+        padding:
+            4px 60px 22px !important;
+    }
+
+
+    .fluxo-card-agendamento {
+
+        width:
+            min(760px,
+                100%) !important;
+
+        padding:
+            20x 24px !important;
+    }
+
+
+    .fluxo-card-agendamento .fluxo-titulo {
+
+        margin-bottom:
+            15px !important;
+    }
+
+
+    .fluxo-card-agendamento .fluxo-resumo-plano {
+
+        margin-bottom:
+            12px !important;
+
+        padding:
+            10px 14px !important;
+    }
+
+
+    .agenda-widget-grande {
+
+        width:
+            min(600px,
+                100%) !important;
+
+        padding:
+            16px 18px !important;
+    }
+
+
+    /*
+       O calendário visual propriamente dito fica menor.
+       Os textos continuam usando os tamanhos já existentes.
+    */
+
+    .agenda-widget-grande .agenda-semana,
+    .agenda-widget-grande .agenda-dias {
+
+        grid-template-columns:
+            repeat(7,
+                36px) !important;
+
+        justify-content:
+            center !important;
+
+        gap:
+            5px !important;
+    }
+
+
+    .agenda-widget-grande .agenda-dia {
+
+        width:
+            36px !important;
+
+        height:
+            36px !important;
+
+        min-width:
+            36px !important;
+
+        min-height:
+            36px !important;
+
+        aspect-ratio:
+            1 / 1 !important;
+
+        border-radius:
+            7px !important;
+    }
+
+
+    .agenda-widget-grande .agenda-calendario-topo {
+
+        width:
+            282px !important;
+
+        margin-left:
+            auto !important;
+
+        margin-right:
+            auto !important;
+    }
+
+
+    .agenda-widget-grande .agenda-horarios {
+
+        margin-top:
+            12px !important;
+    }
+
+
+    .agenda-widget-grande .agenda-horarios-grade {
+
+        grid-template-columns:
+            repeat(5,
+                minmax(0,
+                    1fr)) !important;
+
+        gap:
+            6px !important;
+    }
+
+
+    .agenda-widget-grande .agenda-horario {
+
+        min-height:
+            36px !important;
+    }
+
+
+    .agenda-widget-grande .agenda-selecao {
+
+        margin-top:
+            9px !important;
+
+        padding:
+            8px 11px !important;
+    }
+
+
+    .agenda-continuar-pagina {
+
+        width:
+            min(600px,
+                100%) !important;
+
+        min-height:
+            43px !important;
+
+        margin:
+            9px auto 0 !important;
+    }
+
+}
+
+
+/* ======================================================================
+   5. ENDEREÇO - COMPACTO PARA CABER MELHOR
+   ====================================================================== */
+
+@media (min-width: 993px) {
+
+    .fluxo-card-formulario {
+
+        width:
+            min(850px,
+                100%) !important;
+
+        padding:
+            18px 26px !important;
+    }
+
+
+    .fluxo-card-formulario .fluxo-titulo {
+
+        margin-bottom:
+            14px !important;
+    }
+
+
+    .fluxo-card-formulario .fluxo-resumo-plano {
+
+        margin-bottom:
+            12px !important;
+
+        padding:
+            10px 14px !important;
+    }
+
+
+    .endereco-form {
+
+        gap:
+            9px 14px !important;
+    }
+
+
+    .campo {
+
+        gap:
+            4px !important;
+    }
+
+
+    .campo input {
+
+        height:
+            40px !important;
+    }
+
+
+    .endereco-form .fluxo-botao-principal {
+
+        min-height:
+            43px !important;
+
+        margin-top:
+            4px !important;
+    }
+
+}
+
+
+/* ======================================================================
+   6. LOGO DAS PÁGINAS DO FLUXO
+   MESMO EFEITO DA LOGO DA HOME
+   ====================================================================== */
+
+.fluxo-logo {
+
+    animation-name:
+        fadeEntradaHome,
+        sombraMetalLogo !important;
+
+    animation-duration:
+        1.1s,
+        5.5s !important;
+
+    animation-timing-function:
+        ease-out,
+        ease-in-out !important;
+
+    animation-delay:
+        0.10s,
+        1.5s !important;
+
+    animation-iteration-count:
+        1,
+        infinite !important;
+
+    animation-fill-mode:
+        both,
+        none !important;
+}
+
+
+/* ======================================================================
+   7. LINHAS LATERAIS DAS PÁGINAS DO FLUXO
+   CÓPIA DO MESMO EFEITO USADO NA HOME
+   ====================================================================== */
+
+body.pagina-fluxo::before,
+body.pagina-fluxo::after {
+
+    content:
+        "" !important;
+
+    position:
+        fixed !important;
+
+    top:
+        0 !important;
+
+    bottom:
+        auto !important;
+
+    width:
+        2px !important;
+
+    height:
+        100vh !important;
+
+    pointer-events:
+        none !important;
+
+    z-index:
+        50 !important;
+
+    border-radius:
+        999px !important;
+
+    background-color:
+        rgba(212,
+            175,
+            55,
+            0.16) !important;
+
+    background-image:
+        linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 235, 170, 0.95) 50%,
+            rgba(255, 255, 255, 0) 100%) !important;
+
+    background-repeat:
+        no-repeat !important;
+
+    background-size:
+        100% 180px !important;
+
+    background-position:
+        center -220px !important;
+
+    box-shadow:
+        0 0 6px rgba(212,
+            175,
+            55,
+            0.12) !important;
+
+    opacity:
+        0.75 !important;
+
+    animation:
+        brilho-lateral 5.5s linear infinite !important;
+}
+
+
+body.pagina-fluxo::before {
+
+    left:
+        38px !important;
+}
+
+
+body.pagina-fluxo::after {
+
+    right:
+        38px !important;
+
+    animation-delay:
+        2.75s !important;
+}
+
+
+/* ======================================================================
+   8. BOTÃO "VOLTAR AOS PLANOS" NO TOPO
+   ====================================================================== */
+
+.fluxo-voltar-topo {
+
+    position:
+        absolute !important;
+
+    left:
+        70px !important;
+
+    top:
+        50% !important;
+
+    z-index:
+        100 !important;
+
+    transform:
+        translateY(-50%) !important;
+
+    display:
+        inline-flex !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        center !important;
+
+    gap:
+        8px !important;
+
+    padding:
+        8px 12px !important;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.76) !important;
+
+    background:
+        #101012 !important;
+
+    border:
+        1px solid rgba(214,
+            174,
+            97,
+            0.20) !important;
+
+    border-radius:
+        999px !important;
+
+    font-family:
+        'Montserrat',
+        sans-serif !important;
+
+    font-size:
+        0.72rem !important;
+
+    font-weight:
+        400 !important;
+
+    white-space:
+        nowrap !important;
+}
+
+
+.fluxo-voltar-topo i {
+
+    color:
+        var(--dourado) !important;
+}
+
+
+.fluxo-voltar-topo:hover {
+
+    color:
+        #ffffff !important;
+
+    border-color:
+        rgba(214,
+            174,
+            97,
+            0.52) !important;
+}
+
+
+/* ======================================================================
+   9. MOBILE / TABLET
+   ====================================================================== */
+
+@media (max-width: 992px) {
+
+    body.pagina-fluxo::before {
+
+        left:
+            16px !important;
+    }
+
+
+    body.pagina-fluxo::after {
+
+        right:
+            16px !important;
+    }
+
+
+    body.pagina-fluxo::before,
+    body.pagina-fluxo::after {
+
+        width:
+            1px !important;
+
+        opacity:
+            0.45 !important;
+    }
+
+
+    .fluxo-voltar-topo {
+
+        left:
+            27px !important;
+
+        top:
+            22px !important;
+
+        transform:
+            none !important;
+
+        padding:
+            7px 9px !important;
+    }
+
+
+    .agenda-modal-cabecalho p {
+
+        white-space:
+            normal !important;
+    }
+
+
+    /* Em telas menores os quadrados continuam sendo quadrados,
+       mas usam o espaço disponível. */
+
+    .agenda-dia {
+
+        aspect-ratio:
+            1 / 1 !important;
+
+        min-height:
+            0 !important;
+    }
+
+}
+
+
+/* ======================================================================
+   10. CARROSSEL DO IPHONE - LOOP CONTÍNUO SEM GAP
+   ====================================================================== */
+
+/*
+   O HTML tem duas cópias iguais dos depoimentos.
+   O padding dos dois grupos criava um espaço maior justamente
+   na passagem da última imagem para a primeira repetida.
+*/
+
+.depoimentos-track {
+
+    display:
+        flex !important;
+
+    flex-direction:
+        column !important;
+
+    gap:
+        11px !important;
+
+    padding:
+        0 10px !important;
+
+    animation-name:
+        rolarDepoimentosSemGapV36 !important;
+}
+
+
+.depoimentos-grupo {
+
+    display:
+        contents !important;
+
+    padding:
+        0 !important;
+
+    gap:
+        0 !important;
+}
+
+
+@keyframes rolarDepoimentosSemGapV36 {
+
+    from {
+
+        transform:
+            translateY(0);
+    }
+
+
+    to {
+
+        transform:
+            translateY(calc(-50% - 5.5px));
+    }
+
+}
+
+/* ======================================================================
+   PAINEL FINAL DE AJUSTE MANUAL
+   PÁGINAS DE AGENDAMENTO / ENDEREÇO / PAGAMENTO
+   ====================================================================== */
+
+@media (min-width: 993px) {
+
+    body.pagina-fluxo {
+
+        /* ==================================================
+           1. TOPO
+           ================================================== */
+
+        --fluxo-topo-padding: 0px;
+
+
+        /* ==================================================
+           2. LOGO
+
+           X:
+           negativo = esquerda
+           positivo = direita
+
+           Y:
+           negativo = sobe
+           positivo = desce
+
+           TAMANHO:
+           1 = normal
+           0.8 = 80%
+           0.6 = 60%
+           ================================================== */
+
+        --fluxo-logo-x: 550px;
+        --fluxo-logo-y: -80px;
+        --fluxo-logo-tamanho: 0.6;
+
+
+        /* ==================================================
+           3. BOTÃO VOLTAR AOS PLANOS
+
+           X:
+           negativo = esquerda
+           positivo = direita
+
+           Y:
+           negativo = sobe
+           positivo = desce
+           ================================================== */
+
+        --fluxo-voltar-x: 60px;
+        --fluxo-voltar-y: -70px;
+
+
+        /* ==================================================
+           4. BLOCO PRINCIPAL
+
+           MANTIDO NA POSIÇÃO QUE ESTAVA
+           ================================================== */
+
+        --fluxo-conteudo-x: 0px;
+        --fluxo-conteudo-y: -45px;
+
+
+        /* ==================================================
+           5. CARD INTEIRO DO AGENDAMENTO
+
+           X:
+           negativo = esquerda
+           positivo = direita
+
+           Y:
+           negativo = sobe
+           positivo = desce
+
+           IMPORTANTE:
+           -180px mantém o card na posição que você estava usando.
+           ================================================== */
+
+        --fluxo-card-agendamento-x: 0px;
+        --fluxo-card-agendamento-y: -180px;
+
+
+        /* ==================================================
+           6. CALENDÁRIO INTERNO
+           ================================================== */
+
+        --agenda-pagina-dia: 34px;
+
+        --agenda-pagina-gap: 4px;
+
+        --agenda-pagina-padding-y: 10px;
+
+        --agenda-pagina-horario-altura: 32px;
+
+        --agenda-pagina-largura: 262px;
+
+
+        /* ==================================================
+           7. RODAPÉ
+           ================================================== */
+
+        --rodape-gap-inferior: 0px;
+    }
+
+
+    /* ==================================================================
+       MOTOR
+       NÃO PRECISA MEXER DAQUI PARA BAIXO
+       ================================================================== */
+
+
+    /* ==================================================
+       TOPO
+       ================================================== */
+
+    body.pagina-fluxo .fluxo-topo {
+
+        padding-top:
+            var(--fluxo-topo-padding) !important;
+
+        padding-bottom:
+            0 !important;
+    }
+
+
+    /* ==================================================
+       ÁREA DA LOGO
+       ================================================== */
+
+    body.pagina-fluxo .fluxo-logo-area {
+
+        display:
+            flex !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            center !important;
+
+        translate:
+            var(--fluxo-logo-x) var(--fluxo-logo-y) !important;
+    }
+
+
+    /* ==================================================
+       TAMANHO DA LOGO
+       ================================================== */
+
+    body.pagina-fluxo .fluxo-logo {
+
+        scale:
+            var(--fluxo-logo-tamanho) !important;
+
+        transform-origin:
+            center center !important;
+    }
+
+
+    /* ==================================================
+       BOTÃO VOLTAR AOS PLANOS
+       ================================================== */
+
+    body.pagina-fluxo .fluxo-voltar-topo {
+
+        translate:
+            var(--fluxo-voltar-x) var(--fluxo-voltar-y) !important;
+    }
+
+
+    /* ==================================================
+       CONTEÚDO PRINCIPAL
+       ================================================== */
+
+    body.pagina-fluxo .fluxo-conteudo {
+
+        margin-top:
+            var(--fluxo-conteudo-y) !important;
+
+        margin-left:
+            var(--fluxo-conteudo-x) !important;
+
+        min-height:
+            0 !important;
+
+        height:
+            auto !important;
+
+        padding-bottom:
+            0 !important;
+
+        margin-bottom:
+            0 !important;
+    }
+
+
+    /* ==================================================
+       CARD INTEIRO DO AGENDAMENTO
+
+       Y = margin-top
+       evita criar aquele espaço fantasma embaixo.
+
+       X = translate
+       move lateralmente sem alterar a estrutura.
+       ================================================== */
+
+    body.pagina-fluxo .fluxo-card-agendamento {
+
+        margin-top:
+            var(--fluxo-card-agendamento-y) !important;
+
+        margin-bottom:
+            0 !important;
+
+        translate:
+            var(--fluxo-card-agendamento-x) 0 !important;
+
+        padding-bottom:
+            18px !important;
+    }
+
+
+    /* ==================================================
+       CALENDÁRIO INTERNO
+       ================================================== */
+
+    body.pagina-fluxo .agenda-widget-grande {
+
+        padding-top:
+            var(--agenda-pagina-padding-y) !important;
+
+        padding-bottom:
+            var(--agenda-pagina-padding-y) !important;
+    }
+
+
+    /* ==================================================
+       DATAS
+       ================================================== */
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-semana,
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-dias {
+
+        grid-template-columns:
+            repeat(7,
+                var(--agenda-pagina-dia)) !important;
+
+        gap:
+            var(--agenda-pagina-gap) !important;
+
+        justify-content:
+            center !important;
+    }
+
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-dia {
+
+        width:
+            var(--agenda-pagina-dia) !important;
+
+        height:
+            var(--agenda-pagina-dia) !important;
+
+        min-width:
+            var(--agenda-pagina-dia) !important;
+
+        min-height:
+            var(--agenda-pagina-dia) !important;
+
+        aspect-ratio:
+            1 / 1 !important;
+    }
+
+
+    /* ==================================================
+       CABEÇALHO DO CALENDÁRIO
+       ================================================== */
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-calendario-topo {
+
+        width:
+            var(--agenda-pagina-largura) !important;
+
+        margin-left:
+            auto !important;
+
+        margin-right:
+            auto !important;
+
+        margin-bottom:
+            6px !important;
+    }
+
+
+    /* ==================================================
+       HORÁRIOS
+       ================================================== */
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-horario {
+
+        min-height:
+            var(--agenda-pagina-horario-altura) !important;
+
+        height:
+            var(--agenda-pagina-horario-altura) !important;
+    }
+
+
+    /* ==================================================
+       PEQUENOS ESPAÇOS INTERNOS
+       ================================================== */
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-status {
+
+        margin-bottom:
+            7px !important;
+    }
+
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-semana {
+
+        margin-bottom:
+            3px !important;
+    }
+
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-horarios {
+
+        margin-top:
+            8px !important;
+    }
+
+
+    body.pagina-fluxo .agenda-widget-grande .agenda-selecao {
+
+        margin-top:
+            6px !important;
+    }
+
+
+    body.pagina-fluxo .agenda-continuar-pagina {
+
+        margin-top:
+            6px !important;
+    }
+
+
+    /* ==================================================
+       RODAPÉ
+       ================================================== */
+
+    .rodape-site {
+
+        padding-bottom:
+            var(--rodape-gap-inferior) !important;
+    }
+
+
+    .rodape-site .rodape-site-final {
+
+        margin-bottom:
+            0 !important;
+
+        padding-bottom:
+            0 !important;
+    }
+
+}
+
+
+/* ======================================================================
+   ALTURA DA PÁGINA
+   ====================================================================== */
+
+body.pagina-fluxo {
+
+    min-height:
+        100vh !important;
+}
+
+
+/* ======================================================================
+   LINHAS LATERAIS COM BRILHO
+
+   IMPORTANTE:
+   Agora usamos os elementos que JÁ EXISTEM no HTML:
+
+   <span class="fluxo-linha fluxo-linha-esquerda"></span>
+   <span class="fluxo-linha fluxo-linha-direita"></span>
+
+   Isso evita qualquer interferência no card/calendário.
+   ====================================================================== */
+
+
+/* ==================================================
+   DESLIGA AS LINHAS ANTIGAS FEITAS COM ::BEFORE / ::AFTER
+   ================================================== */
+
+body.pagina-fluxo::before,
+body.pagina-fluxo::after {
+
+    content:
+        none !important;
+
+    display:
+        none !important;
+}
+
+
+/* ==================================================
+   LINHA BASE
+
+   MESMOS PARÂMETROS VISUAIS DA HOME
+   ================================================== */
+
+body.pagina-fluxo .fluxo-linha {
+
+    display:
+        block !important;
+
+    position:
+        fixed !important;
+
+    top:
+        0 !important;
+
+    bottom:
+        auto !important;
+
+    width:
+        2px !important;
+
+    height:
+        100vh !important;
+
+    pointer-events:
+        none !important;
+
+    z-index:
+        50 !important;
+
+    border-radius:
+        999px !important;
+
+
+    /* LINHA DOURADA DISCRETA */
+
+    background-color:
+        rgba(212,
+            175,
+            55,
+            0.16) !important;
+
+
+    /* BRILHO QUE PERCORRE A LINHA */
+
+    background-image:
+        linear-gradient(to bottom,
+
+            rgba(255,
+                255,
+                255,
+                0) 0%,
+
+            rgba(255,
+                235,
+                170,
+                0.95) 50%,
+
+            rgba(255,
+                255,
+                255,
+                0) 100%) !important;
+
+
+    background-repeat:
+        no-repeat !important;
+
+
+    background-size:
+        100% 180px !important;
+
+
+    /*
+       NÃO COLOCAR !important AQUI.
+
+       A animação precisa conseguir alterar
+       background-position.
+    */
+
+    background-position:
+        center -220px;
+
+
+    box-shadow:
+        0 0 6px rgba(212,
+            175,
+            55,
+            0.12) !important;
+
+
+    opacity:
+        0.75 !important;
+
+
+    animation:
+        brilho-lateral-pagina-fluxo 5.5s linear infinite !important;
+}
+
+
+/* ==================================================
+   LINHA ESQUERDA
+   ================================================== */
+
+body.pagina-fluxo .fluxo-linha-esquerda {
+
+    left:
+        38px !important;
+
+    right:
+        auto !important;
+}
+
+
+/* ==================================================
+   LINHA DIREITA
+   ================================================== */
+
+body.pagina-fluxo .fluxo-linha-direita {
+
+    right:
+        38px !important;
+
+    left:
+        auto !important;
+
+    animation-delay:
+        2.75s !important;
+}
+
+
+/* ==================================================
+   ANIMAÇÃO DO BRILHO
+   ================================================== */
+
+@keyframes brilho-lateral-pagina-fluxo {
+
+    from {
+
+        background-position:
+            center -220px;
+    }
+
+
+    to {
+
+        background-position:
+            center calc(100vh + 220px);
+    }
+
+}
+
+
+/* ======================================================================
+   MOBILE / TABLET
+   ====================================================================== */
+
+@media (max-width: 992px) {
+
+    body.pagina-fluxo .fluxo-linha-esquerda {
+
+        left:
+            16px !important;
+    }
+
+
+    body.pagina-fluxo .fluxo-linha-direita {
+
+        right:
+            16px !important;
+    }
+
+
+    body.pagina-fluxo .fluxo-linha {
+
+        width:
+            1px !important;
+
+        opacity:
+            0.45 !important;
+    }
+
+}
+
+
+/* ======================================================================
+   FIM DO PAINEL FINAL
    ====================================================================== */

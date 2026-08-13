@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Endereço | Rhuan Nunes</title>
+    <link rel="stylesheet" href="style.css?v=36">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    >
+</head>
+<body class="pagina-fluxo">
+    <span class="fluxo-linha fluxo-linha-esquerda"></span>
+    <span class="fluxo-linha fluxo-linha-direita"></span>
+
+    <header class="fluxo-topo">
+
+        <a
+            class="fluxo-voltar-topo"
+            href="index.html#consultoria"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+            Voltar aos planos
+        </a>
+
+        <a
+            href="index.html#consultoria"
+            aria-label="Voltar aos planos"
+        >
+            <img
+                src="img/logo.png"
+                alt="Rhuan Nunes Nutricionista"
+                class="fluxo-logo"
+            >
+        </a>
+
+    </header>
+
+    <main class="fluxo-conteudo">
+
+        <section class="fluxo-card fluxo-card-formulario">
+
+            <div class="fluxo-titulo">
+                <span class="agenda-etapa">ETAPA 2</span>
+                <h1>Dados para o atendimento A DOMICÍLIO</h1>
+                <p>
+                    Preencha o endereço onde será realizado o atendimento em Anápolis - GO.
+                </p>
+            </div>
+
+            <div class="fluxo-resumo-plano" data-resumo-plano></div>
+
+            <form class="endereco-form" id="endereco-form">
+
+                <div class="campo campo-largo">
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" name="nome" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" required>
+                </div>
+
+                <div class="campo campo-largo">
+                    <label for="logradouro">Rua / Avenida</label>
+                    <input id="logradouro" name="logradouro" type="text" autocomplete="address-line1" required>
+                </div>
+
+                <div class="campo">
+                    <label for="numero">Número</label>
+                    <input id="numero" name="numero" type="text" required>
+                </div>
+
+                <div class="campo">
+                    <label for="complemento">Complemento</label>
+                    <input id="complemento" name="complemento" type="text" autocomplete="address-line2">
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input id="bairro" name="bairro" type="text" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" name="cidade" type="text" value="Anápolis" readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="uf">UF</label>
+                    <input id="uf" name="uf" type="text" value="GO" readonly>
+                </div>
+
+                <div class="campo campo-largo">
+                    <label for="referencia">Ponto de referência</label>
+                    <input id="referencia" name="referencia" type="text">
+                </div>
+
+                <button class="fluxo-botao-principal" type="submit">
+                    Continuar para pagamento
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+</section>
+
+    </main>
+
+    <script src="script.js?v=29"></script>
+</body>
+</html>

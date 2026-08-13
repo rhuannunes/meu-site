@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Agendamento | Rhuan Nunes</title>
+    <link rel="stylesheet" href="style.css?v=36">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    >
+</head>
+<body class="pagina-fluxo">
+    <span class="fluxo-linha fluxo-linha-esquerda"></span>
+    <span class="fluxo-linha fluxo-linha-direita"></span>
+
+    <header class="fluxo-topo">
+
+        <a
+            class="fluxo-voltar-topo"
+            href="index.html#consultoria"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+            Voltar aos planos
+        </a>
+
+        <div class="fluxo-logo-area">
+
+    <img
+        src="img/logo.png"
+        alt="Rhuan Nunes Nutricionista"
+        class="fluxo-logo"
+    >
+
+</div>
+
+    </header>
+
+    <main class="fluxo-conteudo">
+
+        <section class="fluxo-card fluxo-card-agendamento">
+
+            <div class="fluxo-titulo">
+                <span class="agenda-etapa">ETAPA 1</span>
+                <h1>Escolha seu horário</h1>
+                <p>
+                    Selecione uma data e um horário disponíveis para sua consulta inicial.
+                </p>
+            </div>
+
+            <div class="fluxo-resumo-plano" data-resumo-plano></div>
+
+            <div
+                class="agenda-widget agenda-widget-grande"
+                data-agenda-widget
+                data-contexto="pagina"
+            ></div>
+
+            <button
+                class="agenda-continuar agenda-continuar-pagina"
+                data-agenda-continuar
+                hidden
+                type="button"
+            >
+                Prosseguir com este horário
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+</section>
+
+    </main>
+
+    <script src="script.js?v=29"></script>
+</body>
+</html>

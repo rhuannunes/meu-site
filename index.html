@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Rhuan Nunes | Nutricionista</title>
-<link href="style.css?v=31" rel="stylesheet"/>
+<link href="style.css?v=36" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" rel="stylesheet"/>
 <style>
         /* ==================================================
@@ -690,9 +690,10 @@
             </h2>
 
             <p>
-                Cada estratégia é construída considerando objetivo, rotina,
-                preferências e contexto. A proposta é transformar ciência
-                em decisões práticas, sustentáveis e direcionadas à sua evolução.
+                Cada estratégia é montada cuidadosamente, considerando objetivo,
+                rotina, preferências, contexto e bem-estar. Junto ao plano, você
+                recebe uma lista de substituições para dar mais flexibilidade às
+                escolhas, evitar uma alimentação engessada e facilitar a adesão.
             </p>
 
             <div class="diferenciais-assinatura" aria-label="Pilares da consultoria">
@@ -1041,9 +1042,14 @@
     </div>
 
 
+    <!-- ==================================================
+         SETA - COMO POSSO TE AJUDAR -> CONSULTORIA
+         FICA CENTRALIZADA ABAIXO DO BLOCO DE HIPERTROFIA
+         ================================================== -->
+
     <a
         aria-label="Ir para Consultoria"
-        class="scroll-indicador seta-pagina"
+        class="scroll-indicador seta-objetivos-consultoria"
         href="#consultoria"
     >
         <i class="fa-solid fa-chevron-down"></i>
@@ -1089,6 +1095,7 @@
         <article
             class="plano-vendas-card"
             data-modalidade="Online Essencial"
+            data-plano="basic"
         >
 
             <span class="plano-vendas-badge plano-vendas-badge-neutro">
@@ -1105,18 +1112,22 @@
 
             </div>
 
+            <span class="plano-nome">
+                PLANO BASIC
+            </span>
+
             <div class="plano-vendas-cabecalho-card">
 
                 <span class="plano-vendas-periodo">
                     ONLINE ESSENCIAL
                 </span>
 
-                <h2>Questionário + mensagens</h2>
+                <h2>Questionário + WhatsApp</h2>
 
             </div>
 
             <p class="plano-vendas-resumo">
-                Você responde no seu tempo e o acompanhamento acontece por mensagens.
+                Você responde no seu tempo e o acompanhamento acontece pelo WhatsApp.
             </p>
 
 
@@ -1129,6 +1140,7 @@
                     class="plano-opcao ativo"
                     data-checkout-url=""
                     data-periodo="Mensal"
+                    data-meses="1"
                     data-preco="199"
                     type="button"
                 >
@@ -1140,6 +1152,7 @@
                     class="plano-opcao"
                     data-checkout-url=""
                     data-periodo="Trimestral"
+                    data-meses="3"
                     data-preco="549"
                     type="button"
                 >
@@ -1151,6 +1164,7 @@
                     class="plano-opcao"
                     data-checkout-url=""
                     data-periodo="Semestral"
+                    data-meses="6"
                     data-preco="999"
                     type="button"
                 >
@@ -1163,11 +1177,21 @@
 
             <div class="plano-preco-selecionado">
 
-                <span>A partir de</span>
+                <span>Valor do plano</span>
 
-                <div>
-                    <small>R$</small>
-                    <strong data-preco-display>199</strong>
+                <div class="plano-preco-linha">
+
+                    <div class="plano-preco-valor">
+                        <small>R$</small>
+                        <strong data-preco-display>199</strong>
+                    </div>
+
+                    <span
+                        aria-live="polite"
+                        class="plano-economia"
+                        data-economia-display
+                    ></span>
+
                 </div>
 
             </div>
@@ -1182,7 +1206,12 @@
 
                 <li>
                     <i class="fa-solid fa-check"></i>
-                    Acompanhamento por mensagens
+                    Acompanhamento pelo WhatsApp
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Disponibilidade diária para sanar dúvidas
                 </li>
 
             </ul>
@@ -1219,9 +1248,10 @@
         <article
             class="plano-vendas-card plano-vendas-card-destaque"
             data-modalidade="Online com Videoconsulta"
+            data-plano="essencial"
         >
 
-            <span class="plano-vendas-badge">
+            <span class="plano-vendas-badge plano-vendas-badge-neutro">
                 MAIS INTERAÇÃO
             </span>
 
@@ -1234,6 +1264,10 @@
                 <i class="fa-solid fa-user modalidade-ilustracao-detalhe"></i>
 
             </div>
+
+            <span class="plano-nome">
+                PLANO ESSENCIAL
+            </span>
 
             <div class="plano-vendas-cabecalho-card">
 
@@ -1259,6 +1293,7 @@
                     class="plano-opcao ativo"
                     data-checkout-url=""
                     data-periodo="Mensal"
+                    data-meses="1"
                     data-preco="249"
                     type="button"
                 >
@@ -1270,6 +1305,7 @@
                     class="plano-opcao"
                     data-checkout-url=""
                     data-periodo="Trimestral"
+                    data-meses="3"
                     data-preco="649"
                     type="button"
                 >
@@ -1281,6 +1317,7 @@
                     class="plano-opcao"
                     data-checkout-url=""
                     data-periodo="Semestral"
+                    data-meses="6"
                     data-preco="1.149"
                     type="button"
                 >
@@ -1293,11 +1330,21 @@
 
             <div class="plano-preco-selecionado">
 
-                <span>A partir de</span>
+                <span>Valor do plano</span>
 
-                <div>
-                    <small>R$</small>
-                    <strong data-preco-display>249</strong>
+                <div class="plano-preco-linha">
+
+                    <div class="plano-preco-valor">
+                        <small>R$</small>
+                        <strong data-preco-display>249</strong>
+                    </div>
+
+                    <span
+                        aria-live="polite"
+                        class="plano-economia"
+                        data-economia-display
+                    ></span>
+
                 </div>
 
             </div>
@@ -1307,12 +1354,22 @@
 
                 <li>
                     <i class="fa-solid fa-check"></i>
-                    Consulta individual por vídeo
+                    Consulta inicial por vídeo: aproximadamente 45 min
                 </li>
 
                 <li>
                     <i class="fa-solid fa-check"></i>
                     Avaliação conduzida em tempo real
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Disponibilidade diária para sanar dúvidas
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Retornos por vídeo: aproximadamente 30 min
                 </li>
 
             </ul>
@@ -1327,15 +1384,13 @@
             </button>
 
 
-            <a
+            <button
                 class="plano-vendas-disponibilidade"
-                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20consultar%20a%20disponibilidade%20de%20horários%20para%20a%20Consultoria%20Online%20com%20Videoconsulta."
-                rel="noopener noreferrer"
-                target="_blank"
+                type="button"
             >
                 <i class="fa-regular fa-calendar-check"></i>
                 Consultar disponibilidade
-            </a>
+            </button>
 
 
             <a
@@ -1352,17 +1407,17 @@
 
 
         <!-- ==================================================
-             MODALIDADE 3 - PRESENCIAL EM DOMICÍLIO
+             MODALIDADE 3 - ATENDIMENTO A DOMICÍLIO
 
              BIOIMPEDÂNCIA INCLUÍDA
-             TAXA DE DESLOCAMENTO: A PARTIR DE R$ 50
 
              ALTERE OS PREÇOS NOS data-preco=""
              ================================================== -->
 
         <article
             class="plano-vendas-card plano-vendas-card-presencial"
-            data-modalidade="Presencial em Domicílio"
+            data-modalidade="Atendimento a domicílio"
+            data-plano="premium"
         >
 
             <span class="plano-vendas-badge plano-vendas-badge-bio">
@@ -1379,10 +1434,14 @@
 
             </div>
 
+            <span class="plano-nome">
+                PLANO PREMIUM
+            </span>
+
             <div class="plano-vendas-cabecalho-card">
 
                 <span class="plano-vendas-periodo">
-                    PRESENCIAL EM DOMICÍLIO
+                    ATENDIMENTO A DOMICÍLIO
                 </span>
 
                 <h2>Consulta + Bioimpedância</h2>
@@ -1390,12 +1449,12 @@
             </div>
 
             <p class="plano-vendas-resumo">
-                Atendimento no seu endereço com avaliação da composição corporal.
+                Atendimento a domicílio em Anápolis - GO, com avaliação da composição corporal.
             </p>
 
 
             <div
-                aria-label="Escolha a duração do atendimento presencial"
+                aria-label="Escolha a duração do atendimento a domicílio"
                 class="plano-periodos"
             >
 
@@ -1403,6 +1462,7 @@
                     class="plano-opcao ativo"
                     data-checkout-url=""
                     data-periodo="Mensal"
+                    data-meses="1"
                     data-preco="299"
                     type="button"
                 >
@@ -1414,6 +1474,7 @@
                     class="plano-opcao"
                     data-checkout-url=""
                     data-periodo="Trimestral"
+                    data-meses="3"
                     data-preco="799"
                     type="button"
                 >
@@ -1425,6 +1486,7 @@
                     class="plano-opcao"
                     data-checkout-url=""
                     data-periodo="Semestral"
+                    data-meses="6"
                     data-preco="1.399"
                     type="button"
                 >
@@ -1437,38 +1499,51 @@
 
             <div class="plano-preco-selecionado">
 
-                <span>A partir de</span>
+                <span>Valor do plano</span>
 
-                <div>
-                    <small>R$</small>
-                    <strong data-preco-display>299</strong>
+                <div class="plano-preco-linha">
+
+                    <div class="plano-preco-valor">
+                        <small>R$</small>
+                        <strong data-preco-display>299</strong>
+                    </div>
+
+                    <span
+                        aria-live="polite"
+                        class="plano-economia"
+                        data-economia-display
+                    ></span>
+
                 </div>
-
-            </div>
-
-
-            <div class="taxa-domicilio">
-
-                <i class="fa-solid fa-location-dot"></i>
-
-                <span>
-                    Deslocamento a partir de R$ 50,
-                    conforme a localização.
-                </span>
 
             </div>
 
 
             <ul class="plano-vendas-beneficios">
 
-                <li>
+                <li class="beneficio-bioimpedancia">
                     <i class="fa-solid fa-check"></i>
-                    Atendimento no seu endereço
+                    Bioimpedância incluída
                 </li>
 
                 <li>
                     <i class="fa-solid fa-check"></i>
-                    Bioimpedância incluída
+                    Consulta inicial a domicílio: aproximadamente 60 min
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Atendimento em Anápolis - GO
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Disponibilidade diária para sanar dúvidas
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Retornos a domicílio: aproximadamente 45 min
                 </li>
 
             </ul>
@@ -1483,20 +1558,18 @@
             </button>
 
 
-            <a
+            <button
                 class="plano-vendas-disponibilidade"
-                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20consultar%20a%20disponibilidade%20para%20Atendimento%20Presencial%20em%20Domicílio."
-                rel="noopener noreferrer"
-                target="_blank"
+                type="button"
             >
                 <i class="fa-regular fa-calendar-check"></i>
                 Consultar disponibilidade
-            </a>
+            </button>
 
 
             <a
                 class="plano-vendas-conversar"
-                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20conversar%20sobre%20o%20Atendimento%20Presencial%20em%20Domicílio."
+                href="https://wa.me/5562994611228?text=Olá%2C%20quero%20conversar%20sobre%20o%20Atendimento%20a%20domicílio."
                 rel="noopener noreferrer"
                 target="_blank"
             >
@@ -1560,6 +1633,68 @@
 </section>
 
 
+
+<!-- ======================================================================
+     MODAL DE DISPONIBILIDADE
+     Abre sobre a página de vendas sem fundo transparente.
+     ====================================================================== -->
+
+<div
+    aria-hidden="true"
+    class="agenda-modal"
+    id="agenda-modal"
+>
+    <div
+        aria-labelledby="agenda-modal-titulo"
+        aria-modal="true"
+        class="agenda-modal-painel"
+        role="dialog"
+    >
+
+        <button
+            aria-label="Fechar calendário"
+            class="agenda-modal-fechar"
+            id="agenda-modal-fechar"
+            type="button"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="agenda-modal-cabecalho">
+
+            <span class="agenda-etapa">
+                DISPONIBILIDADE
+            </span>
+
+            <h2 id="agenda-modal-titulo">
+                Escolha um dia e horário
+            </h2>
+
+            <p id="agenda-modal-subtitulo">
+                Selecione um horário disponível para continuar.
+            </p>
+
+        </div>
+
+        <div
+            class="agenda-widget"
+            data-agenda-widget
+            data-contexto="modal"
+        ></div>
+
+        <button
+            class="agenda-continuar"
+            data-agenda-continuar
+            hidden
+            type="button"
+        >
+            Prosseguir com este horário
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+</div>
+
 <!-- ======================================================================
      ======================================================================
      DADOS DO RODAPÉ - EDITE SOMENTE ESTE BLOCO
@@ -1599,9 +1734,6 @@
                 class="rodape-logo"
                 src="img/logo.png"
             />
-
-
-        
 
 
             <!--
@@ -1698,7 +1830,7 @@
 
             <!-- MODALIDADES -->
             <p>
-                Online e presencial em domicílio
+                Online e a domicílio
             </p>
 
         </div>
@@ -1740,8 +1872,7 @@
     <i class="fa-solid fa-chevron-up"></i>
 </a>
 
-<script src="script.js?v=26"></script>
+<script src="script.js?v=29"></script>
 
 </body>
 </html>
-
