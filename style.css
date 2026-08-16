@@ -17008,7 +17008,620 @@ body.pagina-fluxo .fluxo-linha-direita {
 
 }
 
+/* ==================================================
+   AJUSTE FINO - ECONOMIA + VIAGENS/COMPETIÇÕES/ROTINA
+   ================================================== */
+
+
+/* ==================================================
+   1. CAIXA "ECONOMIA DE..."
+
+   menor e mais compacta
+   ================================================== */
+
+.consultoria-planos .plano-economia {
+
+    max-width:
+        130px !important;
+
+    padding:
+        5px 8px !important;
+
+    font-size:
+        0.64rem !important;
+
+    line-height:
+        1.18 !important;
+}
+
+
+/* ==================================================
+   2. VIAGENS / COMPETIÇÕES / ROTINA
+
+   caixas um pouco maiores
+   texto um pouco maior
+   ================================================== */
+
+.services .servico-venda-adaptacoes span {
+
+    padding:
+        8px 13px !important;
+
+    gap:
+        7px !important;
+
+    font-size:
+        0.76rem !important;
+}
+
+
+/* ==================================================
+   3. ÍCONES DESSAS CAIXAS
+   ================================================== */
+
+.services .servico-venda-adaptacoes i {
+
+    font-size:
+        0.82rem !important;
+}
+
 
 /* ======================================================================
    FIM DO PAINEL FINAL
+   ====================================================================== */
+
+/* ======================================================================
+   V37 - ADAPTAÇÃO PROPORCIONAL PARA DESKTOPS E MONITORES MAIORES
+   ======================================================================
+
+   OBJETIVO
+   ----------------------------------------------------------------------
+   - Até 1680px: NÃO ALTERA NADA do layout atual.
+   - Acima de 1680px: o site cresce de forma proporcional.
+   - Mantém os mesmos alinhamentos, ordem, X/Y e composição visual.
+   - Evita que os blocos permaneçam "presos" no centro em telas maiores.
+   - Não interfere nas páginas de agendamento/endereço/pagamento.
+   - Mobile/tablet continuam com as regras já existentes.
+
+   REFERÊNCIA:
+   O layout atual é tratado como a composição-base em 1680px de largura.
+   ====================================================================== */
+
+
+/* ======================================================================
+   1. DESKTOP GRANDE - A PARTIR DE 1681px
+   ====================================================================== */
+
+@media (min-width: 1681px) {
+
+    /* ==================================================
+       ESCALA TIPOGRÁFICA SUAVE
+
+       1680px = 16px (visual atual)
+       telas maiores = cresce gradualmente
+       limite = 19px
+       ================================================== */
+
+    html:has(body:not(.pagina-fluxo)) {
+        font-size:
+            clamp(16px,
+                0.95238vw,
+                19px) !important;
+    }
+
+
+    /* ==================================================
+       CORPO PRINCIPAL
+
+       Antes:
+       max-width: 1200px fixos
+
+       Agora:
+       mantém exatamente 1200px em 1680px
+       e passa a crescer na mesma proporção da tela.
+       ================================================== */
+
+    body:not(.pagina-fluxo) {
+        max-width:
+            clamp(1200px,
+                71.42857vw,
+                2200px) !important;
+    }
+
+
+    /* ==================================================================
+       PÁGINA 1 - HOME
+       ================================================================== */
+
+
+    /* HEADER - apenas o espaço horizontal passa a acompanhar a tela */
+    .pagina-home>header {
+        padding-left:
+            clamp(54px,
+                3.21429vw,
+                82px) !important;
+
+        padding-right:
+            clamp(54px,
+                3.21429vw,
+                82px) !important;
+    }
+
+
+    /* LOGO - mesma proporção visual */
+    .pagina-home .logo {
+        width:
+            clamp(390px,
+                23.21429vw,
+                560px) !important;
+
+        max-width:
+            34vw !important;
+    }
+
+
+    /* ÁREA PRINCIPAL DA HOME */
+    .pagina-home .section-div {
+        padding-left:
+            clamp(50px,
+                2.97619vw,
+                78px) !important;
+
+        padding-right:
+            clamp(50px,
+                2.97619vw,
+                78px) !important;
+
+        gap:
+            clamp(38px,
+                2.26190vw,
+                58px) !important;
+    }
+
+
+    /* BLOCO TEXTO + CELULAR */
+    .pagina-home .prova-social-home {
+        --texto-largura:
+            clamp(222px,
+                13.21429vw,
+                310px);
+
+        --celular-largura:
+            clamp(240px,
+                14.28571vw,
+                335px);
+
+        --espaco-texto-celular:
+            clamp(22px,
+                1.30952vw,
+                31px);
+
+        max-width:
+            clamp(490px,
+                29.16667vw,
+                685px) !important;
+    }
+
+
+    /* TEXTO DOS DEPOIMENTOS */
+    .pagina-home .frase-depoimentos-cursiva {
+        font-size:
+            clamp(1.5rem,
+                1.42857vw,
+                2rem) !important;
+    }
+
+
+    /* SETA DESENHADA AO LADO DO CELULAR */
+    .pagina-home .seta-depoimentos {
+        width:
+            clamp(68px,
+                4.04762vw,
+                95px) !important;
+    }
+
+
+    /* FOTO PRINCIPAL */
+    .pagina-home .imagem-rhuan {
+        width:
+            min(100%,
+                clamp(455px,
+                    27.08333vw,
+                    635px)) !important;
+
+        max-width:
+            clamp(455px,
+                27.08333vw,
+                635px) !important;
+    }
+
+
+    /* BLOCO "CIÊNCIA, PRÁTICA E EXPERIÊNCIA" */
+    .pagina-home .apresentacao-home {
+        width:
+            clamp(720px,
+                42.85714vw,
+                1000px) !important;
+
+        max-width:
+            clamp(720px,
+                42.85714vw,
+                1000px) !important;
+    }
+
+
+    .pagina-home .apresentacao-home>h2.titulo-experiencia {
+        width:
+            clamp(720px,
+                42.85714vw,
+                1000px) !important;
+
+        max-width:
+            clamp(720px,
+                42.85714vw,
+                1000px) !important;
+    }
+
+
+    /* BLOCO DAS FORMAÇÕES */
+    .pagina-home .linha-apresentacao-home {
+        width:
+            clamp(500px,
+                29.76190vw,
+                700px) !important;
+
+        max-width:
+            clamp(700px,
+                41.66667vw,
+                950px) !important;
+    }
+
+
+    /* ==================================================
+       SUPER PAINEL - POSIÇÕES DA HOME
+
+       Os valores abaixo são os MESMOS valores que você
+       já havia ajustado, apenas crescendo proporcionalmente
+       quando a tela ultrapassa 1680px.
+
+       Portanto:
+       - em 1680px continuam iguais;
+       - em monitor maior conservam a mesma proporção.
+       ================================================== */
+
+    :root {
+
+        /* LOGO */
+        --d-p1-logo-x:
+            clamp(120px,
+                7.14286vw,
+                174px);
+
+        --d-p1-logo-y:
+            clamp(30px,
+                3.17460vh,
+                44px);
+
+
+        /* MENU */
+        --d-p1-menu-x:
+            clamp(-174px,
+                -7.14286vw,
+                -120px);
+
+        --d-p1-menu-y:
+            clamp(25px,
+                2.64550vh,
+                36px);
+
+
+        /* DEPOIMENTOS - BLOCO GERAL */
+        --d-p1-depoimentos-x:
+            clamp(30px,
+                1.78571vw,
+                44px);
+
+        --d-p1-depoimentos-y:
+            clamp(10px,
+                1.05820vh,
+                15px);
+
+
+        /* TEXTO AO LADO DO CELULAR */
+        --d-p1-texto-depoimentos-x:
+            clamp(-44px,
+                -1.78571vw,
+                -30px);
+
+        --d-p1-texto-depoimentos-y:
+            clamp(-58px,
+                -4.23280vh,
+                -40px);
+
+
+        /* CELULAR */
+        --d-p1-celular-x:
+            clamp(-36px,
+                -1.48810vw,
+                -25px);
+
+        --d-p1-celular-y:
+            clamp(20px,
+                2.11640vh,
+                29px);
+
+
+        /* SETA DOS DEPOIMENTOS */
+        --d-p1-seta-depoimentos-x:
+            clamp(15px,
+                0.89286vw,
+                22px);
+
+        --d-p1-seta-depoimentos-y:
+            clamp(20px,
+                2.11640vh,
+                29px);
+
+
+        /* BLOCO DIREITO */
+        --d-p1-perfil-x:
+            clamp(-116px,
+                -4.76190vw,
+                -80px);
+
+
+        /* FOTO */
+        --d-p1-foto-x:
+            clamp(20px,
+                1.19048vw,
+                29px);
+
+        --d-p1-foto-y:
+            clamp(40px,
+                4.23280vh,
+                58px);
+
+
+        /* REDES */
+        --d-p1-redes-x:
+            clamp(-44px,
+                -1.78571vw,
+                -30px);
+
+        --d-p1-redes-y:
+            clamp(-29px,
+                -2.11640vh,
+                -20px);
+
+
+        /* SETA PARA PÁGINA 2 */
+        --d-p1-seta-pagina-x:
+            clamp(-36px,
+                -1.48810vw,
+                -25px);
+
+
+        /* RODAPÉ - LINHA FINAL */
+        --d-ft-final-y:
+            clamp(-29px,
+                -2.11640vh,
+                -20px);
+    }
+
+
+    /* ==================================================================
+       PÁGINA 2 - DIFERENCIAIS
+       ================================================================== */
+
+    .diferenciais {
+        --dif-largura:
+            clamp(1340px,
+                79.76190vw,
+                2320px);
+
+        --dif-padding-x:
+            clamp(34px,
+                2.02381vw,
+                50px);
+
+        --dif-gap:
+            clamp(108px,
+                6.42857vw,
+                155px);
+    }
+
+
+    /* ==================================================================
+       PÁGINA 3 - SERVIÇOS
+       ================================================================== */
+
+    .services {
+        --servicos-v29-largura:
+            clamp(1320px,
+                78.57143vw,
+                2300px);
+
+        padding-left:
+            clamp(34px,
+                2.02381vw,
+                50px) !important;
+
+        padding-right:
+            clamp(34px,
+                2.02381vw,
+                50px) !important;
+    }
+
+
+    .services .servicos-vendas-grade,
+    .services .objetivos-vendas-grade {
+        gap:
+            clamp(22px,
+                1.30952vw,
+                32px) !important;
+    }
+
+
+    /* VIAGENS / COMPETIÇÕES / ROTINA
+       preserva o ajuste que você acabou de aprovar */
+    .services .servico-venda-adaptacoes span {
+        padding:
+            clamp(8px,
+                0.47619vw,
+                11px) clamp(13px,
+                0.77381vw,
+                18px) !important;
+
+        gap:
+            clamp(7px,
+                0.41667vw,
+                10px) !important;
+    }
+
+
+    .services .servico-venda-adaptacoes i {
+        font-size:
+            clamp(0.82rem,
+                0.83333vw,
+                1rem) !important;
+    }
+
+
+    /* ==================================================================
+       PÁGINA 4 - CONSULTORIA
+       ================================================================== */
+
+    .consultoria-planos {
+        --consultoria-v29-largura:
+            clamp(1320px,
+                78.57143vw,
+                2300px);
+
+        padding-left:
+            clamp(34px,
+                2.02381vw,
+                50px) !important;
+
+        padding-right:
+            clamp(34px,
+                2.02381vw,
+                50px) !important;
+    }
+
+
+    .consultoria-planos .planos-vendas-grade {
+        gap:
+            clamp(22px,
+                1.30952vw,
+                32px) !important;
+    }
+
+
+    /* CAIXA "ECONOMIA DE..."
+       preserva o tamanho reduzido aprovado */
+    .consultoria-planos .plano-economia {
+        max-width:
+            clamp(130px,
+                7.73810vw,
+                180px) !important;
+
+        padding:
+            clamp(5px,
+                0.29762vw,
+                7px) clamp(8px,
+                0.47619vw,
+                11px) !important;
+    }
+
+
+    /* ==================================================================
+       RODAPÉ
+       ================================================================== */
+
+    .rodape-site {
+        padding-left:
+            clamp(38px,
+                2.26190vw,
+                56px) !important;
+
+        padding-right:
+            clamp(38px,
+                2.26190vw,
+                56px) !important;
+    }
+
+
+    .rodape-site .rodape-site-conteudo {
+        max-width:
+            clamp(1320px,
+                78.57143vw,
+                2300px) !important;
+
+        gap:
+            clamp(45px,
+                2.67857vw,
+                66px) !important;
+    }
+
+
+    .rodape-site .rodape-logo {
+        width:
+            clamp(330px,
+                19.64286vw,
+                460px) !important;
+    }
+
+}
+
+
+/* ======================================================================
+   2. MONITORES MUITO LARGOS / ULTRAWIDE
+   ======================================================================
+
+   A partir daqui o crescimento continua, mas com limites.
+   O objetivo é NÃO transformar o site em uma faixa estreita no centro,
+   sem deixar cards gigantes ou linhas de texto excessivamente compridas.
+   ====================================================================== */
+
+@media (min-width: 2560px) {
+
+    body:not(.pagina-fluxo) {
+        max-width:
+            min(86vw,
+                2200px) !important;
+    }
+
+
+    .diferenciais {
+        --dif-largura:
+            min(86vw,
+                2320px);
+    }
+
+
+    .services {
+        --servicos-v29-largura:
+            min(86vw,
+                2300px);
+    }
+
+
+    .consultoria-planos {
+        --consultoria-v29-largura:
+            min(86vw,
+                2300px);
+    }
+
+
+    .rodape-site .rodape-site-conteudo {
+        max-width:
+            min(86vw,
+                2300px) !important;
+    }
+
+}
+
+
+/* ======================================================================
+   FIM V37 - ADAPTAÇÃO PROPORCIONAL PARA MONITORES MAIORES
    ====================================================================== */
