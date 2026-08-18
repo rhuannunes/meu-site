@@ -17625,3 +17625,65 @@ body.pagina-fluxo .fluxo-linha-direita {
 /* ======================================================================
    FIM V37 - ADAPTAÇÃO PROPORCIONAL PARA MONITORES MAIORES
    ====================================================================== */
+
+
+/* ======================================================================
+   V38 - CORREÇÃO DA RESPONSIVIDADE EM MONITORES MAIORES
+   HEADER / LOGO / MENU PRESERVADOS
+   ======================================================================
+
+   Motivo:
+   Na V37, logo e menu também tiveram tamanho e deslocamentos X/Y
+   ampliados proporcionalmente. Como um elemento avançava para a direita
+   e o outro para a esquerda, eles podiam se aproximar e se sobrepor.
+
+   Nesta correção:
+   - o restante da adaptação para monitores grandes continua;
+   - logo e menu mantêm EXATAMENTE os valores do layout-base;
+   - a tipografia global não aumenta em monitores grandes;
+   - o espaço extra é absorvido pelos containers, grids e gaps.
+   ====================================================================== */
+
+@media (min-width: 1681px) {
+
+    /* Mantém o tamanho tipográfico do layout-base.
+       A responsividade continua ocorrendo pelos containers. */
+    html:has(body:not(.pagina-fluxo)) {
+        font-size: 16px !important;
+    }
+
+    /* Logo: mantém exatamente o tamanho-base anterior à V37. */
+    .pagina-home .logo {
+        width: 460px !important;
+        max-width: 100% !important;
+    }
+
+    /* Posições manuais originais do Super Painel.
+       Não crescem com a largura do monitor. */
+    :root {
+        --d-p1-logo-x: 120px;
+        --d-p1-logo-y: 30px;
+        --d-p1-logo-tamanho: 1.2;
+
+        --d-p1-menu-x: -120px;
+        --d-p1-menu-y: 25px;
+        --d-p1-menu-tamanho: 1;
+    }
+
+    /* Garante que logo e menu permaneçam em lados opostos do header. */
+    .pagina-home>header {
+        justify-content: space-between !important;
+    }
+
+    .pagina-home>header nav {
+        flex-shrink: 0 !important;
+    }
+
+    .pagina-home>header .logo {
+        flex-shrink: 0 !important;
+    }
+}
+
+/* ======================================================================
+   FIM V38
+   ====================================================================== */
