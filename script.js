@@ -26,7 +26,7 @@ const CONFIG_AGENDAMENTO = {
         '',
 
     CHECKOUT_API_URL:
-        '',
+    'https://meu-site-rhuan13.vercel.app/api/criar-pagamento',
 
     FUSO:
         'America/Sao_Paulo',
