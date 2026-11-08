@@ -23,7 +23,7 @@
 const CONFIG_AGENDAMENTO = {
 
     AGENDA_API_URL:
-        '',
+        'https://script.google.com/macros/s/AKfycbyumSkv6w5oFHenryHUucHAPdKMe0KT7F9YnLvjvOnU6Ziq1Sz8-HwwAUGvY0VACRac/exec',
 
     CHECKOUT_API_URL:
         'https://meu-site-six-lemon.vercel.app/api/criar-pagamento',
