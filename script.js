@@ -26,7 +26,7 @@ const CONFIG_AGENDAMENTO = {
         '',
 
     CHECKOUT_API_URL:
-    'https://meu-site-six-lemon.vercel.app/api/criar-pagamento',
+        'https://meu-site-six-lemon.vercel.app/api/criar-pagamento',
 
     FUSO:
         'America/Sao_Paulo',
@@ -47,7 +47,7 @@ const CONFIG_AGENDAMENTO = {
             modalidade: 'Online com Videoconsulta',
             exigeAgenda: true,
             exigeEndereco: false,
-            consultaInicialMinutos: 45,
+            consultaInicialMinutos: 50,
             retornoMinutos: 30
         },
 
@@ -56,7 +56,7 @@ const CONFIG_AGENDAMENTO = {
             modalidade: 'Atendimento a domicílio',
             exigeAgenda: true,
             exigeEndereco: true,
-            consultaInicialMinutos: 60,
+            consultaInicialMinutos: 50,
             retornoMinutos: 45,
             cidade: 'Anápolis - GO'
         }
@@ -527,7 +527,7 @@ function montarDadosPlanoDoCard(
 
     const configPlano =
         CONFIG_AGENDAMENTO.PLANOS[
-            planoSlug
+        planoSlug
         ];
 
     if (!configPlano) {
@@ -626,7 +626,7 @@ function dadosDaURL() {
 
     const config =
         CONFIG_AGENDAMENTO.PLANOS[
-            plano
+        plano
         ];
 
     if (!config) {
@@ -1072,7 +1072,7 @@ function consultarDisponibilidadeGoogle(
                         reject(
                             new Error(
                                 dados &&
-                                dados.erro
+                                    dados.erro
                                     ? dados.erro
                                     : 'Não foi possível carregar a agenda.'
                             )
@@ -1414,7 +1414,7 @@ function criarCalendario(
 
         tituloMes.textContent =
             MESES_PT[
-                mesAtual.getMonth()
+            mesAtual.getMonth()
             ] +
             ' ' +
             mesAtual.getFullYear();
@@ -1482,7 +1482,7 @@ function criarCalendario(
 
             const horarios =
                 disponibilidade[
-                    dataISO
+                dataISO
                 ] || [];
 
             const botaoDia =
@@ -1789,15 +1789,15 @@ function criarCalendario(
                 }
 
                 const dadosAtualizados =
-                    {
-                        ...dadosPlano,
+                {
+                    ...dadosPlano,
 
-                        data:
-                            dataSelecionada,
+                    data:
+                        dataSelecionada,
 
-                        hora:
-                            horaSelecionada
-                    };
+                    hora:
+                        horaSelecionada
+                };
 
 
                 salvarContratacao(
@@ -2062,10 +2062,10 @@ function preencherResumoPlano(
 
         <span class="fluxo-resumo-preco">
             ${formatadorReal.format(
-                converterPrecoParaNumero(
-                    dados.preco
-                )
-            )}
+            converterPrecoParaNumero(
+                dados.preco
+            )
+        )}
         </span>
         `;
 
@@ -2227,23 +2227,23 @@ if (enderecoForm) {
 
 
             const atualizados =
-                {
-                    ...dados,
+            {
+                ...dados,
 
-                    endereco:
-                        endereco,
+                endereco:
+                    endereco,
 
-                    cliente: {
-                        nome:
-                            endereco.nome,
+                cliente: {
+                    nome:
+                        endereco.nome,
 
-                        email:
-                            endereco.email,
+                    email:
+                        endereco.email,
 
-                        whatsapp:
-                            endereco.whatsapp
-                    }
-                };
+                    whatsapp:
+                        endereco.whatsapp
+                }
+            };
 
 
             salvarContratacao(
@@ -2366,12 +2366,12 @@ if (pagamentoForm) {
 
 
             const dadosFinais =
-                {
-                    ...dados,
+            {
+                ...dados,
 
-                    cliente:
-                        cliente
-                };
+                cliente:
+                    cliente
+            };
 
 
             salvarContratacao(
