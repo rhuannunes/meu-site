@@ -17572,3 +17572,667 @@ body.pagina-fluxo .fluxo-linha-direita {
     }
 
 }
+
+/* ======================================================================
+   PLANOS EM BREVE
+   ====================================================================== */
+
+    .consultoria-planos .plano-vendas-card-em-breve {
+
+        position:
+            relative;
+
+    }
+
+
+    .consultoria-planos .plano-em-breve-faixa {
+
+        width:
+            100%;
+
+        min-height:
+            48px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        gap:
+            10px;
+
+        margin-top:
+            auto;
+
+        padding:
+            12px 18px;
+
+        color:
+            #d6ae61;
+
+        background:
+            rgba(214, 174, 97, 0.08);
+
+        border:
+            1px solid rgba(214, 174, 97, 0.42);
+
+        border-radius:
+            10px;
+
+        font-family:
+            'Montserrat',
+            sans-serif;
+
+        font-size:
+            0.78rem;
+
+        font-weight:
+            700;
+
+        letter-spacing:
+            0.18em;
+
+        text-transform:
+            uppercase;
+
+        box-shadow:
+            0 0 22px rgba(214, 174, 97, 0.06);
+
+    }
+
+
+    .consultoria-planos .plano-em-breve-faixa i {
+
+        font-size:
+            0.92rem;
+
+    }
+
+
+    /* ==================================================
+   QUATRO CARDS NO DESKTOP
+   ================================================== */
+
+    @media (min-width: 1281px) {
+
+        .consultoria-planos .planos-vendas-grade {
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+        }
+
+    }
+
+
+    /* ==================================================
+   NOTEBOOK / TABLET
+   ================================================== */
+
+    @media (min-width: 769px) and (max-width: 1280px) {
+
+        .consultoria-planos .planos-vendas-grade {
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+        }
+
+    }
+
+
+    /* ==================================================
+   CELULAR
+   ================================================== */
+
+    @media (max-width: 768px) {
+
+        .consultoria-planos .planos-vendas-grade {
+
+            grid-template-columns:
+                1fr;
+
+        }
+
+    }
+
+    /* ======================================================================
+   V39 - PLANOS EM GRADE 2x2 + AJUSTE DOS CARDS EM BREVE
+   ====================================================================== */
+
+
+    /* ==================================================
+   DESKTOP - SEMPRE 2 PLANOS EM CIMA + 2 EMBAIXO
+   ================================================== */
+
+    @media (min-width: 993px) {
+
+        .consultoria-planos .planos-vendas-grade {
+
+            grid-template-columns:
+                repeat(2,
+                    minmax(0, 1fr)) !important;
+
+            max-width:
+                1120px !important;
+
+            gap:
+                28px !important;
+
+            align-items:
+                start !important;
+
+        }
+
+    }
+
+
+    /* ==================================================
+   PLANOS EM BREVE
+   NÃO FORÇAR A ALTURA DOS PLANOS COM PREÇO
+   ================================================== */
+
+    .consultoria-planos .plano-vendas-card-em-breve {
+
+        min-height:
+            0 !important;
+
+        height:
+            auto !important;
+
+        align-self:
+            start !important;
+
+    }
+
+
+    /* ==================================================
+   BENEFÍCIOS DOS PLANOS EM BREVE
+   NÃO CRIAR ESPAÇO VAZIO DESNECESSÁRIO
+   ================================================== */
+
+    .consultoria-planos .plano-vendas-card-em-breve .plano-vendas-beneficios {
+
+        margin-bottom:
+            0 !important;
+
+    }
+
+
+    /* ==================================================
+   FAIXA EM BREVE
+   FICA LOGO DEPOIS DOS BENEFÍCIOS
+   ================================================== */
+
+    .consultoria-planos .plano-vendas-card-em-breve .plano-em-breve-faixa {
+
+        margin-top:
+            26px !important;
+
+        flex-shrink:
+            0 !important;
+
+    }
+
+
+    /* ==================================================
+   BOTÃO CONVERSAR DOS PLANOS EM BREVE
+   ================================================== */
+
+    .consultoria-planos .plano-vendas-card-em-breve .plano-vendas-conversar {
+
+        margin-top:
+            10px !important;
+
+    }
+
+
+    /* ==================================================
+   TABLET
+   2 COLUNAS ENQUANTO HOUVER ESPAÇO
+   ================================================== */
+
+    @media (min-width: 769px) and (max-width: 992px) {
+
+        .consultoria-planos .planos-vendas-grade {
+
+            grid-template-columns:
+                repeat(2,
+                    minmax(0, 1fr)) !important;
+
+            gap:
+                20px !important;
+
+        }
+
+    }
+
+
+    /* ==================================================
+   CELULAR
+   UM CARD POR LINHA
+   ================================================== */
+
+    @media (max-width: 768px) {
+
+        .consultoria-planos .planos-vendas-grade {
+
+            grid-template-columns:
+                1fr !important;
+
+        }
+
+    }
+
+/* ======================================================================
+   V40 - GRADE DEFINITIVA DOS PLANOS
+   2 EM CIMA + 2 EMBAIXO
+   ====================================================================== */
+
+/* DESKTOP E TABLET MAIOR: 2 x 2 */
+@media (min-width: 769px) {
+
+    .consultoria-planos .planos-vendas-grade {
+        width: 100% !important;
+        max-width: 1120px !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-auto-flow: row !important;
+        gap: 28px !important;
+        align-items: start !important;
+        justify-content: center !important;
+    }
+
+}
+
+/* PLANOS "EM BREVE": altura natural, sem espaço vazio forçado */
+.consultoria-planos .plano-vendas-card-em-breve {
+    min-height: 0 !important;
+    height: auto !important;
+    align-self: start !important;
+    justify-content: flex-start !important;
+}
+
+.consultoria-planos
+.plano-vendas-card-em-breve
+.plano-vendas-resumo {
+    min-height: 0 !important;
+}
+
+.consultoria-planos
+.plano-vendas-card-em-breve
+.plano-vendas-beneficios {
+    margin: 24px 0 0 !important;
+}
+
+.consultoria-planos
+.plano-vendas-card-em-breve
+.plano-em-breve-faixa {
+    margin-top: 26px !important;
+}
+
+.consultoria-planos
+.plano-vendas-card-em-breve
+.plano-vendas-conversar {
+    margin-top: 10px !important;
+}
+
+/* CELULAR: 1 CARD POR LINHA */
+@media (max-width: 768px) {
+
+    .consultoria-planos .planos-vendas-grade {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+}
+
+/* ======================================================================
+   V41 - HOME MOBILE REFINADA
+   - remove o menu hambúrguer
+   - mantém somente "Marcar Consulta" no topo
+   - sobe o bloco foto + currículo
+   - reduz a foto e impede que invada a coluna do currículo
+   - compacta a formação para antecipar as redes sociais
+   ====================================================================== */
+
+@media (max-width: 992px) {
+
+    /* ==================================================
+       SUPER PAINEL - AJUSTES RÁPIDOS DESTA VERSÃO
+       ================================================== */
+
+    :root {
+        /* valor negativo = sobe o conjunto foto + currículo + redes */
+        --v41-mobile-perfil-y: -52px;
+
+        /* valor negativo = sobe somente a foto */
+        --v41-mobile-foto-y: -6px;
+
+        /* altura máxima da área da foto */
+        --v41-mobile-foto-altura: 340px;
+
+        /* espaço entre currículo e foto */
+        --v41-mobile-perfil-gap: 8px;
+    }
+
+
+    /* ==================================================
+       1. CABEÇALHO MOBILE
+       REMOVE AS 3 BARRAS
+       ================================================== */
+
+    .pagina-home header nav > i.fa-bars {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+
+    /* O NAV DEIXA DE SER UM MENU EXPANSÍVEL */
+    .pagina-home header nav {
+        position: absolute !important;
+
+        left: 18px !important;
+        right: auto !important;
+
+        top: 50% !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        display: block !important;
+
+        transform: translateY(-50%) !important;
+
+        z-index: 1000 !important;
+    }
+
+
+    /* MOSTRA A LISTA MESMO SEM A CLASSE .ativado */
+    .pagina-home header .navegacao-primaria,
+    .pagina-home header .navegacao-primaria.ativado {
+        position: static !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+
+        background: transparent !important;
+
+        border: 0 !important;
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+
+        transform: none !important;
+    }
+
+
+    /* ESCONDE DIFERENCIAIS E SERVIÇOS NO TOPO */
+    .pagina-home header .navegacao-primaria li {
+        display: none !important;
+    }
+
+
+    /* DEIXA SOMENTE MARCAR CONSULTA */
+    .pagina-home header .navegacao-primaria li:last-child {
+        display: flex !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        opacity: 1 !important;
+
+        animation: none !important;
+    }
+
+
+    /* REMOVE AS BOLINHAS DO MENU MOBILE */
+    .pagina-home header .navegacao-primaria li:last-child::before,
+    .pagina-home header .navegacao-primaria li:last-child::after {
+        content: none !important;
+        display: none !important;
+    }
+
+
+    /* BOTÃO MARCAR CONSULTA COMPACTO */
+    .pagina-home header .navegacao-primaria li:last-child a {
+        margin: 0 !important;
+
+        padding: 8px 11px !important;
+
+        display: inline-flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        color: var(--dourado) !important;
+
+        background: rgba(0, 0, 0, 0.30) !important;
+
+        border: 1px solid rgba(214, 174, 97, 0.58) !important;
+        border-radius: 999px !important;
+
+        font-family: 'Montserrat', sans-serif !important;
+
+        font-size: clamp(0.58rem, 2.35vw, 0.72rem) !important;
+
+        font-weight: 500 !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: 0.15px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ==================================================
+       2. APROXIMA AS DUAS PARTES DA HOME
+       ================================================== */
+
+    .pagina-home .section-div {
+        gap: 5px !important;
+
+        padding-bottom: 36px !important;
+    }
+
+
+    /* ==================================================
+       3. SOBE FOTO + CURRÍCULO + REDES COMO UM BLOCO
+       ================================================== */
+
+    .pagina-home .home-perfil {
+        width: 100% !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(112px, 33%) !important;
+
+        column-gap:
+            var(--v41-mobile-perfil-gap) !important;
+
+        row-gap:
+            12px !important;
+
+        translate:
+            0
+            var(--v41-mobile-perfil-y) !important;
+
+        scale:
+            1 !important;
+    }
+
+
+    /* ==================================================
+       4. FOTO MENOR E SEM INVADIR O CURRÍCULO
+       ================================================== */
+
+    .pagina-home .home-foto-area {
+        width: 100% !important;
+
+        height:
+            min(
+                var(--v41-mobile-foto-altura),
+                78vw
+            ) !important;
+
+        align-self: end !important;
+
+        display: flex !important;
+
+        align-items: flex-end !important;
+        justify-content: center !important;
+
+        overflow: visible !important;
+    }
+
+
+    .pagina-home .imagem-rhuan {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 100% !important;
+
+        margin: 0 !important;
+
+        object-fit: contain !important;
+        object-position: center bottom !important;
+
+        transform: none !important;
+
+        translate:
+            0
+            var(--v41-mobile-foto-y) !important;
+
+        scale:
+            1 !important;
+    }
+
+
+    /* ==================================================
+       5. CURRÍCULO UM POUCO MAIS COMPACTO
+       ================================================== */
+
+    .pagina-home .apresentacao-home > h2.titulo-experiencia {
+        margin-bottom: 12px !important;
+
+        font-size:
+            clamp(
+                1.42rem,
+                5.6vw,
+                1.82rem
+            ) !important;
+    }
+
+
+    .pagina-home .linha-apresentacao-home {
+        gap: 0 !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home {
+        min-height: auto !important;
+
+        padding:
+            9px
+            2px !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home > i {
+        width: 29px !important;
+        height: 29px !important;
+
+        font-size: 0.73rem !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home h3 {
+        margin-bottom: 2px !important;
+
+        font-size:
+            clamp(
+                0.72rem,
+                2.65vw,
+                0.84rem
+            ) !important;
+
+        line-height: 1.20 !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home p {
+        font-size:
+            clamp(
+                0.60rem,
+                2.15vw,
+                0.71rem
+            ) !important;
+
+        line-height: 1.34 !important;
+    }
+
+
+    /* ==================================================
+       6. REDES SOCIAIS MAIS PRÓXIMAS DO CURRÍCULO
+       ================================================== */
+
+    .pagina-home
+    .home-perfil
+    .whatsapp-home-wrap.social-home-wrap {
+        margin-top: 2px !important;
+
+        translate:
+            0
+            -18px !important;
+
+        scale:
+            1 !important;
+    }
+
+
+    /* ==================================================
+       7. CELULARES MAIS ESTREITOS
+       Evita o botão tocar a logo.
+       ================================================== */
+
+    @media (max-width: 430px) {
+
+        .pagina-home header .navegacao-primaria li:last-child a {
+            padding:
+                7px
+                9px !important;
+
+            font-size:
+                0.59rem !important;
+        }
+
+
+        .pagina-home .logo {
+            width:
+                min(
+                    225px,
+                    61vw
+                ) !important;
+
+            max-width:
+                61vw !important;
+        }
+
+    }
+
+}
+

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Rhuan Nunes | Nutricionista</title>
-    <link href="style.css?v=36" rel="stylesheet" />
+    <link href="style.css?v=41" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" rel="stylesheet" />
     <style>
         /* ==================================================
@@ -447,6 +447,57 @@
         @media (prefers-reduced-motion: reduce) {
             .depoimentos-track {
                 animation: none;
+            }
+        }
+
+        /* ==================================================
+           PLANOS EM BREVE / QUATRO MODALIDADES
+           ================================================== */
+
+        .consultoria-planos .plano-vendas-card-em-breve {
+            position: relative;
+        }
+
+        .consultoria-planos .plano-em-breve-faixa {
+            width: 100%;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: auto;
+            padding: 12px 18px;
+            color: #D6AE61;
+            background: rgba(214, 174, 97, 0.08);
+            border: 1px solid rgba(214, 174, 97, 0.42);
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            box-shadow: 0 0 22px rgba(214, 174, 97, 0.06);
+        }
+
+        .consultoria-planos .plano-em-breve-faixa i {
+            font-size: 0.92rem;
+        }
+
+        @media (min-width: 1281px) {
+            .consultoria-planos .planos-vendas-grade {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1280px) {
+            .consultoria-planos .planos-vendas-grade {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .consultoria-planos .planos-vendas-grade {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1054,7 +1105,7 @@
             <h1>Escolha como você prefere ser atendido</h1>
 
             <p>
-                Três formas de atendimento. A mesma estratégia individualizada.
+                Duas modalidades disponíveis agora, com novas formas de atendimento chegando em breve.
             </p>
 
         </div>
@@ -1268,7 +1319,7 @@
 
                     <li>
                         <i class="fa-solid fa-check"></i>
-                        Consulta inicial por vídeo: aproximadamente 45 min
+                        Consulta inicial por vídeo: aproximadamente 50 min
                     </li>
 
                     <li>
@@ -1312,15 +1363,94 @@
 
 
             <!-- ==================================================
-             MODALIDADE 3 - ATENDIMENTO A DOMICÍLIO
-
-             BIOIMPEDÂNCIA INCLUÍDA
-
-             ALTERE OS PREÇOS NOS data-preco=""
+             MODALIDADE 3 - ATENDIMENTO EM CONSULTÓRIO
+             EM BREVE
              ================================================== -->
 
-            <article class="plano-vendas-card plano-vendas-card-presencial" data-modalidade="Atendimento a domicílio"
-                data-plano="premium">
+            <article class="plano-vendas-card plano-vendas-card-em-breve" data-modalidade="Atendimento em consultório"
+                data-plano="presencial">
+
+                <span class="plano-vendas-badge plano-vendas-badge-neutro">
+                    ATENDIMENTO PRESENCIAL
+                </span>
+
+                <div class="modalidade-ilustracao">
+
+                    <span class="modalidade-ilustracao-circulo"></span>
+
+                    <i class="fa-solid fa-building-user modalidade-ilustracao-principal"></i>
+
+                    <i class="fa-solid fa-weight-scale modalidade-ilustracao-detalhe"></i>
+
+                </div>
+
+                <span class="plano-nome">
+                    PLANO PRESENCIAL
+                </span>
+
+                <div class="plano-vendas-cabecalho-card">
+
+                    <span class="plano-vendas-periodo">
+                        ATENDIMENTO EM CONSULTÓRIO
+                    </span>
+
+                    <h2>Consulta presencial</h2>
+
+                </div>
+
+                <p class="plano-vendas-resumo">
+                    Atendimento presencial em consultório, com avaliação individualizada e acompanhamento nutricional.
+                </p>
+
+
+                <ul class="plano-vendas-beneficios">
+
+                    <li class="beneficio-bioimpedancia">
+                        <i class="fa-solid fa-check"></i>
+                        Bioimpedância incluída
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Consulta presencial individualizada
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Avaliação realizada em consultório
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Acompanhamento durante o período contratado
+                    </li>
+
+                </ul>
+
+
+                <div class="plano-em-breve-faixa">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>EM BREVE</span>
+                </div>
+
+
+                <a class="plano-vendas-conversar"
+                    href="https://wa.me/5562994611228?text=Olá%2C%20quero%20saber%20mais%20sobre%20o%20futuro%20atendimento%20em%20consultório."
+                    rel="noopener noreferrer" target="_blank">
+                    <i class="fa-regular fa-message"></i>
+                    Conversar antes
+                </a>
+
+            </article>
+
+
+            <!-- ==================================================
+             MODALIDADE 4 - ATENDIMENTO A DOMICÍLIO
+             EM BREVE
+             ================================================== -->
+
+            <article class="plano-vendas-card plano-vendas-card-presencial plano-vendas-card-em-breve"
+                data-modalidade="Atendimento a domicílio" data-plano="premium">
 
                 <span class="plano-vendas-badge plano-vendas-badge-bio">
                     BIOIMPEDÂNCIA INCLUÍDA
@@ -1351,49 +1481,8 @@
                 </div>
 
                 <p class="plano-vendas-resumo">
-                    Atendimento a domicílio em Anápolis - GO, com avaliação da composição corporal.
+                    Atendimento nutricional a domicílio em Anápolis - GO, com avaliação da composição corporal.
                 </p>
-
-
-                <div aria-label="Escolha a duração do atendimento a domicílio" class="plano-periodos">
-
-                    <button class="plano-opcao ativo" data-checkout-url="" data-periodo="Mensal" data-meses="1"
-                        data-preco="299,90" type="button">
-                        <span>Mensal</span>
-                        <strong>R$299,90</strong>
-                    </button>
-
-                    <button class="plano-opcao" data-checkout-url="" data-periodo="Trimestral" data-meses="3"
-                        data-preco="799,90" type="button">
-                        <span>3 meses</span>
-                        <strong>R$799,90</strong>
-                    </button>
-
-                    <button class="plano-opcao" data-checkout-url="" data-periodo="Semestral" data-meses="6"
-                        data-preco="1.399,90" type="button">
-                        <span>6 meses</span>
-                        <strong>R$1.399,90</strong>
-                    </button>
-
-                </div>
-
-
-                <div class="plano-preco-selecionado">
-
-                    <span>Valor do plano</span>
-
-                    <div class="plano-preco-linha">
-
-                        <div class="plano-preco-valor">
-                            <small>R$</small>
-                            <strong data-preco-display>299,90</strong>
-                        </div>
-
-                        <span aria-live="polite" class="plano-economia" data-economia-display></span>
-
-                    </div>
-
-                </div>
 
 
                 <ul class="plano-vendas-beneficios">
@@ -1405,7 +1494,7 @@
 
                     <li>
                         <i class="fa-solid fa-check"></i>
-                        Consulta inicial a domicílio: aproximadamente 60 min
+                        Atendimento personalizado a domicílio
                     </li>
 
                     <li>
@@ -1415,31 +1504,20 @@
 
                     <li>
                         <i class="fa-solid fa-check"></i>
-                        Disponibilidade diária para sanar dúvidas
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-check"></i>
-                        Retornos a domicílio: aproximadamente 45 min
+                        Acompanhamento durante o período contratado
                     </li>
 
                 </ul>
 
 
-                <button class="plano-vendas-comprar" type="button">
-                    Comprar este plano
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-
-                <button class="plano-vendas-disponibilidade" type="button">
-                    <i class="fa-regular fa-calendar-check"></i>
-                    Consultar disponibilidade
-                </button>
+                <div class="plano-em-breve-faixa">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>EM BREVE</span>
+                </div>
 
 
                 <a class="plano-vendas-conversar"
-                    href="https://wa.me/5562994611228?text=Olá%2C%20quero%20conversar%20sobre%20o%20Atendimento%20a%20domicílio."
+                    href="https://wa.me/5562994611228?text=Olá%2C%20quero%20saber%20mais%20sobre%20o%20futuro%20atendimento%20a%20domicílio."
                     rel="noopener noreferrer" target="_blank">
                     <i class="fa-regular fa-message"></i>
                     Conversar antes
@@ -1649,7 +1727,7 @@
 
                 <!-- MODALIDADES -->
                 <p>
-                    Online e a domicílio
+                    Online · Presencial e a domicílio em breve
                 </p>
 
             </div>
