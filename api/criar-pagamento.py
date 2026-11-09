@@ -150,7 +150,7 @@ class handler(BaseHTTPRequestHandler):
                 str(ordem.get("id", "")).lower() != order_id.lower()
                 or pedido.get("MERCADO_PAGO_ORDER_ID") != ordem.get("id")
                 or Decimal(str(ordem.get("total_amount"))) != esperado
-                or Decimal(str(ordem.get("total_paid_amount"))) != esperado
+                or Decimal(str(ordem.get("total_paid_amount"))) < esperado
             ):
                 return self.responder({"ok": False, "erro": "Pedido não corresponde ao pagamento."}, 409)
 
