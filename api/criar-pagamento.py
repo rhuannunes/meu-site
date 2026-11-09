@@ -132,8 +132,9 @@ class handler(BaseHTTPRequestHandler):
 
     def recuperar_pagamento(self, parametros):
         segredo = os.environ.get("CONTRATACOES_SECRET", "")
-        autorizacao = self.headers.get("Authorization", "")
-        if not segredo or not hmac.compare_digest(autorizacao.encode(), ("Bearer " + segredo).encode()):
+        chave = self.headers.get("X-Contratacoes-Key", "")
+        if not segredo or not hmac.compare_digest(chave.encode(), segredo.encode()):
+            self.log_message("Recuperação recusada: chave_recebida=%s chave_configurada=%s", bool(chave), bool(segredo))
             return self.responder({"ok": False, "erro": "Acesso negado."}, 401)
 
         order_id = parametros.get("order_id", [""])[0]
