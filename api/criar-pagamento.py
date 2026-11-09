@@ -1,4 +1,10 @@
+import hashlib
+import hmac
 import json
+import re
+from datetime import datetime, timezone
+from decimal import Decimal
+from urllib.parse import parse_qs, urlsplit
 import os
 import uuid
 import urllib.request
@@ -75,7 +81,92 @@ PLANOS = {
 }
 
 
+def contratacoes(acao=None, referencia=None, pedido=None):
+    url = os.environ["CONTRATACOES_SCRIPT_URL"]
+    chave = os.environ["CONTRATACOES_SECRET"]
+    corpo = {"chave": chave, "acao": acao, "referencia": referencia, "pedido": pedido}
+    requisicao = urllib.request.Request(
+        url,
+        data=json.dumps(corpo).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(requisicao, timeout=8) as resposta:
+        resultado = json.load(resposta)
+    if resultado.get("ok") is not True:
+        raise RuntimeError("Apps Script recusou a operação")
+    return resultado
+
+
+def agora():
+    return datetime.now(timezone.utc).isoformat()
+
+
 class handler(BaseHTTPRequestHandler):
+
+    def confirmar_pagamento(self, parametros):
+        segredo = os.environ.get("MERCADO_PAGO_WEBHOOK_SECRET")
+        if not segredo:
+            return self.responder({"ok": False, "erro": "Webhook não configurado."}, 503)
+
+        order_id = parametros.get("data.id", [""])[0]
+        request_id = self.headers.get("x-request-id", "")
+        assinatura = dict(
+            (chave.strip(), valor.strip())
+            for parte in self.headers.get("x-signature", "").split(",")
+            for chave, separador, valor in [parte.partition("=")]
+            if separador
+        )
+        ts = assinatura.get("ts", "")
+        recebido = assinatura.get("v1", "")
+        if not re.fullmatch(r"ORD[A-Z0-9]+", order_id, re.IGNORECASE) or not request_id or not ts.isdecimal():
+            return self.responder({"ok": False}, 401)
+        manifesto = f"id:{order_id.lower()};request-id:{request_id};ts:{ts};"
+        esperado = hmac.new(segredo.encode(), manifesto.encode(), hashlib.sha256).hexdigest()
+        if not re.fullmatch(r"[a-f0-9]{64}", recebido) or not hmac.compare_digest(esperado, recebido):
+            return self.responder({"ok": False}, 401)
+
+        try:
+            token = os.environ["MERCADO_PAGO_ACCESS_TOKEN"]
+            requisicao = urllib.request.Request(
+                f"https://api.mercadopago.com/v1/orders/{order_id.upper()}",
+                headers={"Authorization": "Bearer " + token},
+            )
+            with urllib.request.urlopen(requisicao, timeout=7) as resposta:
+                ordem = json.load(resposta)
+            if ordem.get("status") != "processed" or ordem.get("status_detail") != "accredited":
+                return self.responder({"ok": True})
+
+            referencia = ordem.get("external_reference", "")
+            if not re.fullmatch(r"rn_(basic|essencial|premium)_[136]_[a-f0-9]{16}", referencia):
+                return self.responder({"ok": True})
+            pedido = contratacoes("ler_pendente", referencia).get("pedido")
+            if not pedido:
+                # Notificação repetida após a remoção do pendente, ou pedido anterior à integração.
+                return self.responder({"ok": True})
+
+            esperado = Decimal(str(pedido["VALOR"]))
+            if (
+                str(ordem.get("id", "")).lower() != order_id.lower()
+                or pedido.get("MERCADO_PAGO_ORDER_ID") != ordem.get("id")
+                or Decimal(str(ordem.get("total_amount"))) != esperado
+                or Decimal(str(ordem.get("total_paid_amount"))) != esperado
+            ):
+                return self.responder({"ok": False, "erro": "Pedido não corresponde ao pagamento."}, 409)
+
+            pedido.update({
+                "STATUS_PAGAMENTO": "APROVADO",
+                "MERCADO_PAGO_ORDER_ID": ordem["id"],
+                "MERCADO_PAGO_STATUS": ordem["status_detail"],
+                "PAGO_EM": ordem.get("last_updated_date") or agora(),
+            })
+            contratacoes(pedido=pedido)
+            contratacoes("remover_pendente", referencia)
+            return self.responder({"ok": True})
+        except Exception:
+            # A resposta não expõe credenciais nem dados pessoais e permite retentativa.
+            return self.responder({"ok": False, "erro": "Falha ao registrar confirmação."}, 503)
+
 
     # =====================================================
     # HEADERS
@@ -153,6 +244,9 @@ class handler(BaseHTTPRequestHandler):
     # =====================================================
 
     def do_POST(self):
+        parametros = parse_qs(urlsplit(self.path).query)
+        if parametros.get("webhook") == ["1"]:
+            return self.confirmar_pagamento(parametros)
 
         try:
 
@@ -402,7 +496,7 @@ class handler(BaseHTTPRequestHandler):
             )
 
 
-            if not checkout_url:
+            if not checkout_url or not order_id:
 
                 self.responder(
                     {
@@ -420,12 +514,32 @@ class handler(BaseHTTPRequestHandler):
 
 
             # -------------------------------------------------
-            # 9. DEVOLVER URL PARA O SITE
+            # 9. GUARDAR CONTATO ANTES DE DEVOLVER A URL
             # -------------------------------------------------
+
+            if os.environ.get("MERCADO_PAGO_WEBHOOK_SECRET"):
+                nome = str(cliente.get("nome", "")).strip()
+                whatsapp = str(cliente.get("whatsapp", "")).strip()
+                if not nome or not whatsapp or len(nome) > 200 or len(whatsapp) > 40 or len(email) > 254:
+                    return self.responder({"ok": False, "erro": "Confira nome, e-mail e WhatsApp."}, 400)
+                try:
+                    contratacoes("guardar_pendente", referencia, {
+                        "PEDIDO_ID": referencia,
+                        "CRIADO_EM": agora(),
+                        "PLANO": plano,
+                        "PERIODO": "Mensal" if meses == 1 else f"{meses} meses",
+                        "MESES": meses,
+                        "VALOR": float(produto["valor"]),
+                        "NOME": nome,
+                        "EMAIL": email,
+                        "WHATSAPP": whatsapp,
+                        "MERCADO_PAGO_ORDER_ID": order_id,
+                    })
+                except Exception:
+                    return self.responder({"ok": False, "erro": "Não foi possível preparar o registro do pedido."}, 503)
 
             self.responder({
                 "ok": True,
-
                 "checkoutUrl":
                     checkout_url,
 
