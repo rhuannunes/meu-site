@@ -121,7 +121,7 @@ class handler(BaseHTTPRequestHandler):
         recebido = assinatura.get("v1", "")
         if not re.fullmatch(r"ORD[A-Z0-9]+", order_id, re.IGNORECASE) or not request_id or not ts.isdecimal():
             return self.responder({"ok": False}, 401)
-        manifesto = f"id:{order_id.lower()};request-id:{request_id};ts:{ts};"
+        manifesto = f"id:{order_id};request-id:{request_id};ts:{ts};"
         esperado = hmac.new(segredo.encode(), manifesto.encode(), hashlib.sha256).hexdigest()
         if not re.fullmatch(r"[a-f0-9]{64}", recebido) or not hmac.compare_digest(esperado, recebido):
             return self.responder({"ok": False}, 401)
