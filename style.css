@@ -36,6 +36,9 @@
 }
 
 html {
+    container-type: inline-size;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     scroll-behavior: smooth;
     scroll-padding-top: 0;
 
@@ -43,6 +46,14 @@ html {
     overflow-y: auto;
 
     background: #000000;
+}
+
+/* A janela pode encolher sem trocar o layout de computador pelo de celular. */
+@media (hover: hover) and (pointer: fine) {
+    html {
+        min-width: 1281px;
+        overflow-x: auto;
+    }
 }
 
 body {
@@ -748,9 +759,9 @@ header .navegacao-primaria li a:hover::after {
 
 .services {
     position: relative;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100cqw;
+    margin-left: calc(50% - 50cqw);
+    margin-right: calc(50% - 50cqw);
 
     padding-top: 110px;
     padding-bottom: 120px;
@@ -1314,7 +1325,7 @@ header nav {
    PAINEL DE POSIÇÃO - COMPUTADOR
    ================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     /* LOGO */
     .logo {
@@ -1376,7 +1387,7 @@ header nav {
    CELULAR / TABLET
    ================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     /* Em telas menores as seções podem ser maiores que a viewport.
        Desativar o snap evita prender a rolagem. */
@@ -1398,7 +1409,7 @@ header nav {
         top: 100%;
 
         width: 600px;
-        max-width: 80vw;
+        max-width: 80cqw;
         height: auto;
 
         transform: translate(-50%, -50%);
@@ -1511,7 +1522,7 @@ header nav {
 
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: calc(100% + 200px - 15vw) center;
+        background-position: calc(100% + 200px - 15cqw) center;
     }
 
     .conteudo-home {
@@ -1603,7 +1614,7 @@ header nav {
     }
 }
 
-@media (max-width: 650px) {
+@container (max-width: 650px) {
 
     .my_services ul {
         grid-template-columns: 1fr;
@@ -2326,11 +2337,11 @@ html {
 .diferenciais,
 .services,
 .consultoria-planos {
-    width: 100vw !important;
+    width: 100cqw !important;
     min-height: 100vh;
 
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
+    margin-left: calc(50% - 50cqw) !important;
+    margin-right: calc(50% - 50cqw) !important;
 
     position: relative;
     border: none !important;
@@ -2399,7 +2410,7 @@ html {
    nem mover foto, celular, menu ou apresentação.
 */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     .pagina-home {
         margin-bottom: -190px !important;
@@ -2614,7 +2625,7 @@ html {
    MOBILE / TABLET
    ================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .pagina-home {
         margin-bottom: 0 !important;
@@ -2814,7 +2825,7 @@ html {
    O MESMO CONTROLE DO GRUPO CONTINUA DISPONÍVEL.
    ================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .whatsapp-home-wrap.social-home-wrap {
 
@@ -3027,7 +3038,7 @@ html {
    MOBILE / TABLET
    ================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .whatsapp-home-wrap.social-home-wrap {
 
@@ -3141,7 +3152,7 @@ body::after {
 }
 
 /* Ajuste para celular */
-@media (max-width: 992px) {
+@container (max-width: 992px) {
     body::before {
         left: 16px;
     }
@@ -3380,16 +3391,16 @@ body::after {
         1340px;
 
     width:
-        100vw !important;
+        100cqw !important;
 
     min-height:
         100vh;
 
     margin-left:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     margin-right:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     padding:
         0 32px 108px !important;
@@ -3466,7 +3477,7 @@ body::after {
 
     font-size:
         clamp(2.4rem,
-            4vw,
+            4cqw,
             3.6rem);
 
     font-weight:
@@ -4234,16 +4245,16 @@ body::after {
         1340px;
 
     width:
-        100vw !important;
+        100cqw !important;
 
     min-height:
         100vh;
 
     margin-left:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     margin-right:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     padding:
         0 32px 82px !important;
@@ -4329,7 +4340,7 @@ body::after {
 
     font-size:
         clamp(2.35rem,
-            4vw,
+            4cqw,
             3.55rem);
 
     font-weight:
@@ -5091,13 +5102,13 @@ body::after {
 .rodape-site {
 
     width:
-        100vw;
+        100cqw;
 
     margin-left:
-        calc(50% - 50vw);
+        calc(50% - 50cqw);
 
     margin-right:
-        calc(50% - 50vw);
+        calc(50% - 50cqw);
 
     padding:
         52px 38px 22px;
@@ -5352,7 +5363,7 @@ body::after {
    6. RESPONSIVO
    ================================================== */
 
-@media (max-width: 1100px) {
+@container (max-width: 1100px) {
 
     .servicos-vendas-grade,
     .objetivos-vendas-grade,
@@ -5398,7 +5409,7 @@ body::after {
 }
 
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .services,
     .consultoria-planos {
@@ -5464,7 +5475,7 @@ body::after {
 }
 
 
-@media (max-width: 720px) {
+@container (max-width: 720px) {
 
     .servicos-vendas-cabecalho,
     .consultoria-vendas-cabecalho {
@@ -5564,21 +5575,21 @@ body::after {
    1. HOME - ESTRUTURA DESKTOP MAIS EFICIENTE
    ================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     .pagina-home {
 
         width:
-            100vw !important;
+            100cqw !important;
 
         min-height:
             100vh !important;
 
         margin-left:
-            calc(50% - 50vw) !important;
+            calc(50% - 50cqw) !important;
 
         margin-right:
-            calc(50% - 50vw) !important;
+            calc(50% - 50cqw) !important;
 
         margin-bottom:
             0 !important;
@@ -5616,7 +5627,7 @@ body::after {
             360px !important;
 
         max-width:
-            32vw !important;
+            32cqw !important;
 
         transform:
             none !important;
@@ -6053,7 +6064,7 @@ body::after {
 
         font-size:
             clamp(2.15rem,
-                2.65vw,
+                2.65cqw,
                 3.15rem) !important;
 
         font-weight:
@@ -6468,7 +6479,7 @@ body::after {
         relative !important;
 
     width:
-        100vw !important;
+        100cqw !important;
 
     min-height:
         100vh !important;
@@ -6477,10 +6488,10 @@ body::after {
         0 !important;
 
     margin-left:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     margin-right:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     padding:
         0 var(--dif-padding-x) 86px !important;
@@ -6656,7 +6667,7 @@ body::after {
 
     font-size:
         clamp(2.45rem,
-            3.35vw,
+            3.35cqw,
             3.65rem);
 
     font-weight:
@@ -7066,21 +7077,21 @@ body::after {
    3. HOME MOBILE / TABLET COMPLETA
    ================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .pagina-home {
 
         width:
-            100vw !important;
+            100cqw !important;
 
         min-height:
             auto !important;
 
         margin-left:
-            calc(50% - 50vw) !important;
+            calc(50% - 50cqw) !important;
 
         margin-right:
-            calc(50% - 50vw) !important;
+            calc(50% - 50cqw) !important;
 
         margin-bottom:
             0 !important;
@@ -7134,10 +7145,10 @@ body::after {
 
         width:
             min(250px,
-                66vw) !important;
+                66cqw) !important;
 
         max-width:
-            66vw !important;
+            66cqw !important;
 
         transform:
             translate(-50%,
@@ -7318,7 +7329,7 @@ body::after {
 
         font-size:
             clamp(1rem,
-                4.2vw,
+                4.2cqw,
                 1.18rem) !important;
 
         font-style:
@@ -7484,7 +7495,7 @@ body::after {
 
         height:
             clamp(310px,
-                92vw,
+                92cqw,
                 430px);
 
         align-self:
@@ -7593,7 +7604,7 @@ body::after {
 
         font-size:
             clamp(1.5rem,
-                6vw,
+                6cqw,
                 2rem) !important;
 
         font-weight:
@@ -7762,7 +7773,7 @@ body::after {
 
         font-size:
             clamp(0.74rem,
-                2.7vw,
+                2.7cqw,
                 0.86rem);
 
         font-weight:
@@ -7783,7 +7794,7 @@ body::after {
 
         font-size:
             clamp(0.62rem,
-                2.2vw,
+                2.2cqw,
                 0.73rem);
 
         line-height:
@@ -7866,7 +7877,7 @@ body::after {
 
         font-size:
             clamp(0.6rem,
-                2.3vw,
+                2.3cqw,
                 0.7rem) !important;
     }
 
@@ -7943,7 +7954,7 @@ body::after {
 
         font-size:
             clamp(2.05rem,
-                8vw,
+                8cqw,
                 2.85rem);
     }
 
@@ -8014,7 +8025,7 @@ body::after {
    4. CELULARES MUITO ESTREITOS
    ================================================== */
 
-@media (max-width: 520px) {
+@container (max-width: 520px) {
 
     .pagina-home .prova-social-home {
 
@@ -8048,7 +8059,7 @@ body::after {
 
         height:
             clamp(295px,
-                95vw,
+                95cqw,
                 385px);
     }
 
@@ -8070,7 +8081,7 @@ body::after {
 
         font-size:
             clamp(1.4rem,
-                6.4vw,
+                6.4cqw,
                 1.78rem) !important;
     }
 
@@ -8115,7 +8126,7 @@ body::after {
    HOME - DESKTOP
    ================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     /* A HOME TERMINA EXATAMENTE NO FINAL DA TELA.
        Não existe mais "sobra" para rolar sem entrar
@@ -8164,7 +8175,7 @@ body::after {
             390px !important;
 
         max-width:
-            34vw !important;
+            34cqw !important;
     }
 
 
@@ -8272,7 +8283,7 @@ body::after {
 
         font-size:
             clamp(2.45rem,
-                2.9vw,
+                2.9cqw,
                 3.45rem) !important;
     }
 
@@ -8501,9 +8512,9 @@ body::after {
    PAINEL DESKTOP - 993px OU MAIS
    ====================================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
-    :root {
+    body {
 
         /* ==============================================================
            PÁGINA 1 - HOME
@@ -8826,9 +8837,9 @@ body::after {
    PAINEL MOBILE / TABLET - ATÉ 992px
    ====================================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
-    :root {
+    body {
 
         /* ==============================================================
            PÁGINA 1 - HOME MOBILE
@@ -9103,7 +9114,7 @@ body::after {
    MOTOR - DESKTOP
    ====================================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     /* PÁGINA 1 */
 
@@ -9415,7 +9426,7 @@ body::after {
    MOTOR - MOBILE / TABLET
    ====================================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     /* PÁGINA 1 */
 
@@ -9733,7 +9744,7 @@ body::after {
    SOMENTE DESKTOP
    ================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     /* CAIXA / BLOCO INTEIRO DA APRESENTAÇÃO */
     .pagina-home .apresentacao-home {
@@ -9817,16 +9828,16 @@ body::after {
         relative !important;
 
     width:
-        100vw !important;
+        100cqw !important;
 
     min-height:
         100vh !important;
 
     margin-left:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     margin-right:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     padding:
         38px 34px 104px !important;
@@ -9908,7 +9919,7 @@ body::after {
 
     font-size:
         clamp(2.6rem,
-            4vw,
+            4cqw,
             3.7rem) !important;
 
     font-weight:
@@ -10082,7 +10093,7 @@ body::after {
 
     font-size:
         clamp(2.35rem,
-            3.6vw,
+            3.6cqw,
             3.25rem) !important;
 
     font-weight:
@@ -11000,16 +11011,16 @@ body::after {
         relative !important;
 
     width:
-        100vw !important;
+        100cqw !important;
 
     min-height:
         100vh !important;
 
     margin-left:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     margin-right:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     padding:
         42px 34px 76px !important;
@@ -11100,7 +11111,7 @@ body::after {
 
     font-size:
         clamp(2.6rem,
-            4vw,
+            4cqw,
             3.7rem) !important;
 
     font-weight:
@@ -12276,13 +12287,13 @@ body::after {
 .rodape-site {
 
     width:
-        100vw !important;
+        100cqw !important;
 
     margin-left:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     margin-right:
-        calc(50% - 50vw) !important;
+        calc(50% - 50cqw) !important;
 
     padding:
         42px 38px 20px !important;
@@ -12594,7 +12605,7 @@ body::after {
    RESPONSIVO - SOMENTE PÁGINAS 3, 4 E RODAPÉ
    ====================================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .services {
 
@@ -12772,7 +12783,7 @@ body::after {
 }
 
 
-@media (max-width: 600px) {
+@container (max-width: 600px) {
 
     .services .servico-venda-card h3,
     .services .objetivo-venda-card h3 {
@@ -12890,7 +12901,7 @@ body::after {
 
     font-size:
         clamp(2.6rem,
-            4vw,
+            4cqw,
             3.7rem) !important;
 
     font-weight:
@@ -13364,7 +13375,7 @@ body::after {
    MOBILE / TABLET
    ====================================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .diferenciais>.pagina-titulo h1 {
 
@@ -13452,7 +13463,7 @@ body::after {
 }
 
 
-@media (max-width: 520px) {
+@container (max-width: 520px) {
 
     .rodape-site .rodape-logo {
 
@@ -13466,7 +13477,7 @@ body::after {
    RODAPÉ - ABAIXAR OS MENUS LATERAIS
    ================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     .rodape-site .rodape-site-coluna {
 
@@ -13943,7 +13954,7 @@ body::after {
    RESPONSIVO
    ====================================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .services {
 
@@ -13978,7 +13989,7 @@ body::after {
 }
 
 
-@media (max-width: 520px) {
+@container (max-width: 520px) {
 
     .consultoria-planos .plano-preco-linha {
 
@@ -14031,7 +14042,7 @@ body::after {
    CARD BASIC - UM POUCO MAIS CURTO NO DESKTOP
    ================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     .consultoria-planos .planos-vendas-grade .plano-vendas-card:nth-child(1) {
 
@@ -14049,7 +14060,7 @@ body::after {
    MOBILE/TABLET - DEIXA O CARD CRESCER NATURALMENTE
    ================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     .consultoria-planos .planos-vendas-grade .plano-vendas-card:nth-child(1) {
 
@@ -14166,7 +14177,7 @@ body::after {
 
     width:
         min(760px,
-            94vw);
+            94cqw);
 
     max-height:
         90vh;
@@ -14271,7 +14282,7 @@ body::after {
 
     font-size:
         clamp(1.7rem,
-            3vw,
+            3cqw,
             2.4rem);
 
     font-weight:
@@ -14904,7 +14915,7 @@ body.pagina-fluxo {
         460px;
 
     max-width:
-        78vw;
+        78cqw;
 
     height:
         auto;
@@ -15029,7 +15040,7 @@ body.pagina-fluxo {
 
     font-size:
         clamp(2rem,
-            4vw,
+            4cqw,
             3rem);
 
     font-weight:
@@ -15411,7 +15422,7 @@ body.pagina-fluxo {
    RESPONSIVO DO FLUXO
    ================================================== */
 
-@media (max-width: 760px) {
+@container (max-width: 760px) {
 
     .agenda-modal {
 
@@ -15462,7 +15473,7 @@ body.pagina-fluxo {
             360px;
 
         max-width:
-            82vw;
+            82cqw;
     }
 
 
@@ -15512,7 +15523,7 @@ body.pagina-fluxo {
 }
 
 
-@media (max-width: 480px) {
+@container (max-width: 480px) {
 
     .agenda-semana,
     .agenda-dias {
@@ -15634,7 +15645,7 @@ body.pagina-fluxo {
    2. POP-UP - MAIS ESTREITO E SEM BARRA INTERNA
    ====================================================================== */
 
-@media (min-width: 761px) {
+@container (min-width: 761px) {
 
     .agenda-modal {
 
@@ -15647,7 +15658,7 @@ body.pagina-fluxo {
 
         width:
             min(700px,
-                92vw) !important;
+                92cqw) !important;
 
         max-height:
             calc(100vh - 32px) !important;
@@ -15695,7 +15706,7 @@ body.pagina-fluxo {
    3. DATAS QUADRADAS - POP-UP
    ====================================================================== */
 
-@media (min-width: 761px) {
+@container (min-width: 761px) {
 
     .agenda-modal .agenda-semana,
     .agenda-modal .agenda-dias {
@@ -15793,7 +15804,7 @@ body.pagina-fluxo {
    MANTÉM OS TEXTOS NOS TAMANHOS EXISTENTES
    ====================================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     body.pagina-fluxo {
 
@@ -15839,7 +15850,7 @@ body.pagina-fluxo {
             460px !important;
 
         max-width:
-            42vw !important;
+            42cqw !important;
 
         translate:
             0 30px !important;
@@ -16012,7 +16023,7 @@ body.pagina-fluxo {
    5. ENDEREÇO - COMPACTO PARA CABER MELHOR
    ====================================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     .fluxo-card-formulario {
 
@@ -16288,7 +16299,7 @@ body.pagina-fluxo::after {
    9. MOBILE / TABLET
    ====================================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     body.pagina-fluxo::before {
 
@@ -16417,7 +16428,7 @@ body.pagina-fluxo::after {
    PÁGINAS DE AGENDAMENTO / ENDEREÇO / PAGAMENTO
    ====================================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     body.pagina-fluxo {
 
@@ -16981,7 +16992,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    MOBILE / TABLET
    ====================================================================== */
 
-@media (max-width: 992px) {
+@container (max-width: 992px) {
 
     body.pagina-fluxo .fluxo-linha-esquerda {
 
@@ -17124,7 +17135,7 @@ body.pagina-fluxo .fluxo-linha-direita {
     body:not(.pagina-fluxo) {
         max-width:
             clamp(1200px,
-                71.42857vw,
+                71.42857cqw,
                 2200px) !important;
     }
 
@@ -17138,12 +17149,12 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home>header {
         padding-left:
             clamp(54px,
-                3.21429vw,
+                3.21429cqw,
                 82px) !important;
 
         padding-right:
             clamp(54px,
-                3.21429vw,
+                3.21429cqw,
                 82px) !important;
     }
 
@@ -17152,11 +17163,11 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .logo {
         width:
             clamp(390px,
-                23.21429vw,
+                23.21429cqw,
                 560px) !important;
 
         max-width:
-            34vw !important;
+            34cqw !important;
     }
 
 
@@ -17164,17 +17175,17 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .section-div {
         padding-left:
             clamp(50px,
-                2.97619vw,
+                2.97619cqw,
                 78px) !important;
 
         padding-right:
             clamp(50px,
-                2.97619vw,
+                2.97619cqw,
                 78px) !important;
 
         gap:
             clamp(38px,
-                2.26190vw,
+                2.26190cqw,
                 58px) !important;
     }
 
@@ -17183,22 +17194,22 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .prova-social-home {
         --texto-largura:
             clamp(222px,
-                13.21429vw,
+                13.21429cqw,
                 310px);
 
         --celular-largura:
             clamp(240px,
-                14.28571vw,
+                14.28571cqw,
                 335px);
 
         --espaco-texto-celular:
             clamp(22px,
-                1.30952vw,
+                1.30952cqw,
                 31px);
 
         max-width:
             clamp(490px,
-                29.16667vw,
+                29.16667cqw,
                 685px) !important;
     }
 
@@ -17207,7 +17218,7 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .frase-depoimentos-cursiva {
         font-size:
             clamp(1.5rem,
-                1.42857vw,
+                1.42857cqw,
                 2rem) !important;
     }
 
@@ -17216,7 +17227,7 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .seta-depoimentos {
         width:
             clamp(68px,
-                4.04762vw,
+                4.04762cqw,
                 95px) !important;
     }
 
@@ -17226,12 +17237,12 @@ body.pagina-fluxo .fluxo-linha-direita {
         width:
             min(100%,
                 clamp(455px,
-                    27.08333vw,
+                    27.08333cqw,
                     635px)) !important;
 
         max-width:
             clamp(455px,
-                27.08333vw,
+                27.08333cqw,
                 635px) !important;
     }
 
@@ -17240,12 +17251,12 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .apresentacao-home {
         width:
             clamp(720px,
-                42.85714vw,
+                42.85714cqw,
                 1000px) !important;
 
         max-width:
             clamp(720px,
-                42.85714vw,
+                42.85714cqw,
                 1000px) !important;
     }
 
@@ -17253,12 +17264,12 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .apresentacao-home>h2.titulo-experiencia {
         width:
             clamp(720px,
-                42.85714vw,
+                42.85714cqw,
                 1000px) !important;
 
         max-width:
             clamp(720px,
-                42.85714vw,
+                42.85714cqw,
                 1000px) !important;
     }
 
@@ -17267,12 +17278,12 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .linha-apresentacao-home {
         width:
             clamp(500px,
-                29.76190vw,
+                29.76190cqw,
                 700px) !important;
 
         max-width:
             clamp(700px,
-                41.66667vw,
+                41.66667cqw,
                 950px) !important;
     }
 
@@ -17294,7 +17305,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* LOGO */
         --d-p1-logo-x:
             clamp(120px,
-                7.14286vw,
+                7.14286cqw,
                 174px);
 
         --d-p1-logo-y:
@@ -17306,7 +17317,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* MENU */
         --d-p1-menu-x:
             clamp(-174px,
-                -7.14286vw,
+                -7.14286cqw,
                 -120px);
 
         --d-p1-menu-y:
@@ -17318,7 +17329,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* DEPOIMENTOS - BLOCO GERAL */
         --d-p1-depoimentos-x:
             clamp(30px,
-                1.78571vw,
+                1.78571cqw,
                 44px);
 
         --d-p1-depoimentos-y:
@@ -17330,7 +17341,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* TEXTO AO LADO DO CELULAR */
         --d-p1-texto-depoimentos-x:
             clamp(-44px,
-                -1.78571vw,
+                -1.78571cqw,
                 -30px);
 
         --d-p1-texto-depoimentos-y:
@@ -17342,7 +17353,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* CELULAR */
         --d-p1-celular-x:
             clamp(-36px,
-                -1.48810vw,
+                -1.48810cqw,
                 -25px);
 
         --d-p1-celular-y:
@@ -17354,7 +17365,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* SETA DOS DEPOIMENTOS */
         --d-p1-seta-depoimentos-x:
             clamp(15px,
-                0.89286vw,
+                0.89286cqw,
                 22px);
 
         --d-p1-seta-depoimentos-y:
@@ -17366,14 +17377,14 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* BLOCO DIREITO */
         --d-p1-perfil-x:
             clamp(-116px,
-                -4.76190vw,
+                -4.76190cqw,
                 -80px);
 
 
         /* FOTO */
         --d-p1-foto-x:
             clamp(20px,
-                1.19048vw,
+                1.19048cqw,
                 29px);
 
         --d-p1-foto-y:
@@ -17385,7 +17396,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* REDES */
         --d-p1-redes-x:
             clamp(-44px,
-                -1.78571vw,
+                -1.78571cqw,
                 -30px);
 
         --d-p1-redes-y:
@@ -17397,7 +17408,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* SETA PARA PÁGINA 2 */
         --d-p1-seta-pagina-x:
             clamp(-36px,
-                -1.48810vw,
+                -1.48810cqw,
                 -25px);
 
 
@@ -17416,17 +17427,17 @@ body.pagina-fluxo .fluxo-linha-direita {
     .diferenciais {
         --dif-largura:
             clamp(1340px,
-                79.76190vw,
+                79.76190cqw,
                 2320px);
 
         --dif-padding-x:
             clamp(34px,
-                2.02381vw,
+                2.02381cqw,
                 50px);
 
         --dif-gap:
             clamp(108px,
-                6.42857vw,
+                6.42857cqw,
                 155px);
     }
 
@@ -17438,17 +17449,17 @@ body.pagina-fluxo .fluxo-linha-direita {
     .services {
         --servicos-v29-largura:
             clamp(1320px,
-                78.57143vw,
+                78.57143cqw,
                 2300px);
 
         padding-left:
             clamp(34px,
-                2.02381vw,
+                2.02381cqw,
                 50px) !important;
 
         padding-right:
             clamp(34px,
-                2.02381vw,
+                2.02381cqw,
                 50px) !important;
     }
 
@@ -17457,7 +17468,7 @@ body.pagina-fluxo .fluxo-linha-direita {
     .services .objetivos-vendas-grade {
         gap:
             clamp(22px,
-                1.30952vw,
+                1.30952cqw,
                 32px) !important;
     }
 
@@ -17467,14 +17478,14 @@ body.pagina-fluxo .fluxo-linha-direita {
     .services .servico-venda-adaptacoes span {
         padding:
             clamp(8px,
-                0.47619vw,
+                0.47619cqw,
                 11px) clamp(13px,
-                0.77381vw,
+                0.77381cqw,
                 18px) !important;
 
         gap:
             clamp(7px,
-                0.41667vw,
+                0.41667cqw,
                 10px) !important;
     }
 
@@ -17482,7 +17493,7 @@ body.pagina-fluxo .fluxo-linha-direita {
     .services .servico-venda-adaptacoes i {
         font-size:
             clamp(0.82rem,
-                0.83333vw,
+                0.83333cqw,
                 1rem) !important;
     }
 
@@ -17494,17 +17505,17 @@ body.pagina-fluxo .fluxo-linha-direita {
     .consultoria-planos {
         --consultoria-v29-largura:
             clamp(1320px,
-                78.57143vw,
+                78.57143cqw,
                 2300px);
 
         padding-left:
             clamp(34px,
-                2.02381vw,
+                2.02381cqw,
                 50px) !important;
 
         padding-right:
             clamp(34px,
-                2.02381vw,
+                2.02381cqw,
                 50px) !important;
     }
 
@@ -17512,7 +17523,7 @@ body.pagina-fluxo .fluxo-linha-direita {
     .consultoria-planos .planos-vendas-grade {
         gap:
             clamp(22px,
-                1.30952vw,
+                1.30952cqw,
                 32px) !important;
     }
 
@@ -17522,14 +17533,14 @@ body.pagina-fluxo .fluxo-linha-direita {
     .consultoria-planos .plano-economia {
         max-width:
             clamp(130px,
-                7.73810vw,
+                7.73810cqw,
                 180px) !important;
 
         padding:
             clamp(5px,
-                0.29762vw,
+                0.29762cqw,
                 7px) clamp(8px,
-                0.47619vw,
+                0.47619cqw,
                 11px) !important;
     }
 
@@ -17541,12 +17552,12 @@ body.pagina-fluxo .fluxo-linha-direita {
     .rodape-site {
         padding-left:
             clamp(38px,
-                2.26190vw,
+                2.26190cqw,
                 56px) !important;
 
         padding-right:
             clamp(38px,
-                2.26190vw,
+                2.26190cqw,
                 56px) !important;
     }
 
@@ -17554,12 +17565,12 @@ body.pagina-fluxo .fluxo-linha-direita {
     .rodape-site .rodape-site-conteudo {
         max-width:
             clamp(1320px,
-                78.57143vw,
+                78.57143cqw,
                 2300px) !important;
 
         gap:
             clamp(45px,
-                2.67857vw,
+                2.67857cqw,
                 66px) !important;
     }
 
@@ -17567,7 +17578,7 @@ body.pagina-fluxo .fluxo-linha-direita {
     .rodape-site .rodape-logo {
         width:
             clamp(330px,
-                19.64286vw,
+                19.64286cqw,
                 460px) !important;
     }
 
@@ -17657,7 +17668,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    QUATRO CARDS NO DESKTOP
    ================================================== */
 
-@media (min-width: 1281px) {
+@container (min-width: 1281px) {
 
     .consultoria-planos .planos-vendas-grade {
 
@@ -17673,7 +17684,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    NOTEBOOK / TABLET
    ================================================== */
 
-@media (min-width: 769px) and (max-width: 1280px) {
+@container (min-width: 769px) and (max-width: 1280px) {
 
     .consultoria-planos .planos-vendas-grade {
 
@@ -17689,7 +17700,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    CELULAR
    ================================================== */
 
-@media (max-width: 768px) {
+@container (max-width: 768px) {
 
     .consultoria-planos .planos-vendas-grade {
 
@@ -17709,7 +17720,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    DESKTOP - SEMPRE 2 PLANOS EM CIMA + 2 EMBAIXO
    ================================================== */
 
-@media (min-width: 993px) {
+@container (min-width: 993px) {
 
     .consultoria-planos .planos-vendas-grade {
 
@@ -17796,7 +17807,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    2 COLUNAS ENQUANTO HOUVER ESPAÇO
    ================================================== */
 
-@media (min-width: 769px) and (max-width: 992px) {
+@container (min-width: 769px) and (max-width: 992px) {
 
     .consultoria-planos .planos-vendas-grade {
 
@@ -17817,7 +17828,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    UM CARD POR LINHA
    ================================================== */
 
-@media (max-width: 768px) {
+@container (max-width: 768px) {
 
     .consultoria-planos .planos-vendas-grade {
 
@@ -17834,7 +17845,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    ====================================================================== */
 
 /* DESKTOP E TABLET MAIOR: 2 x 2 */
-@media (min-width: 769px) {
+@container (min-width: 769px) {
 
     .consultoria-planos .planos-vendas-grade {
         width: 100% !important;
@@ -17873,7 +17884,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 }
 
 /* CELULAR: 1 CARD POR LINHA */
-@media (max-width: 768px) {
+@container (max-width: 768px) {
 
     .consultoria-planos .planos-vendas-grade {
         grid-template-columns: 1fr !important;
@@ -18276,7 +18287,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            Se quiser mudar separadamente no celular, altere aqui.
            ================================================== */
 
-        @media (max-width: 992px) {
+        @container (max-width: 992px) {
             .prova-social-home {
                 --depoimentos-x: 0px;
                 --depoimentos-y: 0px;
@@ -18361,19 +18372,19 @@ body.pagina-fluxo .fluxo-linha-direita {
             font-size: 0.92rem;
         }
 
-        @media (min-width: 1281px) {
+        @container (min-width: 1281px) {
             .consultoria-planos .planos-vendas-grade {
                 grid-template-columns: repeat(4, minmax(0, 1fr));
             }
         }
 
-        @media (min-width: 769px) and (max-width: 1280px) {
+        @container (min-width: 769px) and (max-width: 1280px) {
             .consultoria-planos .planos-vendas-grade {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 768px) {
+        @container (max-width: 768px) {
             .consultoria-planos .planos-vendas-grade {
                 grid-template-columns: 1fr;
             }
@@ -18389,18 +18400,18 @@ body.pagina-fluxo .fluxo-linha-direita {
    - prova social: OCULTA
    - frase da prova social: OCULTA
    - mockup/celular de depoimentos: OCULTO
-   - redes sociais da primeira página: OCULTAS
+   - redes sociais da primeira página: EMPILHADAS
    - foto do Rhuan: ESQUERDA
    - currículo: DIREITA
 
    O DESKTOP NÃO É ALTERADO POR ESTE BLOCO.
 
    NÃO ALTERE AS REGRAS ABAIXO PARA POSICIONAR ELEMENTOS.
-   PARA ISSO, USE SOMENTE O "SUPER PAINEL MOBILE V46"
-   NO FINAL ABSOLUTO DESTE ARQUIVO.
+   PARA ISSO, USE O "SUPER PAINEL MOBILE V47"
+   MAIS ABAIXO NESTE ARQUIVO.
    ====================================================================== */
 
-@media (max-width: 768px) {
+@container (max-width: 768px) {
 
     /* ==============================================================
        ESCONDE O QUE NÃO DEVE EXISTIR NA HOME DO CELULAR
@@ -18424,13 +18435,13 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home {
         position: relative !important;
 
-        width: 100vw !important;
+        width: 100cqw !important;
         max-width: none !important;
 
         min-height: var(--m-home-altura-minima) !important;
 
-        margin-left: calc(50% - 50vw) !important;
-        margin-right: calc(50% - 50vw) !important;
+        margin-left: calc(50% - 50cqw) !important;
+        margin-right: calc(50% - 50cqw) !important;
 
         background: #000000 !important;
 
@@ -18449,12 +18460,12 @@ body.pagina-fluxo .fluxo-linha-direita {
         min-height: var(--m-header-altura) !important;
 
         margin: 0 auto !important;
-        padding: 0 !important;
+        padding: 0 4% !important;
 
         display: flex !important;
-
         align-items: center !important;
-        justify-content: center !important;
+        justify-content: space-between !important;
+        gap: 3%;
 
         transform:
             translate(
@@ -18474,10 +18485,10 @@ body.pagina-fluxo .fluxo-linha-direita {
        ============================================================== */
 
     .pagina-home .logo {
-        position: absolute !important;
-
-        left: 50% !important;
-        top: 50% !important;
+        position: static !important;
+        min-width: 0;
+        flex: 0 1 auto;
+        translate: none !important;
 
         width: var(--m-logo-largura) !important;
         max-width: none !important;
@@ -18492,8 +18503,8 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         transform:
             translate(
-                calc(-50% + var(--m-logo-x)),
-                calc(-50% + var(--m-logo-y))
+                var(--m-logo-x),
+                var(--m-logo-y)
             )
             scale(
                 var(--m-logo-escala)
@@ -18515,11 +18526,9 @@ body.pagina-fluxo .fluxo-linha-direita {
 
 
     .pagina-home header nav {
-        position: absolute !important;
-
-        left: var(--m-cta-x) !important;
-        top: 50% !important;
-        right: auto !important;
+        position: static !important;
+        flex: 0 0 auto;
+        translate: none !important;
 
         width: auto !important;
         height: auto !important;
@@ -18530,7 +18539,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         transform:
             translateY(
-                calc(-50% + var(--m-cta-y))
+                var(--m-cta-y)
             )
             scale(
                 var(--m-cta-escala)
@@ -19355,10 +19364,10 @@ body.pagina-fluxo .fluxo-linha-direita {
 
     .pagina-home
     .scroll-indicador.seta-pagina {
-        left: 50% !important;
-
-        bottom:
-            var(--m-seta-home-bottom) !important;
+        position: relative !important;
+        inset: auto !important;
+        margin: 24px auto 0 !important;
+        translate: none !important;
 
         width:
             var(--m-seta-home-largura) !important;
@@ -19373,7 +19382,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         transform:
             translate(
-                calc(-50% + var(--m-seta-home-x)),
+                var(--m-seta-home-x),
                 var(--m-seta-home-y)
             )
             scale(
@@ -19419,9 +19428,9 @@ body.pagina-fluxo .fluxo-linha-direita {
    NÃO COLOQUE OUTRAS REGRAS DE HOME MOBILE DEPOIS DELE.
    ====================================================================== */
 
-@media (max-width: 768px) {
+@container (max-width: 768px) {
 
-    :root {
+    body {
 
         /* ==========================================================
            01. PÁGINA HOME
@@ -19438,7 +19447,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         --m-header-y: 0px;
 
         --m-header-largura: 100%;
-        --m-header-altura: 86px;
+        --m-header-altura: clamp(66px, 16cqw, 86px);
 
         --m-header-escala: 1.00;
 
@@ -19447,10 +19456,10 @@ body.pagina-fluxo .fluxo-linha-direita {
            03. LOGO
            ========================================================== */
 
-        --m-logo-x: -80px;
+        --m-logo-x: 0px;
         --m-logo-y: 0px;
 
-        --m-logo-largura: 220px;
+        --m-logo-largura: min(54%, 220px);
 
         --m-logo-escala: 1.00;
 
@@ -19459,15 +19468,14 @@ body.pagina-fluxo .fluxo-linha-direita {
            04. BOTÃO "MARCAR CONSULTA"
            ========================================================== */
 
-        --m-cta-x: 285px;
         --m-cta-y: 0px;
 
         --m-cta-largura: auto;
-        --m-cta-altura: 36px;
+        --m-cta-altura: 44px;
 
         --m-cta-escala: 1.00;
 
-        --m-cta-fonte: 0.8rem;
+        --m-cta-fonte: clamp(0.75rem, 3.2cqw, 0.9rem);
 
         --m-cta-padding-x: 10px;
 
@@ -19481,14 +19489,13 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-section-largura: 100%;
 
-        --m-section-altura-minima:
-            calc(100svh - var(--m-header-altura));
+        --m-section-altura-minima: 0;
 
         --m-section-escala: 1.00;
 
-        --m-section-padding-top: 10px;
-        --m-section-padding-x: 12px;
-        --m-section-padding-bottom: 52px;
+        --m-section-padding-top: clamp(12px, 4cqw, 28px);
+        --m-section-padding-x: 4%;
+        --m-section-padding-bottom: 24px;
 
 
         /* ==========================================================
@@ -19500,18 +19507,18 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-perfil-largura: 100%;
 
-        --m-perfil-altura-minima: 520px;
+        --m-perfil-altura-minima: 0;
 
         --m-perfil-escala: 1.00;
 
         /* FOTO À ESQUERDA / CURRÍCULO À DIREITA
            Mantenha, de preferência, a soma próxima de 100%.
         */
-        --m-foto-coluna: 43%;
-        --m-curriculo-coluna: 57%;
+        --m-foto-coluna: 39fr;
+        --m-curriculo-coluna: 61fr;
 
         /* distância horizontal entre foto e currículo */
-        --m-foto-curriculo-gap: 0px;
+        --m-foto-curriculo-gap: 3%;
 
 
         /* ==========================================================
@@ -19522,7 +19529,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         --m-foto-area-y: 0px;
 
         --m-foto-area-largura: 100%;
-        --m-foto-area-altura: 500px;
+        --m-foto-area-altura: auto;
 
         --m-foto-area-escala: 1.00;
 
@@ -19538,13 +19545,13 @@ body.pagina-fluxo .fluxo-linha-direita {
            08. FOTO DO RHUAN
            ========================================================== */
 
-        --m-foto-x: -30px;
-        --m-foto-y: -170px;
+        --m-foto-x: 0px;
+        --m-foto-y: 0px;
 
-        --m-foto-largura: 115%;
-        --m-foto-altura: 100%;
+        --m-foto-largura: 100%;
+        --m-foto-altura: auto;
 
-        --m-foto-escala: 1.1;
+        --m-foto-escala: 1;
 
         --m-foto-object-fit: contain;
         --m-foto-object-position: left bottom;
@@ -19555,7 +19562,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            ========================================================== */
 
         --m-curriculo-x: 0px;
-        --m-curriculo-y: 20px;
+        --m-curriculo-y: 0px;
 
         /* ESTE É O CONTROLE DIRETO DA LARGURA DO CURRÍCULO */
         --m-curriculo-largura: 100%;
@@ -19576,7 +19583,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-titulo-escala: 1.00;
 
-        --m-titulo-fonte: 1.32rem;
+        --m-titulo-fonte: clamp(1.1rem, 4.8cqw, 1.6rem);
         --m-titulo-peso: 300;
         --m-titulo-linha: 1.02;
 
@@ -19599,7 +19606,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         --m-lista-x: 0px;
         --m-lista-y: 0px;
 
-        --m-lista-largura: 90%;
+        --m-lista-largura: 100%;
 
         --m-lista-escala: 1.00;
 
@@ -19642,14 +19649,14 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-item-icone-radius: 50%;
 
-        --m-item-titulo-fonte: 0.74rem;
+        --m-item-titulo-fonte: clamp(0.78rem, 3.3cqw, 0.95rem);
         --m-item-titulo-peso: 500;
         --m-item-titulo-linha: 1.18;
 
         --m-item-titulo-gap: 2px;
 
         --m-item-texto-cor: #8d8d8d;
-        --m-item-texto-fonte: 0.60rem;
+        --m-item-texto-fonte: clamp(0.75rem, 3cqw, 0.875rem);
         --m-item-texto-linha: 1.28;
 
 
@@ -19657,7 +19664,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            14. ITEM 1 — NUTRICIONISTA
            ========================================================== */
 
-        --m-item1-x: 5px;
+        --m-item1-x: 0px;
         --m-item1-y: 0px;
 
         --m-item1-escala: 1.00;
@@ -19667,7 +19674,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            15. ITEM 2 — PÓS-GRADUAÇÃO
            ========================================================== */
 
-        --m-item2-x: 5px;
+        --m-item2-x: 0px;
         --m-item2-y: 0px;
 
         --m-item2-escala: 1.00;
@@ -19677,7 +19684,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            16. ITEM 3 — VIVÊNCIA PRÁTICA
            ========================================================== */
 
-        --m-item3-x: 5px;
+        --m-item3-x: 0px;
         --m-item3-y: 0px;
 
         --m-item3-escala: 1.00;
@@ -19692,10 +19699,10 @@ body.pagina-fluxo .fluxo-linha-direita {
            Y positivo = baixo   / negativo = cima
         */
         --m-redes-x: 0px;
-        --m-redes-y: -150px;
+        --m-redes-y: 0px;
 
         /* Escala dos 3 botões juntos */
-        --m-redes-escala: 0.80;
+        --m-redes-escala: 1;
 
         /* Distância vertical entre WhatsApp, Instagram e TikTok */
         --m-redes-gap: 12px;
@@ -19705,13 +19712,13 @@ body.pagina-fluxo .fluxo-linha-direita {
            normalmente 52% da largura da tela,
            nunca maior que 210px.
         */
-        --m-rede-largura: clamp(155px, 52vw, 210px);
+        --m-rede-largura: clamp(155px, 56%, 240px);
 
-        --m-rede-altura: 43px;
+        --m-rede-altura: 44px;
 
         /* Ícone e texto também respondem ao tamanho da tela */
-        --m-rede-icone: clamp(18px, 4vw, 22px);
-        --m-rede-fonte: clamp(12px, 3vw, 14px);
+        --m-rede-icone: clamp(18px, 4cqw, 22px);
+        --m-rede-fonte: clamp(12px, 3cqw, 14px);
 
         --m-rede-padding-x: 10px;
         --m-rede-gap-interno: 8px;
@@ -19748,9 +19755,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            ========================================================== */
 
         --m-seta-home-x: 0px;
-        --m-seta-home-y: -150px;
-
-        --m-seta-home-bottom: 16px;
+        --m-seta-home-y: 0px;
 
         --m-seta-home-largura: 38px;
         --m-seta-home-altura: 38px;
@@ -19759,11 +19764,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-seta-home-tamanho: 1.10rem;
 
-        
-
     }
-    
-
 }
 
 /* ======================================================================
@@ -19783,7 +19784,7 @@ body.pagina-fluxo .fluxo-linha-direita {
    - demais seções do site
    ====================================================================== */
 
-@media (max-width: 768px) {
+@container (max-width: 768px) {
 
     /* ==============================================================
        CONTAINER DAS REDES
@@ -19859,7 +19860,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         min-width: var(--m-rede-largura) !important;
 
         max-width:
-            calc(100vw - 48px) !important;
+            calc(100cqw - 48px) !important;
 
         height: var(--m-rede-altura) !important;
         min-height: var(--m-rede-altura) !important;
@@ -20014,4 +20015,3 @@ body.pagina-fluxo .fluxo-linha-direita {
     }
 
 }
-
