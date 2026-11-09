@@ -19809,7 +19809,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         height: auto !important;
 
-        margin: 18px auto 0 !important;
+        margin: calc(18px + (3 * var(--m-rede-altura) + 2 * var(--m-redes-gap)) * 0.1) auto 0 !important;
         padding: 0 !important;
 
         display: flex !important;
