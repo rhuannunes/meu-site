@@ -18460,12 +18460,12 @@ body.pagina-fluxo .fluxo-linha-direita {
         min-height: var(--m-header-altura) !important;
 
         margin: 0 auto !important;
-        padding: 0 4% !important;
+        padding: 0 7% !important;
 
         display: flex !important;
         align-items: center !important;
-        justify-content: space-between !important;
-        gap: 3%;
+        justify-content: center !important;
+        gap: clamp(12px, 6%, 36px);
 
         transform:
             translate(
@@ -18746,7 +18746,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         min-height: 0 !important;
 
-        margin: 0 !important;
+        margin: 0 0 var(--m-foto-y) !important;
         padding: 0 !important;
 
         display: flex !important;
@@ -19447,7 +19447,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         --m-header-y: 0px;
 
         --m-header-largura: 100%;
-        --m-header-altura: clamp(66px, 16cqw, 86px);
+        --m-header-altura: 86px;
 
         --m-header-escala: 1.00;
 
@@ -19493,8 +19493,8 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-section-escala: 1.00;
 
-        --m-section-padding-top: clamp(12px, 4cqw, 28px);
-        --m-section-padding-x: 4%;
+        --m-section-padding-top: 10px;
+        --m-section-padding-x: 12px;
         --m-section-padding-bottom: 24px;
 
 
@@ -19514,11 +19514,11 @@ body.pagina-fluxo .fluxo-linha-direita {
         /* FOTO À ESQUERDA / CURRÍCULO À DIREITA
            Mantenha, de preferência, a soma próxima de 100%.
         */
-        --m-foto-coluna: 39fr;
-        --m-curriculo-coluna: 61fr;
+        --m-foto-coluna: 43%;
+        --m-curriculo-coluna: 57%;
 
         /* distância horizontal entre foto e currículo */
-        --m-foto-curriculo-gap: 3%;
+        --m-foto-curriculo-gap: 0px;
 
 
         /* ==========================================================
@@ -19529,7 +19529,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         --m-foto-area-y: 0px;
 
         --m-foto-area-largura: 100%;
-        --m-foto-area-altura: auto;
+        --m-foto-area-altura: 500px;
 
         --m-foto-area-escala: 1.00;
 
@@ -19545,13 +19545,13 @@ body.pagina-fluxo .fluxo-linha-direita {
            08. FOTO DO RHUAN
            ========================================================== */
 
-        --m-foto-x: 0px;
-        --m-foto-y: 0px;
+        --m-foto-x: -30px;
+        --m-foto-y: -170px;
 
-        --m-foto-largura: 100%;
-        --m-foto-altura: auto;
+        --m-foto-largura: 115%;
+        --m-foto-altura: 100%;
 
-        --m-foto-escala: 1;
+        --m-foto-escala: 1.1;
 
         --m-foto-object-fit: contain;
         --m-foto-object-position: left bottom;
@@ -19569,7 +19569,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-curriculo-escala: 1.00;
 
-        --m-curriculo-padding: 0px;
+        --m-curriculo-padding: 20px 0 0;
 
 
         /* ==========================================================
@@ -19583,7 +19583,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-titulo-escala: 1.00;
 
-        --m-titulo-fonte: clamp(1.1rem, 4.8cqw, 1.6rem);
+        --m-titulo-fonte: 1.32rem;
         --m-titulo-peso: 300;
         --m-titulo-linha: 1.02;
 
@@ -19606,7 +19606,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         --m-lista-x: 0px;
         --m-lista-y: 0px;
 
-        --m-lista-largura: 100%;
+        --m-lista-largura: 90%;
 
         --m-lista-escala: 1.00;
 
@@ -19649,14 +19649,14 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-item-icone-radius: 50%;
 
-        --m-item-titulo-fonte: clamp(0.78rem, 3.3cqw, 0.95rem);
+        --m-item-titulo-fonte: 0.74rem;
         --m-item-titulo-peso: 500;
         --m-item-titulo-linha: 1.18;
 
         --m-item-titulo-gap: 2px;
 
         --m-item-texto-cor: #8d8d8d;
-        --m-item-texto-fonte: clamp(0.75rem, 3cqw, 0.875rem);
+        --m-item-texto-fonte: 0.60rem;
         --m-item-texto-linha: 1.28;
 
 
@@ -19664,7 +19664,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            14. ITEM 1 — NUTRICIONISTA
            ========================================================== */
 
-        --m-item1-x: 0px;
+        --m-item1-x: 5px;
         --m-item1-y: 0px;
 
         --m-item1-escala: 1.00;
@@ -19674,7 +19674,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            15. ITEM 2 — PÓS-GRADUAÇÃO
            ========================================================== */
 
-        --m-item2-x: 0px;
+        --m-item2-x: 5px;
         --m-item2-y: 0px;
 
         --m-item2-escala: 1.00;
@@ -19684,7 +19684,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            16. ITEM 3 — VIVÊNCIA PRÁTICA
            ========================================================== */
 
-        --m-item3-x: 0px;
+        --m-item3-x: 5px;
         --m-item3-y: 0px;
 
         --m-item3-escala: 1.00;
@@ -19709,10 +19709,10 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         /* Largura responsiva:
            nunca menor que 155px,
-           normalmente 52% da largura da tela,
-           nunca maior que 210px.
+           normalmente 51,52% da largura da tela,
+           nunca maior que 240px.
         */
-        --m-rede-largura: clamp(155px, 56%, 240px);
+        --m-rede-largura: clamp(155px, 51.52cqw, 240px);
 
         --m-rede-altura: 44px;
 
@@ -19809,7 +19809,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         height: auto !important;
 
-        margin: calc(18px + (3 * var(--m-rede-altura) + 2 * var(--m-redes-gap)) * 0.1) auto 0 !important;
+        margin: calc(18px + (3 * var(--m-rede-altura) + 2 * var(--m-redes-gap)) * 0.2) auto 0 !important;
         padding: 0 !important;
 
         display: flex !important;
