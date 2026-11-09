@@ -18465,7 +18465,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: clamp(12px, 6%, 36px);
+        gap: clamp(10px, 5%, 30px);
 
         transform:
             translate(
@@ -19444,7 +19444,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            ========================================================== */
 
         --m-header-x: 0px;
-        --m-header-y: 6px;
+        --m-header-y: 12px;
 
         --m-header-largura: 100%;
         --m-header-altura: 86px;
@@ -19461,7 +19461,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-logo-largura: min(54%, 220px);
 
-        --m-logo-escala: 1.08;
+        --m-logo-escala: 1.242;
 
 
         /* ==========================================================
@@ -19473,7 +19473,7 @@ body.pagina-fluxo .fluxo-linha-direita {
         --m-cta-largura: auto;
         --m-cta-altura: 44px;
 
-        --m-cta-escala: 1.00;
+        --m-cta-escala: 1.05;
 
         --m-cta-fonte: clamp(0.75rem, 3.2cqw, 0.9rem);
 
@@ -19545,13 +19545,13 @@ body.pagina-fluxo .fluxo-linha-direita {
            08. FOTO DO RHUAN
            ========================================================== */
 
-        --m-foto-x: -30px;
+        --m-foto-x: calc(-30px - clamp(15px, 5cqw, 25px));
         --m-foto-y: -170px;
 
         --m-foto-largura: 115%;
         --m-foto-altura: 100%;
 
-        --m-foto-escala: 1.1;
+        --m-foto-escala: 1.21;
 
         --m-foto-object-fit: contain;
         --m-foto-object-position: left bottom;
