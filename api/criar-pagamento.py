@@ -471,6 +471,23 @@ class handler(BaseHTTPRequestHandler):
             )
 
 
+            consulta = {}
+            if plano in {"essencial", "premium"} and (dados.get("data") or dados.get("hora")):
+                data_consulta = str(dados.get("data", ""))
+                hora_consulta = str(dados.get("hora", ""))
+                try:
+                    if not re.fullmatch(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}", data_consulta + " " + hora_consulta):
+                        raise ValueError("Formato inválido")
+                    datetime.strptime(data_consulta + " " + hora_consulta, "%Y-%m-%d %H:%M")
+                except ValueError:
+                    return self.responder({"ok": False, "erro": "Selecione uma data e horário válidos."}, 400)
+                consulta = {
+                    "DATA_CONSULTA": data_consulta,
+                    "HORA_CONSULTA": hora_consulta,
+                    "DURACAO_MIN": 50,
+                }
+
+
             # -------------------------------------------------
             # 6. ORDER DO MERCADO PAGO
             # -------------------------------------------------
@@ -518,8 +535,8 @@ class handler(BaseHTTPRequestHandler):
                 token_retorno = hmac.new(
                     segredo_retorno.encode(), ("retorno:" + referencia).encode(), hashlib.sha256
                 ).hexdigest()
-                consulta = urlencode({"retorno": "1", "ref": referencia, "token": token_retorno})
-                url_retorno = "https://meu-site-six-lemon.vercel.app/api/criar-pagamento?" + consulta
+                parametros_retorno = urlencode({"retorno": "1", "ref": referencia, "token": token_retorno})
+                url_retorno = "https://meu-site-six-lemon.vercel.app/api/criar-pagamento?" + parametros_retorno
                 order["config"] = {
                     "online": {
                         "success_url": url_retorno,
@@ -612,6 +629,7 @@ class handler(BaseHTTPRequestHandler):
                     return self.responder({"ok": False, "erro": "Confira nome, e-mail e WhatsApp."}, 400)
                 try:
                     contratacoes("guardar_pendente", referencia, {
+                        **consulta,
                         "PEDIDO_ID": referencia,
                         "CRIADO_EM": agora(),
                         "PLANO": plano,
