@@ -1,10 +1,11 @@
+from html import escape
 import hashlib
 import hmac
 import json
 import re
 from datetime import datetime, timezone
 from decimal import Decimal
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlencode, urlsplit
 import os
 import uuid
 import urllib.request
@@ -142,18 +143,45 @@ class handler(BaseHTTPRequestHandler):
             return self.responder({"ok": False, "erro": "Informe o ID de um pedido de teste."}, 400)
         return self.registrar_pagamento(order_id, recuperacao=True)
 
-    def registrar_pagamento(self, order_id, recuperacao=False):
+    def retorno_checkout(self, parametros):
+        referencia = parametros.get("ref", [""])[0]
+        token = parametros.get("token", [""])[0]
+        segredo = os.environ.get("CONTRATACOES_SECRET", "")
+        if not segredo or not re.fullmatch(r"rn_(basic|essencial|premium)_[136]_[a-f0-9]{16}", referencia):
+            return self.responder({"ok": False, "erro": "Link de confirmação inválido."}, 400)
+        esperado = hmac.new(segredo.encode(), ("retorno:" + referencia).encode(), hashlib.sha256).hexdigest()
+        if not hmac.compare_digest(token.encode(), esperado.encode()):
+            return self.responder({"ok": False, "erro": "Link de confirmação inválido."}, 401)
+        order_id = parametros.get("order_id", [""])[0]
+        if not re.fullmatch(r"ORD[A-Z0-9]{1,60}", order_id):
+            order_id = ""
+        return self.registrar_pagamento(order_id, referencia_retorno=referencia)
+
+    def registrar_pagamento(self, order_id, recuperacao=False, referencia_retorno=None):
         try:
             token = os.environ["MERCADO_PAGO_ACCESS_TOKEN"]
+            url = "https://api.mercadopago.com/v1/orders"
+            if order_id:
+                url += "/" + order_id.upper()
+            else:
+                url += "?" + urlencode({"external_reference": referencia_retorno})
             requisicao = urllib.request.Request(
-                f"https://api.mercadopago.com/v1/orders/{order_id.upper()}",
+                url,
                 headers={"Authorization": "Bearer " + token},
             )
             with urllib.request.urlopen(requisicao, timeout=7) as resposta:
                 ordem = json.load(resposta)
+            if not order_id:
+                resultados = ordem.get("results", [])
+                if len(resultados) != 1:
+                    return self.responder({"ok": False, "erro": "Pedido ainda não localizado."}, 409)
+                ordem = resultados[0]
+                order_id = ordem["id"]
+            if referencia_retorno and ordem.get("external_reference") != referencia_retorno:
+                return self.responder({"ok": False, "erro": "Pedido não corresponde a este link."}, 409)
             if ordem.get("status") != "processed" or ordem.get("status_detail") != "accredited":
-                if recuperacao:
-                    return self.responder({"ok": False, "erro": "Pedido ainda não creditado."}, 409)
+                if recuperacao or referencia_retorno:
+                    return self.responder({"ok": False, "erro": "Pagamento ainda não confirmado. Atualize esta página para consultar novamente."}, 409)
                 return self.responder({"ok": True})
 
             referencia = ordem.get("external_reference", "")
@@ -225,6 +253,21 @@ class handler(BaseHTTPRequestHandler):
     # =====================================================
 
     def responder(self, dados, status=200):
+        if getattr(self, "pagina_retorno", False):
+            mensagem = "Pagamento confirmado." if dados["ok"] else dados["erro"]
+            self.send_response(status)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("Referrer-Policy", "no-referrer")
+            self.end_headers()
+            pagina = (
+                '<!doctype html><html lang="pt-BR"><meta charset="utf-8">'
+                '<meta name="viewport" content="width=device-width, initial-scale=1">'
+                '<title>Status do pagamento</title><main><h1>'
+                + escape(mensagem) + "</h1></main></html>"
+            )
+            self.wfile.write(pagina.encode("utf-8"))
+            return
 
         self.enviar_headers(status)
 
@@ -243,6 +286,10 @@ class handler(BaseHTTPRequestHandler):
     # =====================================================
 
     def do_GET(self):
+        parametros = parse_qs(urlsplit(self.path).query)
+        if parametros.get("retorno") == ["1"]:
+            self.pagina_retorno = True
+            return self.retorno_checkout(parametros)
 
         self.responder({
             "ok": True,
@@ -428,6 +475,8 @@ class handler(BaseHTTPRequestHandler):
             # 6. ORDER DO MERCADO PAGO
             # -------------------------------------------------
 
+            segredo_retorno = os.environ.get("CONTRATACOES_SECRET")
+            registrar_pendente = bool(segredo_retorno and os.environ.get("CONTRATACOES_SCRIPT_URL"))
             order = {
 
                 "type":
@@ -463,6 +512,21 @@ class handler(BaseHTTPRequestHandler):
                     }
                 ]
             }
+
+
+            if registrar_pendente:
+                token_retorno = hmac.new(
+                    segredo_retorno.encode(), ("retorno:" + referencia).encode(), hashlib.sha256
+                ).hexdigest()
+                consulta = urlencode({"retorno": "1", "ref": referencia, "token": token_retorno})
+                url_retorno = "https://meu-site-six-lemon.vercel.app/api/criar-pagamento?" + consulta
+                order["config"] = {
+                    "online": {
+                        "success_url": url_retorno,
+                        "pending_url": url_retorno,
+                        "auto_return": "approved",
+                    }
+                }
 
 
             # -------------------------------------------------
@@ -541,7 +605,7 @@ class handler(BaseHTTPRequestHandler):
             # 9. GUARDAR CONTATO ANTES DE DEVOLVER A URL
             # -------------------------------------------------
 
-            if os.environ.get("MERCADO_PAGO_WEBHOOK_SECRET"):
+            if registrar_pendente:
                 nome = str(cliente.get("nome", "")).strip()
                 whatsapp = str(cliente.get("whatsapp", "")).strip()
                 if not nome or not whatsapp or len(nome) > 200 or len(whatsapp) > 40 or len(email) > 254:
