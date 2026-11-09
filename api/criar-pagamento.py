@@ -128,6 +128,20 @@ class handler(BaseHTTPRequestHandler):
             self.log_message("Webhook recusado: %s", "assinatura divergente" if re.fullmatch(r"[a-f0-9]{64}", recebido) else "assinatura ausente ou malformada")
             return self.responder({"ok": False}, 401)
 
+        return self.registrar_pagamento(order_id)
+
+    def recuperar_pagamento(self, parametros):
+        segredo = os.environ.get("CONTRATACOES_SECRET", "")
+        autorizacao = self.headers.get("Authorization", "")
+        if not segredo or not hmac.compare_digest(autorizacao.encode(), ("Bearer " + segredo).encode()):
+            return self.responder({"ok": False, "erro": "Acesso negado."}, 401)
+
+        order_id = parametros.get("order_id", [""])[0]
+        if not re.fullmatch(r"ORDTST[A-Z0-9]{1,60}", order_id):
+            return self.responder({"ok": False, "erro": "Informe o ID de um pedido de teste."}, 400)
+        return self.registrar_pagamento(order_id, recuperacao=True)
+
+    def registrar_pagamento(self, order_id, recuperacao=False):
         try:
             token = os.environ["MERCADO_PAGO_ACCESS_TOKEN"]
             requisicao = urllib.request.Request(
@@ -137,6 +151,8 @@ class handler(BaseHTTPRequestHandler):
             with urllib.request.urlopen(requisicao, timeout=7) as resposta:
                 ordem = json.load(resposta)
             if ordem.get("status") != "processed" or ordem.get("status_detail") != "accredited":
+                if recuperacao:
+                    return self.responder({"ok": False, "erro": "Pedido ainda não creditado."}, 409)
                 return self.responder({"ok": True})
 
             referencia = ordem.get("external_reference", "")
@@ -144,6 +160,8 @@ class handler(BaseHTTPRequestHandler):
                 return self.responder({"ok": True})
             pedido = contratacoes("ler_pendente", referencia).get("pedido")
             if not pedido:
+                if recuperacao:
+                    return self.responder({"ok": False, "erro": "Pedido pendente ausente ou já registrado."}, 404)
                 # Notificação repetida após a remoção do pendente, ou pedido anterior à integração.
                 return self.responder({"ok": True})
 
@@ -247,6 +265,9 @@ class handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         parametros = parse_qs(urlsplit(self.path).query)
+        if parametros.get("recuperar") == ["1"]:
+            return self.recuperar_pagamento(parametros)
+
         if parametros.get("webhook") == ["1"]:
             return self.confirmar_pagamento(parametros)
 
