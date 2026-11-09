@@ -19444,7 +19444,7 @@ body.pagina-fluxo .fluxo-linha-direita {
            ========================================================== */
 
         --m-header-x: 0px;
-        --m-header-y: 0px;
+        --m-header-y: 6px;
 
         --m-header-largura: 100%;
         --m-header-altura: 86px;
@@ -19461,7 +19461,7 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         --m-logo-largura: min(54%, 220px);
 
-        --m-logo-escala: 1.00;
+        --m-logo-escala: 1.08;
 
 
         /* ==========================================================
