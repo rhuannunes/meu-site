@@ -17577,256 +17577,256 @@ body.pagina-fluxo .fluxo-linha-direita {
    PLANOS EM BREVE
    ====================================================================== */
 
-    .consultoria-planos .plano-vendas-card-em-breve {
+.consultoria-planos .plano-vendas-card-em-breve {
 
-        position:
-            relative;
+    position:
+        relative;
 
-    }
-
-
-    .consultoria-planos .plano-em-breve-faixa {
-
-        width:
-            100%;
-
-        min-height:
-            48px;
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
-        gap:
-            10px;
-
-        margin-top:
-            auto;
-
-        padding:
-            12px 18px;
-
-        color:
-            #d6ae61;
-
-        background:
-            rgba(214, 174, 97, 0.08);
-
-        border:
-            1px solid rgba(214, 174, 97, 0.42);
-
-        border-radius:
-            10px;
-
-        font-family:
-            'Montserrat',
-            sans-serif;
-
-        font-size:
-            0.78rem;
-
-        font-weight:
-            700;
-
-        letter-spacing:
-            0.18em;
-
-        text-transform:
-            uppercase;
-
-        box-shadow:
-            0 0 22px rgba(214, 174, 97, 0.06);
-
-    }
+}
 
 
-    .consultoria-planos .plano-em-breve-faixa i {
+.consultoria-planos .plano-em-breve-faixa {
 
-        font-size:
-            0.92rem;
+    width:
+        100%;
 
-    }
+    min-height:
+        48px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        auto;
+
+    padding:
+        12px 18px;
+
+    color:
+        #d6ae61;
+
+    background:
+        rgba(214, 174, 97, 0.08);
+
+    border:
+        1px solid rgba(214, 174, 97, 0.42);
+
+    border-radius:
+        10px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.18em;
+
+    text-transform:
+        uppercase;
+
+    box-shadow:
+        0 0 22px rgba(214, 174, 97, 0.06);
+
+}
 
 
-    /* ==================================================
+.consultoria-planos .plano-em-breve-faixa i {
+
+    font-size:
+        0.92rem;
+
+}
+
+
+/* ==================================================
    QUATRO CARDS NO DESKTOP
    ================================================== */
 
-    @media (min-width: 1281px) {
+@media (min-width: 1281px) {
 
-        .consultoria-planos .planos-vendas-grade {
+    .consultoria-planos .planos-vendas-grade {
 
-            grid-template-columns:
-                repeat(4, minmax(0, 1fr));
-
-        }
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
 
     }
 
+}
 
-    /* ==================================================
+
+/* ==================================================
    NOTEBOOK / TABLET
    ================================================== */
 
-    @media (min-width: 769px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
 
-        .consultoria-planos .planos-vendas-grade {
+    .consultoria-planos .planos-vendas-grade {
 
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-        }
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
     }
 
+}
 
-    /* ==================================================
+
+/* ==================================================
    CELULAR
    ================================================== */
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-        .consultoria-planos .planos-vendas-grade {
+    .consultoria-planos .planos-vendas-grade {
 
-            grid-template-columns:
-                1fr;
-
-        }
+        grid-template-columns:
+            1fr;
 
     }
 
-    /* ======================================================================
+}
+
+/* ======================================================================
    V39 - PLANOS EM GRADE 2x2 + AJUSTE DOS CARDS EM BREVE
    ====================================================================== */
 
 
-    /* ==================================================
+/* ==================================================
    DESKTOP - SEMPRE 2 PLANOS EM CIMA + 2 EMBAIXO
    ================================================== */
 
-    @media (min-width: 993px) {
+@media (min-width: 993px) {
 
-        .consultoria-planos .planos-vendas-grade {
+    .consultoria-planos .planos-vendas-grade {
 
-            grid-template-columns:
-                repeat(2,
-                    minmax(0, 1fr)) !important;
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr)) !important;
 
-            max-width:
-                1120px !important;
+        max-width:
+            1120px !important;
 
-            gap:
-                28px !important;
+        gap:
+            28px !important;
 
-            align-items:
-                start !important;
-
-        }
-
-    }
-
-
-    /* ==================================================
-   PLANOS EM BREVE
-   NÃO FORÇAR A ALTURA DOS PLANOS COM PREÇO
-   ================================================== */
-
-    .consultoria-planos .plano-vendas-card-em-breve {
-
-        min-height:
-            0 !important;
-
-        height:
-            auto !important;
-
-        align-self:
+        align-items:
             start !important;
 
     }
 
+}
 
-    /* ==================================================
+
+/* ==================================================
+   PLANOS EM BREVE
+   NÃO FORÇAR A ALTURA DOS PLANOS COM PREÇO
+   ================================================== */
+
+.consultoria-planos .plano-vendas-card-em-breve {
+
+    min-height:
+        0 !important;
+
+    height:
+        auto !important;
+
+    align-self:
+        start !important;
+
+}
+
+
+/* ==================================================
    BENEFÍCIOS DOS PLANOS EM BREVE
    NÃO CRIAR ESPAÇO VAZIO DESNECESSÁRIO
    ================================================== */
 
-    .consultoria-planos .plano-vendas-card-em-breve .plano-vendas-beneficios {
+.consultoria-planos .plano-vendas-card-em-breve .plano-vendas-beneficios {
 
-        margin-bottom:
-            0 !important;
+    margin-bottom:
+        0 !important;
 
-    }
+}
 
 
-    /* ==================================================
+/* ==================================================
    FAIXA EM BREVE
    FICA LOGO DEPOIS DOS BENEFÍCIOS
    ================================================== */
 
-    .consultoria-planos .plano-vendas-card-em-breve .plano-em-breve-faixa {
+.consultoria-planos .plano-vendas-card-em-breve .plano-em-breve-faixa {
 
-        margin-top:
-            26px !important;
+    margin-top:
+        26px !important;
 
-        flex-shrink:
-            0 !important;
+    flex-shrink:
+        0 !important;
 
-    }
+}
 
 
-    /* ==================================================
+/* ==================================================
    BOTÃO CONVERSAR DOS PLANOS EM BREVE
    ================================================== */
 
-    .consultoria-planos .plano-vendas-card-em-breve .plano-vendas-conversar {
+.consultoria-planos .plano-vendas-card-em-breve .plano-vendas-conversar {
 
-        margin-top:
-            10px !important;
+    margin-top:
+        10px !important;
 
-    }
+}
 
 
-    /* ==================================================
+/* ==================================================
    TABLET
    2 COLUNAS ENQUANTO HOUVER ESPAÇO
    ================================================== */
 
-    @media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
 
-        .consultoria-planos .planos-vendas-grade {
+    .consultoria-planos .planos-vendas-grade {
 
-            grid-template-columns:
-                repeat(2,
-                    minmax(0, 1fr)) !important;
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr)) !important;
 
-            gap:
-                20px !important;
-
-        }
+        gap:
+            20px !important;
 
     }
 
+}
 
-    /* ==================================================
+
+/* ==================================================
    CELULAR
    UM CARD POR LINHA
    ================================================== */
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-        .consultoria-planos .planos-vendas-grade {
+    .consultoria-planos .planos-vendas-grade {
 
-            grid-template-columns:
-                1fr !important;
-
-        }
+        grid-template-columns:
+            1fr !important;
 
     }
+
+}
 
 /* ======================================================================
    V40 - GRADE DEFINITIVA DOS PLANOS
@@ -17856,27 +17856,19 @@ body.pagina-fluxo .fluxo-linha-direita {
     justify-content: flex-start !important;
 }
 
-.consultoria-planos
-.plano-vendas-card-em-breve
-.plano-vendas-resumo {
+.consultoria-planos .plano-vendas-card-em-breve .plano-vendas-resumo {
     min-height: 0 !important;
 }
 
-.consultoria-planos
-.plano-vendas-card-em-breve
-.plano-vendas-beneficios {
+.consultoria-planos .plano-vendas-card-em-breve .plano-vendas-beneficios {
     margin: 24px 0 0 !important;
 }
 
-.consultoria-planos
-.plano-vendas-card-em-breve
-.plano-em-breve-faixa {
+.consultoria-planos .plano-vendas-card-em-breve .plano-em-breve-faixa {
     margin-top: 26px !important;
 }
 
-.consultoria-planos
-.plano-vendas-card-em-breve
-.plano-vendas-conversar {
+.consultoria-planos .plano-vendas-card-em-breve .plano-vendas-conversar {
     margin-top: 10px !important;
 }
 
@@ -17891,54 +17883,333 @@ body.pagina-fluxo .fluxo-linha-direita {
 }
 
 /* ======================================================================
-   V41 - HOME MOBILE REFINADA
-   - remove o menu hambúrguer
-   - mantém somente "Marcar Consulta" no topo
-   - sobe o bloco foto + currículo
-   - reduz a foto e impede que invada a coluna do currículo
-   - compacta a formação para antecipar as redes sociais
+   V44 - SUPER PAINEL TOTAL DA PRIMEIRA PÁGINA MOBILE
+   ======================================================================
+
+   COMO USAR
+   ----------------------------------------------------------------------
+   X positivo  = direita
+   X negativo  = esquerda
+
+   Y positivo  = baixo
+   Y negativo  = cima
+
+   ESCALA:
+   1.00 = tamanho normal
+   1.10 = 10% maior
+   0.90 = 10% menor
+
+   Esta camada atua SOMENTE em telas até 992px.
+   Desktop e demais páginas permanecem intactos.
    ====================================================================== */
 
 @media (max-width: 992px) {
 
-    /* ==================================================
-       SUPER PAINEL - AJUSTES RÁPIDOS DESTA VERSÃO
-       ================================================== */
+    /* ==================================================================
+       SUPER PAINEL - MEXA SOMENTE NESTE BLOCO
+       ================================================================== */
 
     :root {
-        /* valor negativo = sobe o conjunto foto + currículo + redes */
-        --v41-mobile-perfil-y: -52px;
 
-        /* valor negativo = sobe somente a foto */
-        --v41-mobile-foto-y: -6px;
+        /* ==============================================================
+           01. CABEÇALHO COMPLETO
+           ============================================================== */
 
-        /* altura máxima da área da foto */
-        --v41-mobile-foto-altura: 340px;
+        --m-home-header-altura: 92px;
 
-        /* espaço entre currículo e foto */
-        --v41-mobile-perfil-gap: 8px;
+
+        /* ==============================================================
+           02. LOGO
+           ============================================================== */
+
+        --m-logo-x: -80px;
+        --m-logo-y: 0px;
+        --m-logo-largura: 245px;
+        --m-logo-escala: 1.00;
+
+
+        /* ==============================================================
+           03. BOTÃO "MARCAR CONSULTA"
+           ============================================================== */
+
+        --m-cta-x: 310px;
+        --m-cta-y: 0px;
+        --m-cta-largura: auto;
+        --m-cta-altura: 38px;
+        --m-cta-escala: 1.00;
+        --m-cta-fonte: 0.70rem;
+
+
+        /* ==============================================================
+           04. ÁREA SUPERIOR DA HOME
+           texto dos resultados + celular
+           ============================================================== */
+
+        --m-prova-bloco-x: 0px;
+        --m-prova-bloco-y: 0px;
+        --m-prova-bloco-largura: 430px;
+        --m-prova-bloco-escala: 1.00;
+        --m-prova-gap: 12px;
+
+
+        /* ==============================================================
+           05. TEXTO "RESULTADOS REAIS..."
+           ============================================================== */
+
+        --m-prova-texto-x: 0px;
+        --m-prova-texto-y: 0px;
+        --m-prova-texto-largura: 250px;
+        --m-prova-texto-escala: 1.00;
+        --m-prova-texto-fonte: 1.12rem;
+        --m-prova-texto-linha: 1.10;
+
+
+        /* ==============================================================
+           06. SETA CURVA AO LADO DO TEXTO
+           ============================================================== */
+
+        --m-prova-seta-x: 0px;
+        --m-prova-seta-y: 0px;
+        --m-prova-seta-largura: 52px;
+        --m-prova-seta-escala: 1.00;
+        --m-prova-seta-rotacao: -6deg;
+
+
+        /* ==============================================================
+           07. CELULAR DOS DEPOIMENTOS
+           ============================================================== */
+
+        --m-celular-x: 0px;
+        --m-celular-y: 0px;
+        --m-celular-largura: 150px;
+        --m-celular-escala: 1.00;
+        --m-celular-rotacao: 2deg;
+
+
+        /* ==============================================================
+           08. BLOCO INFERIOR COMPLETO
+           currículo + foto + redes
+           ============================================================== */
+
+        --m-perfil-x: 0px;
+        --m-perfil-y: -58px;
+        --m-perfil-largura: 100%;
+        --m-perfil-escala: 1.00;
+
+        /* LARGURA EXPLÍCITA DO CURRÍCULO */
+        --m-curriculo-coluna: 66%;
+
+        /* distância currículo ↔ foto */
+        --m-curriculo-foto-gap: 0px;
+
+
+        /* ==============================================================
+           09. BLOCO DO CURRÍCULO INTEIRO
+           ============================================================== */
+
+        --m-curriculo-x: 0px;
+        --m-curriculo-y: 0px;
+
+        /* controla a largura real do currículo */
+        --m-curriculo-largura: 100%;
+
+        --m-curriculo-escala: 1.00;
+
+
+        /* ==============================================================
+           10. TÍTULO
+           "Ciência, prática e experiência."
+           ============================================================== */
+
+        --m-titulo-x: 0px;
+        --m-titulo-y: 0px;
+        --m-titulo-largura: 100%;
+        --m-titulo-escala: 1.00;
+        --m-titulo-fonte: 1.75rem;
+
+
+        /* ==============================================================
+           11. LISTA / GRADE DO CURRÍCULO
+           ============================================================== */
+
+        --m-lista-x: 0px;
+        --m-lista-y: 0px;
+        --m-lista-largura: 100%;
+        --m-lista-escala: 1.00;
+
+        --m-item-padding-y: 10px;
+        --m-item-gap: 8px;
+
+        --m-item-icone-tamanho: 31px;
+        --m-item-icone-fonte: 0.75rem;
+
+        --m-item-titulo-fonte: 0.84rem;
+        --m-item-texto-fonte: 0.70rem;
+        --m-item-texto-linha: 1.34;
+
+
+        /* ==============================================================
+           12. ITEM 1 - NUTRICIONISTA
+           ============================================================== */
+
+        --m-item1-x: 0px;
+        --m-item1-y: 0px;
+        --m-item1-escala: 1.00;
+
+
+        /* ==============================================================
+           13. ITEM 2 - PÓS-GRADUAÇÃO
+           ============================================================== */
+
+        --m-item2-x: 0px;
+        --m-item2-y: 0px;
+        --m-item2-escala: 1.00;
+
+
+        /* ==============================================================
+           14. ITEM 3 - VIVÊNCIA PRÁTICA
+           ============================================================== */
+
+        --m-item3-x: 0px;
+        --m-item3-y: 0px;
+        --m-item3-escala: 1.00;
+
+
+        /* ==============================================================
+           15. FOTO DO RHUAN
+           ============================================================== */
+
+        --m-foto-x: 0px;
+        --m-foto-y: -8px;
+        --m-foto-largura: 100%;
+        --m-foto-altura: 390px;
+        --m-foto-escala: 1.10;
+
+
+        /* ==============================================================
+           16. BLOCO COMPLETO DAS REDES
+           ============================================================== */
+
+        --m-redes-x: 0px;
+        --m-redes-y: -22px;
+        --m-redes-largura: 100%;
+        --m-redes-escala: 1.00;
+        --m-redes-gap: 6px;
+
+        --m-rede-altura: 43px;
+        --m-rede-fonte: 0.68rem;
+        --m-rede-icone: 1.05rem;
+
+
+        /* ==============================================================
+           17. WHATSAPP
+           ============================================================== */
+
+        --m-whatsapp-x: 0px;
+        --m-whatsapp-y: 0px;
+        --m-whatsapp-escala: 1.00;
+
+
+        /* ==============================================================
+           18. INSTAGRAM
+           ============================================================== */
+
+        --m-instagram-x: 0px;
+        --m-instagram-y: 0px;
+        --m-instagram-escala: 1.00;
+
+
+        /* ==============================================================
+           19. TIKTOK
+           ============================================================== */
+
+        --m-tiktok-x: 0px;
+        --m-tiktok-y: 0px;
+        --m-tiktok-escala: 1.00;
+
+
+        /* ==============================================================
+           20. SETA PARA A PRÓXIMA PÁGINA
+           ============================================================== */
+
+        --m-seta-home-x: 0px;
+        --m-seta-home-y: 0px;
+        --m-seta-home-escala: 1.00;
+        --m-seta-home-tamanho: 1.25rem;
     }
 
 
-    /* ==================================================
-       1. CABEÇALHO MOBILE
-       REMOVE AS 3 BARRAS
-       ================================================== */
+    /* ==================================================================
+       ESTRUTURA GERAL DA HOME MOBILE
+       ================================================================== */
 
-    .pagina-home header nav > i.fa-bars {
+    .pagina-home {
+        width: 100vw !important;
+        min-height: auto !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        background: #000000 !important;
+        overflow: hidden !important;
+    }
+
+
+    /* ==================================================================
+       CABEÇALHO
+       ================================================================== */
+
+    .pagina-home>header {
+        position: relative !important;
+
+        width: 100% !important;
+        height: var(--m-home-header-altura) !important;
+        min-height: var(--m-home-header-altura) !important;
+
+        padding: 0 18px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+
+    /* ==================================================================
+       LOGO
+       ================================================================== */
+
+    .pagina-home .logo {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        width: var(--m-logo-largura) !important;
+        max-width: none !important;
+        height: auto !important;
+
+        transform:
+            translate(calc(-50% + var(--m-logo-x)),
+                calc(-50% + var(--m-logo-y))) scale(var(--m-logo-escala)) !important;
+
+        transform-origin: center center !important;
+    }
+
+
+    /* ==================================================================
+       MENU MOBILE
+       Só fica "Marcar Consulta"
+       ================================================================== */
+
+    .pagina-home header nav>i.fa-bars {
         display: none !important;
         visibility: hidden !important;
         pointer-events: none !important;
     }
 
 
-    /* O NAV DEIXA DE SER UM MENU EXPANSÍVEL */
     .pagina-home header nav {
         position: absolute !important;
 
-        left: 18px !important;
-        right: auto !important;
-
+        left: var(--m-cta-x) !important;
         top: 50% !important;
 
         width: auto !important;
@@ -17946,13 +18217,15 @@ body.pagina-fluxo .fluxo-linha-direita {
 
         display: block !important;
 
-        transform: translateY(-50%) !important;
+        transform:
+            translateY(calc(-50% + var(--m-cta-y))) scale(var(--m-cta-escala)) !important;
+
+        transform-origin: left center !important;
 
         z-index: 1000 !important;
     }
 
 
-    /* MOSTRA A LISTA MESMO SEM A CLASSE .ativado */
     .pagina-home header .navegacao-primaria,
     .pagina-home header .navegacao-primaria.ativado {
         position: static !important;
@@ -17978,13 +18251,11 @@ body.pagina-fluxo .fluxo-linha-direita {
     }
 
 
-    /* ESCONDE DIFERENCIAIS E SERVIÇOS NO TOPO */
     .pagina-home header .navegacao-primaria li {
         display: none !important;
     }
 
 
-    /* DEIXA SOMENTE MARCAR CONSULTA */
     .pagina-home header .navegacao-primaria li:last-child {
         display: flex !important;
 
@@ -17997,7 +18268,6 @@ body.pagina-fluxo .fluxo-linha-direita {
     }
 
 
-    /* REMOVE AS BOLINHAS DO MENU MOBILE */
     .pagina-home header .navegacao-primaria li:last-child::before,
     .pagina-home header .navegacao-primaria li:last-child::after {
         content: none !important;
@@ -18005,11 +18275,15 @@ body.pagina-fluxo .fluxo-linha-direita {
     }
 
 
-    /* BOTÃO MARCAR CONSULTA COMPACTO */
     .pagina-home header .navegacao-primaria li:last-child a {
-        margin: 0 !important;
+        width: var(--m-cta-largura) !important;
+        min-width: 0 !important;
 
-        padding: 8px 11px !important;
+        height: var(--m-cta-altura) !important;
+        min-height: var(--m-cta-altura) !important;
+
+        margin: 0 !important;
+        padding: 0 12px !important;
 
         display: inline-flex !important;
 
@@ -18024,75 +18298,470 @@ body.pagina-fluxo .fluxo-linha-direita {
         border-radius: 999px !important;
 
         font-family: 'Montserrat', sans-serif !important;
-
-        font-size: clamp(0.58rem, 2.35vw, 0.72rem) !important;
-
+        font-size: var(--m-cta-fonte) !important;
         font-weight: 500 !important;
 
         line-height: 1 !important;
-
-        letter-spacing: 0.15px !important;
 
         white-space: nowrap !important;
     }
 
 
-    /* ==================================================
-       2. APROXIMA AS DUAS PARTES DA HOME
-       ================================================== */
+    /* ==================================================================
+       CONTEÚDO DA PRIMEIRA PÁGINA
+       ================================================================== */
 
     .pagina-home .section-div {
-        gap: 5px !important;
+        position: relative !important;
 
-        padding-bottom: 36px !important;
+        width: 100% !important;
+        min-height: auto !important;
+
+        padding: 4px 20px 46px !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 4px !important;
+
+        background-image: none !important;
+        background-color: #000000 !important;
     }
 
 
-    /* ==================================================
-       3. SOBE FOTO + CURRÍCULO + REDES COMO UM BLOCO
-       ================================================== */
+    /* ==================================================================
+       BLOCO DE DEPOIMENTOS COMPLETO
+       ================================================================== */
 
-    .pagina-home .home-perfil {
+    .pagina-home .conteudo-home {
         width: 100% !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        display: block !important;
+    }
+
+
+    .pagina-home .prova-social-home {
+        width: min(100%, var(--m-prova-bloco-largura)) !important;
+        max-width: none !important;
+
+        margin: 0 auto !important;
+
+        display: grid !important;
 
         grid-template-columns:
-            minmax(0, 1fr)
-            minmax(112px, 33%) !important;
+            minmax(0, var(--m-prova-texto-largura)) var(--m-celular-largura) !important;
 
-        column-gap:
-            var(--v41-mobile-perfil-gap) !important;
+        align-items: center !important;
+        justify-content: center !important;
 
-        row-gap:
-            12px !important;
+        gap: var(--m-prova-gap) !important;
 
-        translate:
-            0
-            var(--v41-mobile-perfil-y) !important;
+        transform:
+            translate(var(--m-prova-bloco-x),
+                var(--m-prova-bloco-y)) scale(var(--m-prova-bloco-escala)) !important;
 
-        scale:
-            1 !important;
+        transform-origin: center center !important;
     }
 
 
-    /* ==================================================
-       4. FOTO MENOR E SEM INVADIR O CURRÍCULO
-       ================================================== */
+    /* ==================================================================
+       TEXTO DOS DEPOIMENTOS
+       ================================================================== */
 
-    .pagina-home .home-foto-area {
+    .pagina-home .prova-social-texto {
+        width: var(--m-prova-texto-largura) !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+        justify-content: center !important;
+
+        transform:
+            translate(var(--m-prova-texto-x),
+                var(--m-prova-texto-y)) scale(var(--m-prova-texto-escala)) !important;
+
+        transform-origin: center center !important;
+    }
+
+
+    .pagina-home .frase-depoimentos-cursiva {
         width: 100% !important;
 
-        height:
-            min(
-                var(--v41-mobile-foto-altura),
-                78vw
-            ) !important;
+        margin: 0 !important;
 
-        align-self: end !important;
+        color: #ffffff !important;
+
+        font-family: 'Montserrat', sans-serif !important;
+
+        font-size: var(--m-prova-texto-fonte) !important;
+        font-style: normal !important;
+        font-weight: 300 !important;
+
+        line-height: var(--m-prova-texto-linha) !important;
+
+        letter-spacing: -0.45px !important;
+
+        text-align: left !important;
+
+        text-shadow: none !important;
+
+        transform: none !important;
+    }
+
+
+    .pagina-home .frase-depoimentos-cursiva .frase-escrita {
+        text-align: left !important;
+    }
+
+
+    .pagina-home .frase-depoimentos-cursiva .frase-escrita:nth-child(1),
+    .pagina-home .frase-depoimentos-cursiva .frase-escrita:nth-child(3) {
+        color: #ffffff !important;
+
+        font-family: 'Montserrat', sans-serif !important;
+
+        font-size: 1em !important;
+
+        font-style: normal !important;
+        font-weight: 300 !important;
+    }
+
+
+    .pagina-home .frase-depoimentos-cursiva .frase-escrita:nth-child(2),
+    .pagina-home .frase-depoimentos-cursiva .frase-escrita:nth-child(4) {
+        color: var(--dourado-claro) !important;
+
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+
+        font-size: 1.18em !important;
+
+        font-style: italic !important;
+        font-weight: 500 !important;
+    }
+
+
+    /* ==================================================================
+       SETA DOS DEPOIMENTOS
+       ================================================================== */
+
+    .pagina-home .seta-depoimentos {
+        width: var(--m-prova-seta-largura) !important;
+        height: auto !important;
+
+        left: 72% !important;
+        top: 94% !important;
+
+        transform:
+            translate(var(--m-prova-seta-x),
+                var(--m-prova-seta-y)) rotate(var(--m-prova-seta-rotacao)) scale(var(--m-prova-seta-escala)) !important;
+
+        transform-origin: center center !important;
+    }
+
+
+    /* ==================================================================
+       CELULAR
+       ================================================================== */
+
+    .pagina-home .iphone-mockup {
+        width: var(--m-celular-largura) !important;
+
+        transform:
+            translate(var(--m-celular-x),
+                var(--m-celular-y)) rotate(var(--m-celular-rotacao)) scale(var(--m-celular-escala)) !important;
+
+        transform-origin: center center !important;
+    }
+
+
+    .pagina-home .iphone-mockup:hover {
+        transform:
+            translate(var(--m-celular-x),
+                var(--m-celular-y)) rotate(var(--m-celular-rotacao)) scale(var(--m-celular-escala)) !important;
+    }
+
+
+    /* ==================================================================
+       BLOCO CURRÍCULO + FOTO + REDES
+       ================================================================== */
+
+    .pagina-home .home-perfil {
+        width: var(--m-perfil-largura) !important;
+        max-width: none !important;
+
+        margin: 0 auto !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, var(--m-curriculo-coluna)) minmax(0, calc(100% - var(--m-curriculo-coluna))) !important;
+
+        grid-template-areas:
+            "apresentacao foto"
+            "redes redes" !important;
+
+        align-items: start !important;
+
+        column-gap: var(--m-curriculo-foto-gap) !important;
+        row-gap: 10px !important;
+
+        transform:
+            translate(var(--m-perfil-x),
+                var(--m-perfil-y)) scale(var(--m-perfil-escala)) !important;
+
+        transform-origin: center top !important;
+    }
+
+
+    /* ==================================================================
+       CURRÍCULO COMPLETO
+       ================================================================== */
+
+    .pagina-home .apresentacao-home {
+        grid-area: apresentacao !important;
+
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+
+        width: var(--m-curriculo-largura) !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+
+        transform:
+            translate(var(--m-curriculo-x),
+                var(--m-curriculo-y)) scale(var(--m-curriculo-escala)) !important;
+
+        transform-origin: left top !important;
+    }
+
+
+    /* ==================================================================
+       TÍTULO DO CURRÍCULO
+       ================================================================== */
+
+    .pagina-home .apresentacao-home>h2.titulo-experiencia {
+        width: var(--m-titulo-largura) !important;
+        max-width: none !important;
+
+        margin: 0 0 14px !important;
+
+        color: #ffffff !important;
+
+        font-family: 'Montserrat', sans-serif !important;
+
+        font-size: var(--m-titulo-fonte) !important;
+        font-weight: 300 !important;
+
+        line-height: 1.03 !important;
+
+        letter-spacing: -0.9px !important;
+
+        white-space: normal !important;
+
+        text-align: left !important;
+
+        transform:
+            translate(var(--m-titulo-x),
+                var(--m-titulo-y)) scale(var(--m-titulo-escala)) !important;
+
+        transform-origin: left top !important;
+    }
+
+
+    .pagina-home .apresentacao-home>h2.titulo-experiencia .destaque-experiencia {
+        display: block !important;
+
+        margin-top: 5px !important;
+
+        color: var(--dourado-claro) !important;
+
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+
+        font-size: 1.1em !important;
+
+        font-style: italic !important;
+        font-weight: 500 !important;
+
+        line-height: 0.98 !important;
+    }
+
+
+    .pagina-home .apresentacao-home-intro {
+        display: none !important;
+    }
+
+
+    /* ==================================================================
+       LISTA DO CURRÍCULO
+       ================================================================== */
+
+    .pagina-home .linha-apresentacao-home {
+        width: var(--m-lista-largura) !important;
+        max-width: none !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        gap: 0 !important;
+
+        padding: 0 !important;
+
+        border-left: 0 !important;
+
+        border-top:
+            1px solid rgba(214, 174, 97, 0.24) !important;
+
+        transform:
+            translate(var(--m-lista-x),
+                var(--m-lista-y)) scale(var(--m-lista-escala)) !important;
+
+        transform-origin: left top !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home {
+        position: relative !important;
+
+        width: 100% !important;
+        min-height: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            var(--m-item-icone-tamanho) minmax(0, 1fr) !important;
+
+        align-items: start !important;
+
+        gap: var(--m-item-gap) !important;
+
+        padding:
+            var(--m-item-padding-y) 2px !important;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.095) !important;
+
+        background: transparent !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home>i {
+        width: var(--m-item-icone-tamanho) !important;
+        height: var(--m-item-icone-tamanho) !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        color: var(--dourado) !important;
+
+        font-size: var(--m-item-icone-fonte) !important;
+
+        border:
+            1px solid rgba(214, 174, 97, 0.30) !important;
+
+        border-radius: 50% !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home>div {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home h3 {
+        width: 100% !important;
+        max-width: none !important;
+
+        margin: 0 0 3px !important;
+
+        color: #ffffff !important;
+
+        font-size: var(--m-item-titulo-fonte) !important;
+        font-weight: 500 !important;
+
+        line-height: 1.23 !important;
+    }
+
+
+    .pagina-home .item-apresentacao-home p {
+        width: 100% !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        color: #8d8d8d !important;
+
+        font-size: var(--m-item-texto-fonte) !important;
+
+        line-height: var(--m-item-texto-linha) !important;
+    }
+
+
+    /* ITEM 1 */
+
+    .pagina-home .item-apresentacao-home:nth-child(1) {
+        transform:
+            translate(var(--m-item1-x),
+                var(--m-item1-y)) scale(var(--m-item1-escala)) !important;
+
+        transform-origin: left center !important;
+    }
+
+
+    /* ITEM 2 */
+
+    .pagina-home .item-apresentacao-home:nth-child(2) {
+        transform:
+            translate(var(--m-item2-x),
+                var(--m-item2-y)) scale(var(--m-item2-escala)) !important;
+
+        transform-origin: left center !important;
+    }
+
+
+    /* ITEM 3 */
+
+    .pagina-home .item-apresentacao-home:nth-child(3) {
+        transform:
+            translate(var(--m-item3-x),
+                var(--m-item3-y)) scale(var(--m-item3-escala)) !important;
+
+        transform-origin: left center !important;
+    }
+
+
+    /* ==================================================================
+       FOTO
+       ================================================================== */
+
+    .pagina-home .home-foto-area {
+        grid-area: foto !important;
+
+        position: relative !important;
+
+        width: 100% !important;
+        height: var(--m-foto-altura) !important;
 
         display: flex !important;
 
         align-items: flex-end !important;
-        justify-content: center !important;
+        justify-content: flex-start !important;
 
         overflow: visible !important;
     }
@@ -18101,138 +18770,199 @@ body.pagina-fluxo .fluxo-linha-direita {
     .pagina-home .imagem-rhuan {
         position: relative !important;
 
-        width: 100% !important;
-        max-width: 100% !important;
+        display: block !important;
+
+        width: var(--m-foto-largura) !important;
+        max-width: none !important;
 
         height: 100% !important;
 
         margin: 0 !important;
 
         object-fit: contain !important;
-        object-position: center bottom !important;
+        object-position: left bottom !important;
 
-        transform: none !important;
+        transform:
+            translate(var(--m-foto-x),
+                var(--m-foto-y)) scale(var(--m-foto-escala)) !important;
 
-        translate:
-            0
-            var(--v41-mobile-foto-y) !important;
-
-        scale:
-            1 !important;
+        transform-origin: left bottom !important;
     }
 
 
-    /* ==================================================
-       5. CURRÍCULO UM POUCO MAIS COMPACTO
-       ================================================== */
+    /* ==================================================================
+       REDES SOCIAIS - BLOCO COMPLETO
+       ================================================================== */
 
-    .pagina-home .apresentacao-home > h2.titulo-experiencia {
-        margin-bottom: 12px !important;
+    .pagina-home .home-perfil .whatsapp-home-wrap.social-home-wrap {
+        grid-area: redes !important;
 
-        font-size:
-            clamp(
-                1.42rem,
-                5.6vw,
-                1.82rem
-            ) !important;
+        width: var(--m-redes-largura) !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+
+        align-items: center !important;
+
+        gap: var(--m-redes-gap) !important;
+
+        transform:
+            translate(var(--m-redes-x),
+                var(--m-redes-y)) scale(var(--m-redes-escala)) !important;
+
+        transform-origin: center center !important;
+
+        overflow: visible !important;
     }
 
 
-    .pagina-home .linha-apresentacao-home {
-        gap: 0 !important;
-    }
+    .pagina-home .home-perfil .whatsapp-home-wrap.social-home-wrap .social-home {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
 
-
-    .pagina-home .item-apresentacao-home {
-        min-height: auto !important;
+        height: var(--m-rede-altura) !important;
+        min-height: var(--m-rede-altura) !important;
 
         padding:
-            9px
-            2px !important;
+            0 clamp(4px, 1.5vw, 8px) !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap:
+            clamp(3px, 1vw, 6px) !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 999px !important;
+
+        overflow: visible !important;
+
+        white-space: nowrap !important;
     }
 
 
-    .pagina-home .item-apresentacao-home > i {
-        width: 29px !important;
-        height: 29px !important;
+    .pagina-home .home-perfil .whatsapp-home-wrap.social-home-wrap .social-home i {
+        flex: 0 0 auto !important;
 
-        font-size: 0.73rem !important;
+        width: auto !important;
+
+        margin: 0 !important;
+
+        font-size: var(--m-rede-icone) !important;
+
+        line-height: 1 !important;
+
+        transform: none !important;
     }
 
 
-    .pagina-home .item-apresentacao-home h3 {
-        margin-bottom: 2px !important;
+    .pagina-home .home-perfil .whatsapp-home-wrap.social-home-wrap .social-home span {
+        display: inline-block !important;
 
-        font-size:
-            clamp(
-                0.72rem,
-                2.65vw,
-                0.84rem
-            ) !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
 
-        line-height: 1.20 !important;
+        color: #ffffff !important;
+
+        font-size: var(--m-rede-fonte) !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+
+        overflow: visible !important;
+
+        text-overflow: clip !important;
     }
 
 
-    .pagina-home .item-apresentacao-home p {
-        font-size:
-            clamp(
-                0.60rem,
-                2.15vw,
-                0.71rem
-            ) !important;
+    /* WHATSAPP INDIVIDUAL */
 
-        line-height: 1.34 !important;
+    .pagina-home .home-perfil .whatsapp-home-wrap.social-home-wrap .whatsapp-home {
+        transform:
+            translate(var(--m-whatsapp-x),
+                var(--m-whatsapp-y)) scale(var(--m-whatsapp-escala)) !important;
+
+        transform-origin: center center !important;
     }
 
 
-    /* ==================================================
-       6. REDES SOCIAIS MAIS PRÓXIMAS DO CURRÍCULO
-       ================================================== */
+    /* INSTAGRAM INDIVIDUAL */
 
-    .pagina-home
-    .home-perfil
-    .whatsapp-home-wrap.social-home-wrap {
-        margin-top: 2px !important;
+    .pagina-home .home-perfil .whatsapp-home-wrap.social-home-wrap .instagram-home {
+        transform:
+            translate(var(--m-instagram-x),
+                var(--m-instagram-y)) scale(var(--m-instagram-escala)) !important;
 
-        translate:
-            0
-            -18px !important;
-
-        scale:
-            1 !important;
+        transform-origin: center center !important;
     }
 
 
-    /* ==================================================
-       7. CELULARES MAIS ESTREITOS
-       Evita o botão tocar a logo.
-       ================================================== */
+    /* TIKTOK INDIVIDUAL */
 
-    @media (max-width: 430px) {
+    .pagina-home .home-perfil .whatsapp-home-wrap.social-home-wrap .tiktok-home {
+        transform:
+            translate(var(--m-tiktok-x),
+                var(--m-tiktok-y)) scale(var(--m-tiktok-escala)) !important;
 
-        .pagina-home header .navegacao-primaria li:last-child a {
-            padding:
-                7px
-                9px !important;
-
-            font-size:
-                0.59rem !important;
-        }
+        transform-origin: center center !important;
+    }
 
 
-        .pagina-home .logo {
-            width:
-                min(
-                    225px,
-                    61vw
-                ) !important;
+    /* ==================================================================
+       SETA PARA A PRÓXIMA PÁGINA
+       ================================================================== */
 
-            max-width:
-                61vw !important;
-        }
+    .pagina-home .scroll-indicador.seta-pagina {
+        left: 50% !important;
+        bottom: 22px !important;
 
+        transform:
+            translate(calc(-50% + var(--m-seta-home-x)),
+                var(--m-seta-home-y)) scale(var(--m-seta-home-escala)) !important;
+
+        transform-origin: center center !important;
+    }
+
+
+    .pagina-home .scroll-indicador.seta-pagina i {
+        font-size: var(--m-seta-home-tamanho) !important;
     }
 
 }
 
+
+/* ======================================================================
+   AJUSTE EXTRA PARA TELAS MUITO ESTREITAS
+   Mantém os três botões sociais dentro da tela.
+   ====================================================================== */
+
+@media (max-width: 430px) {
+
+    :root {
+        --m-logo-largura: 225px;
+        --m-cta-fonte: 0.60rem;
+
+        --m-prova-bloco-largura: 100%;
+        --m-prova-texto-largura: 220px;
+        --m-celular-largura: 145px;
+
+        --m-redes-gap: 5px;
+        --m-rede-fonte: 0.60rem;
+        --m-rede-icone: 0.98rem;
+        --m-rede-altura: 41px;
+    }
+
+}
