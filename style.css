@@ -20061,6 +20061,67 @@ body.pagina-fluxo .fluxo-linha-direita {
     }
 }
 
+/* Rodape compacto, somente em celulares. */
+@media (max-width: 600px) {
+    .rodape-site {
+        padding: 16px 20px 18px !important;
+    }
+
+    .rodape-site .rodape-site-conteudo {
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important;
+        gap: 18px 16px !important;
+        align-items: start;
+    }
+
+    .rodape-site .rodape-site-marca {
+        grid-column: 1 / -1 !important;
+        justify-self: center;
+        align-items: center !important;
+        max-width: 100%;
+        margin: 0 !important;
+        gap: 0 !important;
+    }
+
+    .rodape-site .rodape-logo {
+        width: 270px !important;
+        height: 80px !important;
+        object-fit: cover !important;
+        object-position: center;
+    }
+
+    .rodape-site .rodape-site-coluna {
+        min-width: 0;
+        margin: 0 !important;
+        gap: 6px !important;
+    }
+
+    .rodape-site .rodape-site-coluna:nth-of-type(2) {
+        grid-column: 1 !important;
+    }
+
+    .rodape-site .rodape-site-coluna:nth-of-type(3) {
+        grid-column: 2 !important;
+    }
+
+    .rodape-site .rodape-site-coluna:last-child {
+        grid-column: 1 / -1 !important;
+    }
+
+    .rodape-site .rodape-site-coluna h3 {
+        margin-bottom: 2px !important;
+    }
+
+    .rodape-site .rodape-site-coluna a {
+        overflow-wrap: anywhere;
+    }
+
+    .rodape-site .rodape-site-final {
+        margin-top: 18px !important;
+        padding-top: 12px !important;
+        gap: 10px !important;
+    }
+}
+
 /* Destaque do botão principal da tela inicial. */
 .pagina-home header .navegacao-primaria li:last-child a {
     color: #171109 !important;
