@@ -4494,7 +4494,7 @@ body::after {
         18px;
 
     padding:
-        6px 9px;
+        6px 6px;
 
     color:
         #000000;
@@ -13671,7 +13671,7 @@ body::after {
         100%;
 
     max-width:
-        355px;
+        460px;
 
     margin-left:
         auto !important;
@@ -20014,4 +20014,82 @@ body.pagina-fluxo .fluxo-linha-direita {
         text-overflow: clip !important;
     }
 
+}
+
+/* Pagamento: logo central acima do formulário, com topo compacto. */
+@container (min-width: 993px) {
+    body.pagina-pagamento .fluxo-topo {
+        height: 150px !important;
+        padding: 0 !important;
+    }
+
+    body.pagina-pagamento .fluxo-logo-area {
+        translate: none !important;
+    }
+
+    body.pagina-pagamento .fluxo-logo {
+        translate: none !important;
+        scale: 0.72 !important;
+    }
+
+    body.pagina-pagamento .fluxo-voltar-topo {
+        left: 70px !important;
+        top: 54px !important;
+        translate: none !important;
+        transform: none !important;
+    }
+
+    body.pagina-pagamento .fluxo-conteudo {
+        margin-top: 0 !important;
+    }
+}
+
+/* Cabeçalho da consultoria em uma linha por texto no computador. */
+@container (min-width: 993px) {
+    .consultoria-planos .consultoria-vendas-cabecalho {
+        max-width: 100% !important;
+    }
+
+    .consultoria-planos .consultoria-vendas-cabecalho > h1,
+    .consultoria-planos .consultoria-vendas-cabecalho > p {
+        max-width: 100% !important;
+        white-space: nowrap;
+    }
+
+    .consultoria-planos .consultoria-vendas-cabecalho > h1 {
+        font-size: clamp(2rem, 3.2cqw, 3.5rem) !important;
+    }
+}
+
+/* Destaque do botão principal da tela inicial. */
+.pagina-home header .navegacao-primaria li:last-child a {
+    color: #171109 !important;
+    background: linear-gradient(135deg, #edce89, #d6ae61) !important;
+    border: 1px solid #e7c77d !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 20px rgba(214, 174, 97, 0.28);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pagina-home header .navegacao-primaria li:last-child a:hover,
+.pagina-home header .navegacao-primaria li:last-child a:focus-visible {
+    color: #171109 !important;
+    background: #f0d59a !important;
+    box-shadow: 0 6px 26px rgba(214, 174, 97, 0.42);
+    transform: translateY(-2px);
+}
+
+@container (min-width: 993px) {
+    .pagina-home header .navegacao-primaria li:last-child a {
+        padding: 14px 24px !important;
+        font-size: 1.4rem !important;
+    }
+}
+
+@container (max-width: 992px) {
+    .pagina-home header .navegacao-primaria li:last-child a {
+        height: max(44px, var(--m-cta-altura)) !important;
+        min-height: 44px !important;
+        font-size: max(0.85rem, var(--m-cta-fonte)) !important;
+    }
 }
